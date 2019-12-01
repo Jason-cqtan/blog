@@ -1,0 +1,29 @@
+[search-placeholder]
+other = "搜索"
+
+[summary-dateformat]
+other = "Jan 2, 2006"
+
+[taxo-tags]
+other = "标签"
+
+[taxo-categories]
+other = "分类"
+
+[taxo-series]
+other = "系列"
+
+[archive-dateformat]
+other = "01-02"
+
+[single-dateformat]
+other = "2006-01-02 15:04"
+
+[single-related]
+other = "其他"
+
+[single-writtenBy]
+other = "写于"
+
+[toc-label]
+other = "文中导航"

@@ -1,0 +1,23 @@
+[[main]]
+  identifier = "posts"
+  name = "文章"
+  url = "posts"
+  weight = 10
+    
+[[main]]
+  identifier = "notes"
+  name = "随记"
+  url = "notes"
+  weight = 20
+
+[[main]]
+  identifier = "archive"
+  name = "归档"
+  url = "archive"
+  weight = 30
+
+[[main]]
+  identifier = "about"
+  name = "关于我"
+  url = "about"
+  weight = 50

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Jason Tan&#39;s blog</title>
+    <link>https://betterme.xin/posts/</link>
+    <description>Recent content in Posts on Jason Tan&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Sun, 01 Dec 2019 11:18:12 +0800</lastBuildDate>
+    
+	<atom:link href="https://betterme.xin/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>如何免费使用Netflix</title>
+      <link>https://betterme.xin/posts/free_use_netflix/</link>
+      <pubDate>Sun, 01 Dec 2019 11:18:12 +0800</pubDate>
+      
+      <guid>https://betterme.xin/posts/free_use_netflix/</guid>
+      <description>netflix是什么 netflix中文名奈飞、网飞，是国外流媒体平台，提供在线看美剧、电影、电视节目等。 按月订阅，最高套餐支持一个账号4个人</description>
+    </item>
+    
+    <item>
+      <title>Im back!</title>
+      <link>https://betterme.xin/posts/helloworld/</link>
+      <pubDate>Sun, 01 Dec 2019 02:04:09 +0800</pubDate>
+      
+      <guid>https://betterme.xin/posts/helloworld/</guid>
+      <description>hello world 我又回来了。 现已开启在hugo上写博客了，自己曾有过博客系统，上面的文章也只是自己当笔记偶尔看看， 但是界面写的不美观，很少做优化，也没什</description>
+    </item>
+    
+  </channel>
+</rss>

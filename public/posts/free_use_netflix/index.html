@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>如何免费使用Netflix – Jason Tan&#39;s blog</title>
+    
+
+<script>
+  var runSearch = function() {
+    
+    
+    var searchLanguages = JSON.parse("[\"en\"]");
+    
+        var baseurl = "https:\/\/betterme.xin\/";
+    
+
+    if (!searchLanguages) {
+      searchLanguages = ['en'];
+    }
+
+    var lunrIndex = null;
+    var pagesIndex = null;
+    var searchResults = null;
+    var searchMenu = null;
+
+    function endsWith(str, suffix) {
+      return str.indexOf(suffix, str.length - suffix.length) !== -1;
+    }
+
+    function initLunr() {
+      if (!endsWith(baseurl, "/")) {
+        baseurl = baseurl + '/';
+      };
+
+      $.getJSON(baseurl + "index.json")
+        .done(function (index) {
+          pagesIndex = index;
+          lunrIndex = lunr(function () {
+            this.use(lunr.multiLanguage(...searchLanguages));
+            this.ref('uri');
+            this.field('title');
+            this.field('description');
+            this.field('content');
+            
+            
+            
+
+            var that = this;
+            index.forEach(function (page) {
+              that.add(page);
+            });
+          });
+        })
+        .fail(function (jqxhr, textStatus, error) {
+          var err = textStatus + ", " + error;
+          console.error("Error getting Hugo index file:", err);
+        });
+    }
+
+    function search(query) {
+      return lunrIndex.search(query).map(function (result) {
+        return pagesIndex.filter(function (page) {
+          return page.uri === result.ref;
+        })[0];
+      });
+    }
+
+    function renderSearchResults(results) {
+      searchResults = document.getElementById('search-results');
+      searchMenu = document.getElementById('search-menu');
+      searchResults.setAttribute('class', 'dropdown is-active');
+
+      var content = document.createElement('div');
+      content.setAttribute('class', 'dropdown-content search-content');
+
+      if (results.length > 0) {
+        results.forEach(function (result) {
+          var item = document.createElement('a');
+          item.setAttribute('href', result.uri);
+          item.setAttribute('class', 'dropdown-item');
+          item.innerHTML = `<div class="menu-item"><div class="menu-item__title">📄 ${result.title}</div><div class="menu-item__desc">${result.description ? result.description : result.content}</div></div>`;
+          content.appendChild(item);
+        });
+      } else {
+        var item = document.createElement('span');
+        item.setAttribute('class', 'dropdown-item');
+        item.innerText = 'No results found';
+        content.appendChild(item);
+      }
+
+      while (searchMenu.hasChildNodes()) {
+        searchMenu.removeChild(
+          searchMenu.lastChild
+        );
+      }
+      searchMenu.appendChild(content);
+    }
+
+    function renderSearchResultsMobile(results) {
+      searchResults = document.getElementById('search-mobile-results');
+
+      var content = document.createElement('div');
+      content.setAttribute('class', 'mobile-search__content');
+
+      if (results.length > 0) {
+        results.forEach(function (result) {
+          var item = document.createElement('a');
+          item.setAttribute('href', result.uri);
+          item.innerHTML = `<div class="mobile-search__item"><div class="mobile-search__item--title">📄 ${result.title}</div><div class="mobile-search__item--desc">${result.description ? result.description : result.content}</div></div>`;
+          content.appendChild(item);
+        });
+      } else {
+        var item = document.createElement('span');
+        content.appendChild(item);
+      }
+
+      $('#search-mobile-results').empty();
+      searchResults.appendChild(content);
+    }
+
+    initLunr();
+
+    $("#search").on('input', function (e) {
+      if (!e.target.value) {
+        $('#search-results').attr('class', 'dropdown');
+        return null;
+      }
+
+      if ($(window).width() < 770) {
+        return null;
+      } 
+
+      var results = search(e.target.value);
+      renderSearchResults(results);
+    });
+
+    $('#search').on('blur', function () {
+      if ($(window).width() < 770) {
+        return null;
+      }
+      setTimeout(function () {
+        $('#search-results').attr('class', 'dropdown');
+      }, 100);
+    });
+
+    $('#search').on('click', function (e) {
+      if ($(window).width() < 770) {
+        return null;
+      }
+      if (!e.target.value) {
+        $('#search-results').attr('class', 'dropdown');
+        return null;
+      }
+      var results = search(e.target.value);
+      renderSearchResults(results);
+    });
+
+    $('#search').on('keydown', function (e) {
+      if ($(window).width() < 770) {
+        return null;
+      }
+      var items = $('#search-menu .dropdown-item');
+      var activeIndex = $('#search-menu .dropdown-item.is-active').index();
+
+      items.removeClass('is-active');
+      if (e.key === 'ArrowDown') {
+        items.eq(activeIndex + 1).addClass('is-active');
+      } else if (e.key === 'ArrowUp') {
+        items.eq(activeIndex - 1).addClass('is-active');
+      } else if (e.key === 'Enter') {
+        var currentItemLink = items.eq(activeIndex).attr('href');
+        if (currentItemLink) {
+          location.href = currentItemLink;
+        }
+      }
+    });
+
+    $("#search-mobile").on('input', function(e) {
+      if (!e.target.value) {
+        $('#search-mobile-results').empty();
+        return null;
+      }
+
+      var results = search(e.target.value);
+      renderSearchResultsMobile(results);
+    });
+  }
+</script>    
+    
+
+
+<link rel="stylesheet" href="/css/main.min.css">
+
+
+    <meta name="description" content="本文将分享观看奈飞的一些经验" />
+<meta name="created" content="2019-12-01T11:18:12&#43;0800">
+<meta name="modified" content="2019-12-01T11:18:12&#43;0800">
+
+
+<meta property="og:site_name" content="Jason Tan&#39;s blog">
+<meta property="og:title" content="如何免费使用Netflix">
+<meta property="og:url" content="https://betterme.xin/posts/free_use_netflix/">
+<meta property="og:type" content="article">
+
+<meta name="generator" content="Hugo 0.60.1" />
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
+
+
+<link rel="canonical" href="https://betterme.xin/posts/free_use_netflix/">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "headline": "如何免费使用Netflix",
+    "datePublished": "2019-12-01T11:18:12+08:00",
+    "dateModified": "2019-12-01T11:18:12+08:00",
+    "url" : "https://betterme.xin/posts/free_use_netflix/",
+    "description": "本文将分享观看奈飞的一些经验",
+    "keywords": ["netflix",""],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://betterme.xin/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Jason Tan's blog",
+      "url": "https://betterme.xin/"
+    }
+  }
+</script>
+
+    
+
+
+
+
+
+
+</head>
+
+<body id="root" class="theme__dark">
+    <script>
+        var localTheme = localStorage.getItem('theme');
+            if (localTheme) {
+                document.getElementById('root').className = `theme__${localTheme}`;
+            }
+    </script>
+    <div id="body">
+        <div class="container wrapper">
+            <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar__brand">
+    
+    <a href="/" title="Home" rel="home" class="navbar__logo-link">
+      <img data-src="/logo.png" src="/logo.png">
+    </a>
+    
+    <a href="/" title="Home" rel="home" class="navbar__title-link">
+      <h6 class="navbar__title">Better</h6>
+    </a>    
+  </div>
+  
+  
+<div class="theme-mobile">
+  <div class="dropdown">
+    <button class="dropdown-trigger navbar__slide-down" aria-label="Invert Colors" style="">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" d="M24 0H0v24h24V0z"/><path fill="currentColor" d="M6.34 7.93c-3.12 3.12-3.12 8.19 0 11.31C7.9 20.8 9.95 21.58 12 21.58s4.1-.78 5.66-2.34c3.12-3.12 3.12-8.19 0-11.31l-4.95-4.95c-.39-.39-1.02-.39-1.41 0L6.34 7.93zM12 19.59c-1.6 0-3.11-.62-4.24-1.76C6.62 16.69 6 15.19 6 13.59s.62-3.11 1.76-4.24L12 5.1v14.49z"/></svg>      
+    </button>
+    <div class="dropdown-content select-theme">
+      
+        
+        <a href="#" class="dropdown-item select-theme__item is-active">
+          dark
+        </a>
+        
+        <a href="#" class="dropdown-item select-theme__item ">
+          light
+        </a>
+        
+        <a href="#" class="dropdown-item select-theme__item ">
+          hacker
+        </a>
+        
+        <a href="#" class="dropdown-item select-theme__item ">
+          solarized
+        </a>
+        
+        <a href="#" class="dropdown-item select-theme__item ">
+          custom
+        </a>
+        
+      
+    </div>
+  </div>
+</div>
+
+  
+<div id="mobileSearchBtn" class="mobile-search__btn">
+  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M15.5 14h-.79l-.28-.27c1.2-1.4 1.82-3.31 1.48-5.34-.47-2.78-2.79-5-5.59-5.34-4.23-.52-7.79 3.04-7.27 7.27.34 2.8 2.56 5.12 5.34 5.59 2.03.34 3.94-.28 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+</div>
+
+<div id="search-mobile-container" class="mobile-search hide">
+  <div class="mobile-search__top">
+    <input id="search-mobile" type="text" aria-label="Mobile Search" placeholder="搜索" class="mobile-search__top--input"/>
+    <div id="search-mobile-close" class="mobile-search__top--icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path opacity=".87" fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.59-13L12 10.59 8.41 7 7 8.41 10.59 12 7 15.59 8.41 17 12 13.41 15.59 17 17 15.59 13.41 12 17 8.41z"/></svg>
+    </div>
+  </div>
+  <div id="search-mobile-results" class="mobile-search__body">
+    
+  </div>
+</div>
+
+  
+  <a role="button" class="navbar__burger" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+  </a>  
+
+  <div class="navbar__menu">
+    
+<div class="theme">
+  <div class="dropdown">
+    <button class="dropdown-trigger navbar__slide-down" aria-label="Select Theme Button">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" d="M24 0H0v24h24V0z"/><path fill="currentColor" d="M6.34 7.93c-3.12 3.12-3.12 8.19 0 11.31C7.9 20.8 9.95 21.58 12 21.58s4.1-.78 5.66-2.34c3.12-3.12 3.12-8.19 0-11.31l-4.95-4.95c-.39-.39-1.02-.39-1.41 0L6.34 7.93zM12 19.59c-1.6 0-3.11-.62-4.24-1.76C6.62 16.69 6 15.19 6 13.59s.62-3.11 1.76-4.24L12 5.1v14.49z"/></svg>      
+    </button>
+    <div class="dropdown-content select-theme">
+      
+        
+        <a href="#" class="dropdown-item select-theme__item is-active">
+          dark
+        </a>
+        
+        <a href="#" class="dropdown-item select-theme__item ">
+          light
+        </a>
+        
+        <a href="#" class="dropdown-item select-theme__item ">
+          hacker
+        </a>
+        
+        <a href="#" class="dropdown-item select-theme__item ">
+          solarized
+        </a>
+        
+        <a href="#" class="dropdown-item select-theme__item ">
+          custom
+        </a>
+        
+      
+    </div>
+  </div>
+</div>
+
+    
+    <a href="/posts" class="navbar__menu-item navbar__slide-down">文章</a>
+    
+    
+    <a href="/notes" class="navbar__menu-item navbar__slide-down">随记</a>
+    
+    
+    <a href="/archive" class="navbar__menu-item navbar__slide-down">归档</a>
+    
+    
+    <a href="/about" class="navbar__menu-item navbar__slide-down">关于我</a>
+    
+    
+  </div>
+</nav>
+            
+            
+<main class="main-main">
+  
+  <nav class="breadcrumb" aria-label="breadcrumbs">
+  <ol>
+    
+  
+  
+  
+  
+  
+  <li >    
+    
+      <a href="https://betterme.xin/">Jason Tan&#39;s blog</a>            
+        
+  </li>
+  
+  
+  <li >    
+    
+      <a href="https://betterme.xin/posts/">Posts</a>
+        
+  </li>
+  
+  
+  <li  class="is-active" >    
+    
+      <a href="https://betterme.xin/posts/free_use_netflix/">如何免费使用Netflix</a>
+        
+  </li>
+  
+  </ol>
+  
+</nav>
+  
+  <div class="single">
+    <h2 class="single__title">如何免费使用Netflix</h2>
+    <div class="single__meta">
+      🕓 2019-12-01 11:18 · ☕4 min read
+      <div class="single__tags caption">
+
+  
+    🏷️
+  
+  
+  <li>
+    <a href="/tags/netflix" class="single__tag">
+      #netflix
+    </a>
+  </li>
+    
+
+  
+    
+
+</div>
+    </div>    
+    <article class="single__contents">
+      <h2 id="netflix">netflix是什么</h2>
+<p>netflix中文名奈飞、网飞，是国外流媒体平台，提供在线看美剧、电影、电视节目等。
+按月订阅，最高套餐支持一个账号4个人同时看4k。
+观看时，根据用户网络质量自动调节画面质量，可切换字幕。
+目前不支持在中国观看。</p>
+<h3 id="heading">片源</h3>
+<ul>
+<li>美区
+资源：约 4000部电影，1600部电视剧。数据2018年8月更新，每月都有变动，下同。
+字幕：仅 Netflix 原创剧集有中文字幕，大部分剧没有中文字幕。</li>
+<li>港区
+资源：约 2000部电影，1000部电视剧。
+字幕：基本都有中文字幕。</li>
+<li>日区
+资源：约5000部电影，1400部电视剧。
+字幕：基本没有中文字幕。</li>
+<li>新加坡
+资源：约2400部电影，1200部电视剧。
+字幕：基本都有中文字幕。</li>
+</ul>
+<p>更多关于 Netflix 各区的影视资源和订阅价格可以查看<a href="http://unogs.com/countrydetail/">这个网站</a>。</p>
+<h2 id="heading1">为什么要看奈飞</h2>
+<p>呃，如果你看美剧，奈飞支持很多自制剧，比如《绝命毒师》、《纸房屋》、《怪奇物语》等等，
+还有其他电影，而且都是是无删减的。在线即可观看，支持手机、电视、ipad多端观看。免去找资源、下载的烦恼，还比国内下载分享的早看到。</p>
+<h2 id="heading2">重点，怎样才能免费看奈飞呢</h2>
+<h4 id="heading3">网络支持</h4>
+<ul>
+<li>自己良好的网络环境，当然宽带越高越好。如果你在国内，那么需要科学上网工具了。比较简单的方式是买服务，买支持观看奈飞的科学上网服务；
+或者自己搭，谷歌云、阿里云国际都支持，搭建教程略。我目前有买服务和谷歌云一年300美金搭的香港节点，
+服务是<a href="https://www.flycloud.shop/auth/register?code=Jjxk">flycloud</a>，若你要买的话，按照自己实际需求，偶尔看，套餐一即可，一年100元以内。
+遗憾的是，这篇文章发布错过了他们商店双十一打折，不然还能便宜点。</li>
+<li>在国外且奈飞支持观看的国家不需要科学上网工具</li>
+</ul>
+<h4 id="heading4">外币信用卡</h4>
+<p>我目前使用的中信银行万事达双币信用卡，听说支持招商单币visa信用卡，我是没绑定成功过。</p>
+<h4 id="heading5">奈飞账号</h4>
+<p>去<a href="https://netflix.com">官网</a>注册汇率较低的国家地区账号、目前是土耳其和阿根廷，方法是科学上网挂土耳其的ip，注册即可，但是需要土耳其手机号接收短信验证码。没有怎么办，
+先注册香港的，使用一个月，再招人合租，合租见下方说明。快要到下个扣费日期，先取消订阅，再挂土耳其ip，重新订阅，那么下个扣费周期就按土耳其的汇率来算了。</p>
+<h4 id="heading6">免费机制</h4>
+<p><a href="https://t.me/hezu1">电报群</a>找人合租，找群主提交资料申请开车，按最高套餐土耳其价格41.99 TL，折合人民币53-55人民币左右。
+账号默认4个成人用户，还有个儿童账户，把儿童账户改成成人用户，就是5个账户，再找四个人，四个人每人一个月15人民币，4x15=60 &gt; 55，所以免费了,还能赚几块🤓</p>
+<p>不担心找不到人，只要合租通知一发出，不到半个小时，4个人全找到了。接下来就是自己管理成员收费了、建议最低季付，三个月的收，自己按时还信用卡即可，经常使用还有助于提额。</p>
+<h3 id="heading7">隐私安全问题</h3>
+<p>登录账号是同一个，密码共享，登录成功后选择子账户，各个子账号相互隔离独立。</p>
+<ul>
+<li>都能看到注册手机号，所以建议手机号使用Google Voice（gv号），电报群有卖，按照号码靓度14-100rmb不等,
+<a href="https://t.me/GoogleVoiceShop">购买gv号群1</a>，<a href="https://t.me/googlevoice001/32296">购买gv号群2</a></li>
+<li>信用卡，无需担心，只能看到信用卡后四位，安全码也看不到，除了更换信用卡，需要填写，但更换信用卡就是按新的信用卡扣费，除了您本人谁还会这么干。</li>
+</ul>
+<h2 id="heading8">总结</h2>
+<p>所以想要免费观看奈飞其实并不麻烦、一个科学上网服务、外币信用卡、一点点耐心。</p>
+<p>唯一需要花钱的地方就是科学上网服务了，也可以不花钱，使用谷歌云自己搭建、那就考验你动手能力了，也需要外币信用卡和gv号，一些简单的linux命令。
+后续看情况再写一些相关教程吧。</p>
+<p>本人免费分享谷歌云香港节点，如有需要，call me maybe.还有什么问题的，也可以联系我，尽管问，反正我也不一定帮😅</p>
+<p>另外分享其他比较好的观影网站</p>
+<ul>
+<li><a href="https://www.novipnoad.com/">novipnoad</a>正如网站域名表达含义，no vip、no ad，无需会员还没广告，提供最新电影、美剧<strong>在线</strong>观看</li>
+<li><a href="http://app.rrys.tv/">人人影视</a>，美剧观影者的福音，可惜需要先下载后再观看</li>
+</ul>
+<h2 id="heading9">其他参考</h2>
+<ul>
+<li><a href="https://blog.shuziyimin.org/16">在中国看 Netflix（网飞），看这一篇就够了</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/58972277">电报使用</a></li>
+</ul>
+
+    </article>
+    
+    <aside class="related">
+    
+    
+    <h1 class="related__title">
+      <hr class="hr-dots"/>
+      <div>
+        其他
+      </div>
+      <hr class="hr-dots"/>
+    </h1>
+    <ul class="related-ul">
+        
+        <li>
+          <a href="/posts/helloworld/" class="related__link">Im back!</a>
+        </li>
+        
+    </ul>
+    
+</aside>
+    <div class="grow"></div>
+<nav class="pagination-single">
+  
+    <a href="https://betterme.xin/posts/helloworld/" class="pagination-single__left">
+      <div class="pagination-single__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
+      </div>
+      <div class="pagination-single__left-title">Im back!</div>      
+    </a>
+  
+  <div class="grow"></div>
+  
+    <a href="https://betterme.xin/notes/firt/" class="pagination-single__right">      
+      <div class="pagination-single__right-title">栏目说明</div>
+      <div class="pagination-single__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
+      </div>
+    </a>
+  
+</nav>
+    
+  
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+  
+  <div class="pswp__bg"></div>
+
+  
+  <div class="pswp__scroll-wrap">
+
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+
+    
+    <div class="pswp__ui pswp__ui--hidden">
+
+      <div class="pswp__top-bar">
+
+        
+
+        <div class="pswp__counter"></div>
+
+        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+        <button class="pswp__button pswp__button--share" title="Share"></button>
+
+        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+        
+        
+        <div class="pswp__preloader">
+          <div class="pswp__preloader__icn">
+            <div class="pswp__preloader__cut">
+              <div class="pswp__preloader__donut"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+        <div class="pswp__share-tooltip"></div>
+      </div>
+
+      <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+      </button>
+
+      <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+      </button>
+
+      <div class="pswp__caption">
+        <div class="pswp__caption__center"></div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+    <div class="hide">
+    
+
+<div class="search">
+  <span class="icon">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M15.5 14h-.79l-.28-.27c1.2-1.4 1.82-3.31 1.48-5.34-.47-2.78-2.79-5-5.59-5.34-4.23-.52-7.79 3.04-7.27 7.27.34 2.8 2.56 5.12 5.34 5.59 2.03.34 3.94-.28 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+  </span>
+  <input id="search" aria-label="Site Search" class="input" type="text" placeholder="搜索" autocomplete="off">
+  <div id="search-results" class="dropdown">
+    <div id="search-menu" class="dropdown-menu" role="menu">
+    </div>
+  </div>
+</div>
+
+
+<script defer src="/js/lunr.min.74ef9f2fd39b71f2410c165b75402f2e112977745d76b87120e4571e73008e76.js"></script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/lunr-languages@1.4.0/min/lunr.stemmer.support.min.js" integrity="sha256-LnITYFhGoYAU7HUJEMsYqKTGC7IyABA7P62e8nsQxwU=" crossorigin="anonymous" title="stemmer"></script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/lunr-languages@1.4.0/min/lunr.multi.min.js" integrity="sha256-l2H0da5582Qg/3FN+ZUO+yZO/8+SMO/VW1EaDeiZ6Xk=" crossorigin="anonymous" title="multiLanguage"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+    </div>
+  </div>
+</main>
+
+
+<aside class="main-side">
+  
+
+
+<section class="sidebar">
+  <div class="toc__flexbox">
+    <h6 class="toc__title">文中导航</h6>
+    
+      <label class="switch">
+        <input id="toggle-toc" aria-label="Toggle TOC" type="checkbox" checked>
+        <span class="slider round"></span>
+      </label>
+    
+  </div>
+  <div class="toc">
+    <ul id="toc"></ul>
+  </div>
+</section>
+
+
+
+</aside>
+
+
+
+
+
+<script defer src="/js/jquery.min.0925e8ad7bd971391a8b1e98be8e87a6971919eb5b60c196485941c3c1df089a.js"></script>
+
+<script defer src="/js/clipboard.min.1626706afc88d95ebe1173b553ec732c6dc82a576989315fdf5e7779af738a44.js"></script>
+
+<script defer src="/js/enquire.min.72cb9edeb1ca1b92f5bf9df8d31a1ecd1e423d0b5e0f48a2a208b020dd5053fa.js"></script>
+
+<script defer src="/js/lazysizes.min.31dd6a2d3a1ec0f78a8df007535cf23f03aeb5c70f026e6d6a19dac3b3acc340.js"></script>
+
+<script defer src="/js/zzo.min.3c0983fb92bee20a024044eb95a72e68ad74c1a8194e2ef2408b20e70f212125.js"></script>
+
+
+  
+  <script defer src="/js/photoswipe.min.8edf934cf81ca088ec72ef362c66090602eee3e583198ec96690978bcd183531.js"></script>
+  
+  <script defer src="/js/photoswipe-ui-default.min.efb61f810902a76a0baf817174c11e94d5b5238748a0513db4a310a15e7e3059.js"></script>
+  
+  <link rel="stylesheet" href="/css/photoswipe/photoswipe.min.css">
+  
+  <link rel="stylesheet" href="/css/photoswipe/custom-skin.min.css">
+
+
+
+  
+  <script defer src="/js/jquery.toc.min.376e1b5d343786c1978dbad9ea7a0e23088947732993a91dcbad995883c96ceb.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  window.onload = function() {
+    
+    (function () {
+      document.querySelectorAll('.chroma > table')
+        .forEach((element) => {
+          const sub = element.querySelector('code[data-lang]');
+          if (sub) {
+            $(element).closest('div.chroma').attr('data-lang', mapLang(sub.getAttribute('data-lang')));
+          }
+        }
+      );
+    })();
+
+    (function () {
+      document.querySelectorAll('.single__contents > pre > code')
+        .forEach((element) => {
+          if (!$(element).attr('data-lang')) {
+            $(element).parent().wrap('<div data-lang="Code" class="language-code"></div>');
+          }
+        });
+    })();
+
+    function mapLang(name) {
+      return {
+        coffeescript: 'CoffeeScript',
+        cpp: 'C++',
+        cs: 'C#',
+        css: 'CSS',
+        html: 'HTML',
+        http: 'HTTP',
+        js: 'JavaScript',
+        json: 'JSON',
+        objectivec: 'Objective-C',
+        php: 'PHP',
+        sql: 'SQL',
+        toml: 'TOML',
+        ts: 'TypeScript',
+        typescript: 'TypeScript',
+        xml: 'XML',
+        yaml: 'YAML',
+      }[name] || name.toUpperCase();
+    }
+
+    
+    runSearch();
+
+    var navbar = $('.navbar');
+
+    
+    
+    var enableToc = JSON.parse("true");
+    
+    if (enableToc) {
+      $("#toc").toc({ content: ".single__contents", headings: "h1,h2,h3,h4" });
+      $('#toc > li').each(function () {
+        $(this).find('ul').css('display', 'none');
+      });
+      $('#toc a').each(function () {
+        $(this).click(function () {
+          navbar.removeClass('navbar--show');
+          navbar.removeClass('navbar--hide');
+          navbar.addClass('navbar--hide');
+
+          $(".single__contents :header").each(function () {
+            $('.toc a').removeClass('active');
+          });
+          $(this).addClass('active');
+
+          $('#toc > li').each(function () {
+            $(this).find('ul').css('display', 'none');
+          });
+          $(this).next().css('display', 'block');
+          $(this).parents('ul').css('display', 'block');
+        });
+      });
+
+      
+      $("#toggle-toc").change(function () {
+        if (this.checked) {
+          $('.toc').fadeIn(200);
+        } else {
+          $('.toc').fadeOut(200);
+        }
+      });
+    }    
+
+    
+    var text, clip = new ClipboardJS('.anchor');
+    var headers = $('.single__contents :header').not('h6').not('h5');
+    headers.append(function (index, html) {
+      var element = $(this);
+      var url = encodeURI(document.location.origin + document.location.pathname);
+      var link = url + "#" + element[0].id;
+      return " <span class='anchor hide' data-clipboard-text='" + link + "' style='position: relative;'>" +
+        "<span style='font-size: 1rem; position: absolute; right: -2rem; top: 50%; transform: translateY(-50%)'>🔗</span>" +
+        "</span>"
+        ;
+    });
+    headers.on('mouseenter', function () {
+      $(this).find('.anchor').attr('class', 'anchor');
+    });
+    headers.on('mouseleave', function () {
+      $(this).find('.anchor').attr('class', 'anchor hide');
+    });
+
+    $(".anchor").on('mouseleave', function (e) {
+      $(this).attr('aria-label', null).removeClass('tooltipped tooltipped-s tooltipped-w');
+    });
+
+    clip.on('success', function (e) {
+      e.clearSelection();
+      $(e.trigger).attr('aria-label', 'Link copied to clipboard!').addClass('tooltipped tooltipped-s');
+    });
+    
+    $('.language-code').each(function (i, node) {
+      $(node).append('<span class="copy-to-clipboard" title="Copy to clipboard"/>');
+    });
+
+    
+    var clipInit = false;
+    $('pre.chroma code, .language-code code').each(function () {
+      var code = $(this),
+        text = code.text();
+
+      if (text.length > 30) {
+        if (!clipInit) {
+          var text, clip = new ClipboardJS('.copy-to-clipboard', {
+            text: function (trigger) {
+              console.log();
+              if ($(trigger).prev().find('code').length > 1) {                
+                text = $(trigger).prev().find(`code[class^="language-"]`).text();
+              } else {
+                text = $(trigger).prev().find('code').text();
+              }
+               
+              return text.replace(/^\$\s/gm, '');
+            }
+          });
+
+          var inPre;
+          clip.on('success', function (e) {
+            e.clearSelection();
+            inPre = $(e.trigger).parent().prop('tagName') == 'PRE';
+            $(e.trigger).attr('aria-label', 'Copied to clipboard!').addClass('tooltipped tooltipped-' + (inPre ? 'w' : 's'));
+          });
+
+          clip.on('error', function (e) {
+            inPre = $(e.trigger).parent().prop('tagName') == 'PRE';
+            $(e.trigger).attr('aria-label', fallbackMessage(e.action)).addClass('tooltipped tooltipped-' + (inPre ? 'w' : 's'));
+            $(document).one('copy', function () {
+              $(e.trigger).attr('aria-label', 'Copied to clipboard!').addClass('tooltipped tooltipped-' + (inPre ? 'w' : 's'));
+            });
+          });
+
+          clipInit = true;
+        }
+
+        var notAllowedClass = ['language-mermaid', 'language-viz', 'language-wave', 'language-chart', 'language-msc', 'language-flowchart'];
+        var isNotAllowedIncluded = false;
+        var curClassName = code.attr('class');
+
+        for (let str of notAllowedClass) {
+          if (curClassName && curClassName.startsWith(str)) {
+            isNotAllowedIncluded = true;
+            break;
+          } 
+        }
+        
+        if (!isNotAllowedIncluded) {
+          if (curClassName) {
+            code.closest('div.chroma').append('<span class="copy-to-clipboard" title="Copy to clipboard" />');
+          }         
+        }        
+      }
+    });
+
+    
+    
+    var enablePhotoSwipe = JSON.parse("true");
+    
+    if (enablePhotoSwipe) {
+      var pswpElement = $('.pswp')[0];
+      var imgElements = $('.single__contents').find('img');
+      var items = [];
+
+      imgElements.each(function (i, v) {
+        $(this).click(function (e) {
+          initGallery(i);
+        });
+        $(this).css('cursor', 'pointer');
+        items.push({
+          src: v['src'],
+          w: 0,
+          h: 0,
+          title: filename(v['src']),
+        });
+      });
+
+      function filename(str) {
+        var s = str.replace(/\\/g, '/');
+        s = s.substring(s.lastIndexOf('/') + 1);
+        return str ? s.replace(/[?#].+$/, '') : s.split('.')[0];
+      }
+
+      function initGallery(index) {
+        var options = { index: index };
+        var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+        gallery.listen('imageLoadComplete', function (index, item) {
+          if (item.h < 1 || item.w < 1) {
+            let img = new Image();
+            img.onload = () => {
+              item.w = img.width;
+              item.h = img.height;
+              gallery.invalidateCurrItems();
+              gallery.updateSize(true);
+            }
+            img.src = item.src;
+          }
+        });
+        gallery.init();
+      }
+    }
+
+    
+    
+    var lib = JSON.parse("null");
+
+    if (lib && lib.includes('mermaid')) {
+      
+      var themeVariant = localStorage.getItem('theme') || JSON.parse("\"dark\"");
+
+      if (themeVariant === "dark" || themeVariant === "hacker") {
+        mermaid.initialize({ theme: 'dark' });
+      } else {
+        mermaid.initialize({ theme: 'default' });
+      }
+      
+      let mermaids = [];
+      [].push.apply(mermaids, document.getElementsByClassName('language-mermaid'));
+      for (i = 0; i < mermaids.length; i++) {
+        $(mermaids[i]).unwrap('pre');
+        $(mermaids[i]).replaceWith(function () {
+          return $("<div />").append($(this).contents()).addClass('mermaid').css('padding', '34px 4px 6px');
+        });
+      }
+
+      
+
+    }
+
+    
+    if (lib && lib.includes('katex')) {
+      var mathElements = document.getElementsByClassName('math');
+      var options = [
+        { left: "$$", right: "$$", display: true },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ];
+
+      renderMathInElement(document.querySelector('.single__contents'), options);
+    }
+
+    
+    if (lib && lib.includes('flowchartjs')) {
+      
+      var options = JSON.parse("{\"arrow-end\":\"block\",\"element-color\":\"black\",\"fill\":\"white\",\"flowstate\":{\"approved\":{\"fill\":\"#58C4A3\",\"font-size\":12,\"no-text\":\"n/a\",\"yes-text\":\"APPROVED\"},\"current\":{\"fill\":\"yellow\",\"font-color\":\"red\",\"font-weight\":\"bold\"},\"future\":{\"fill\":\"#FFFF99\"},\"invalid\":{\"fill\":\"#444444\"},\"past\":{\"fill\":\"#CCCCCC\",\"font-size\":12},\"rejected\":{\"fill\":\"#C45879\",\"font-size\":12,\"no-text\":\"REJECTED\",\"yes-text\":\"n/a\"},\"request\":{\"fill\":\"blue\"}},\"font-color\":\"black\",\"font-size\":14,\"line-color\":\"black\",\"line-length\":50,\"line-width\":3,\"no-text\":\"no\",\"scale\":1,\"symbols\":{\"end\":{\"class\":\"end-element\"},\"start\":{\"element-color\":\"green\",\"fill\":\"yellow\",\"font-color\":\"red\"}},\"text-margin\":10,\"x\":0,\"y\":0,\"yes-text\":\"yes\"}");
+
+      var flowchartPrefix = "language-flowchart";
+      var index = 0;
+      Array.prototype.forEach.call(document.querySelectorAll("[class^=" + flowchartPrefix + "]"), function(x){
+          x.style.display = 'none'
+          x.parentNode.style.backgroundColor = "transparent"
+          jsonContent = x.innerText;
+
+          node0 = document.createElement('div');
+          node0.id = 'flowchart' + index;
+          x.parentNode.insertBefore(node0, x);
+
+          var diagram = flowchart.parse(jsonContent);
+          diagram.drawSVG("flowchart"+index, options);
+
+          index +=1;
+      });
+      
+      
+
+    }
+
+    
+    if (lib && lib.includes('mathjax')) {
+      window.MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']],
+          processEscapes: false,
+          packages: { '[+]': ['noerrors'] }
+        },
+        loader: {
+          load: ['[tex]/noerrors']
+        },
+      };
+    }
+
+    
+    if (lib && lib.includes('msc')) {
+      
+      var options = JSON.parse("{\"theme\":\"hand\"}");    
+
+      var index = 0;
+      var chartPrefix = "language-msc";
+      Array.prototype.forEach.call(document.querySelectorAll("[class^=" + chartPrefix + "]"), function (x) {
+        x.style.display = 'none'
+        x.parentNode.style.backgroundColor = "transparent"
+        jsonContent = x.innerText;
+        node0 = document.createElement('div');
+        node0.id = 'msc' + index;
+        x.parentNode.insertBefore(node0, x);
+        var diagram = Diagram.parse(jsonContent);
+        diagram.drawSVG("msc" + index, options);
+        index += 1;
+      });
+
+      
+
+    }
+
+    
+    if (lib && lib.includes('chart')) {
+      var borderColor = "#666";
+      var bgColor = "#ddd";
+      var borderWidth = 2;
+
+      Chart.defaults.global.elements.rectangle.borderWidth = borderWidth;
+      Chart.defaults.global.elements.rectangle.borderColor = borderColor;
+      Chart.defaults.global.elements.rectangle.backgroundColor = bgColor;
+
+      Chart.defaults.global.elements.line.borderWidth = borderWidth;
+      Chart.defaults.global.elements.line.borderColor = borderColor;
+      Chart.defaults.global.elements.line.backgroundColor = bgColor;
+
+      Chart.defaults.global.elements.point.borderWidth = borderWidth;
+      Chart.defaults.global.elements.point.borderColor = borderColor;
+      Chart.defaults.global.elements.point.backgroundColor = bgColor;
+
+      var chartPrefix = "language-chart";
+      var index = 0;
+      Array.prototype.forEach.call(document.querySelectorAll("[class^=" + chartPrefix + "]"), function (x) {
+        x.style.display = 'none'
+        x.parentNode.style.backgroundColor = "transparent"
+        jsonContent = x.innerText;
+        node0 = document.createElement('canvas');
+        node0.height = 200;
+        node0.style.height = 200;
+        node0.id = 'myChart' + index;
+        source = JSON.parse(jsonContent);
+        x.parentNode.insertBefore(node0, x);
+        var ctx = document.getElementById('myChart' + index).getContext('2d');
+        var myChart = new Chart(ctx, source);
+        index += 1;
+      });      
+
+      
+
+      
+    }
+
+    
+    if (lib && lib.includes('wavedrom')) {
+      
+
+
+      var wavePrefix = "language-wave";
+      var index = 0;
+      Array.prototype.forEach.call(document.querySelectorAll("[class^=" + wavePrefix + "]"), function (x) {
+        x.style.display = 'none'
+        x.parentNode.style.backgroundColor = "transparent"
+        jsonContent = x.innerText;
+        node0 = document.createElement('div');
+        node0.id = 'WaveDrom_Display_' + index;
+        source = JSON.parse(jsonContent);
+        x.parentNode.insertBefore(node0, x);
+        WaveDrom.RenderWaveForm(index, source, "WaveDrom_Display_");
+        index += 1;
+      });
+    }
+
+    
+    if (lib && lib.includes('viz')) {
+      
+
+
+      var vizPrefix = "language-viz-";
+      Array.prototype.forEach.call(document.querySelectorAll("[class^=" + vizPrefix + "]"), function (x) {
+        x.style.display = 'none'
+        x.parentNode.style.backgroundColor = "transparent"
+        var engine;
+        x.getAttribute("class").split(" ").forEach(function (cls) {
+          if (cls.startsWith(vizPrefix)) {
+            engine = cls.substr(vizPrefix.length);
+          }
+        });
+        var viz = new Viz();
+        viz.renderSVGElement(x.innerText, { engine: engine })
+          .then(function (element) {
+            element.style.width = "100%";
+            x.parentNode.insertBefore(element, x);
+          })
+      });
+    }
+  }
+</script>
+
+
+            <footer class="footer">
+    <div class="footer__wrapper">
+        
+        
+<div class="footer__social">
+  <div class="social">
+    
+      
+      <a href="mailto:uniqueacheng@email.com" title="email" aria-label="email">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-.4 4.25l-7.07 4.42c-.32.2-.74.2-1.06 0L4.4 8.25c-.25-.16-.4-.43-.4-.72 0-.67.73-1.07 1.3-.72L12 11l6.7-4.19c.57-.35 1.3.05 1.3.72 0 .29-.15.56-.4.72z"/></svg>
+      </a>
+            
+    
+            
+    
+      
+      <a href="https://github.com/Jason-cqtan" title="github" aria-label="github">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 24 24" version="1.1">
+<g id="surface3680">
+<path fill="currentColor" d="M 10.898438 2.101562 C 6.300781 2.601562 2.601562 6.300781 2.101562 10.800781 C 1.601562 15.5 4.300781 19.699219 8.398438 21.300781 C 8.699219 21.398438 9 21.199219 9 20.800781 L 9 19.199219 C 9 19.199219 8.601562 19.300781 8.101562 19.300781 C 6.699219 19.300781 6.101562 18.101562 6 17.398438 C 5.898438 17 5.699219 16.699219 5.398438 16.398438 C 5.101562 16.300781 5 16.300781 5 16.199219 C 5 16 5.300781 16 5.398438 16 C 6 16 6.5 16.699219 6.699219 17 C 7.199219 17.800781 7.800781 18 8.101562 18 C 8.5 18 8.800781 17.898438 9 17.800781 C 9.101562 17.101562 9.398438 16.398438 10 16 C 7.699219 15.5 6 14.199219 6 12 C 6 10.898438 6.5 9.800781 7.199219 9 C 7.101562 8.800781 7 8.300781 7 7.601562 C 7 7.199219 7 6.601562 7.300781 6 C 7.300781 6 8.699219 6 10.101562 7.300781 C 10.601562 7.101562 11.300781 7 12 7 C 12.699219 7 13.398438 7.101562 14 7.300781 C 15.300781 6 16.800781 6 16.800781 6 C 17 6.601562 17 7.199219 17 7.601562 C 17 8.398438 16.898438 8.800781 16.800781 9 C 17.5 9.800781 18 10.800781 18 12 C 18 14.199219 16.300781 15.5 14 16 C 14.601562 16.5 15 17.398438 15 18.300781 L 15 20.898438 C 15 21.199219 15.300781 21.5 15.699219 21.398438 C 19.398438 19.898438 22 16.300781 22 12.101562 C 22 6.101562 16.898438 1.398438 10.898438 2.101562 Z M 10.898438 2.101562 "/>
+</g>
+</svg>
+
+      </a>
+            
+    
+            
+    
+            
+    
+            
+    
+            
+    
+            
+    
+            
+    
+            
+    
+      
+      <a href="https://steamcommunity.com/id/93jc" title="steam" aria-label="steam">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="#fafafa" width="24" height="24" viewBox="0 0 26 26"><path d="M24 12c0 6.627-5.373 12-12 12-5.782 0-10.608-4.091-11.744-9.537l4.764 2.003c.285 1.441 1.56 2.547 3.115 2.534 1.723-.017 3.105-1.414 3.116-3.129l.007-.003 3.602-2.684c2.304.024 4.14-1.833 4.14-4.091 0-2.26-1.834-4.093-4.093-4.093-2.234 0-4.048 1.791-4.09 4.015l-2.64 3.693c-.668-.014-1.269.169-1.791.51l-6.294-2.646c.708-5.953 5.765-10.572 11.908-10.572 6.627 0 12 5.373 12 12zm-16.577 5.477l-1.544-.649c.38.858 1.236 1.461 2.249 1.457 1.346-.012 2.422-1.11 2.41-2.455-.012-1.329-1.104-2.41-2.432-2.41-.287.001-.57.05-.86.16l1.542.648c.898.378 1.319 1.411.941 2.308-.376.896-1.409 1.318-2.306.941zm7.484-5.602c-1.533 0-2.781-1.249-2.781-2.782 0-1.534 1.248-2.782 2.781-2.782 1.534 0 2.781 1.248 2.781 2.782 0 1.533-1.247 2.782-2.781 2.782zm0-.682c1.159 0 2.1-.942 2.1-2.101 0-1.158-.94-2.102-2.1-2.102s-2.102.943-2.102 2.102c.001 1.159.943 2.101 2.102 2.101z"/></svg>
+      </a>
+            
+    
+      
+      <a href="https://t.me/aeiou_93" title="telegram" aria-label="telegram">
+        <svg width="24px" height="24px" fill="#fafafa" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;"><path id="telegram-1" d="M18.384,22.779c0.322,0.228 0.737,0.285 1.107,0.145c0.37,-0.141 0.642,-0.457 0.724,-0.84c0.869,-4.084 2.977,-14.421 3.768,-18.136c0.06,-0.28 -0.04,-0.571 -0.26,-0.758c-0.22,-0.187 -0.525,-0.241 -0.797,-0.14c-4.193,1.552 -17.106,6.397 -22.384,8.35c-0.335,0.124 -0.553,0.446 -0.542,0.799c0.012,0.354 0.25,0.661 0.593,0.764c2.367,0.708 5.474,1.693 5.474,1.693c0,0 1.452,4.385 2.209,6.615c0.095,0.28 0.314,0.5 0.603,0.576c0.288,0.075 0.596,-0.004 0.811,-0.207c1.216,-1.148 3.096,-2.923 3.096,-2.923c0,0 3.572,2.619 5.598,4.062Zm-11.01,-8.677l1.679,5.538l0.373,-3.507c0,0 6.487,-5.851 10.185,-9.186c0.108,-0.098 0.123,-0.262 0.033,-0.377c-0.089,-0.115 -0.253,-0.142 -0.376,-0.064c-4.286,2.737 -11.894,7.596 -11.894,7.596Z"/></svg>
+      </a>
+            
+    
+            
+    
+      
+      <a href="https://twitter.com/O_achengtan" title="twitter" aria-label="twitter">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32" version="1.1">
+<g id="surface676">
+<path fill="currentColor" d="M 28 8.558594 C 27.117188 8.949219 26.167969 9.214844 25.171875 9.332031 C 26.1875 8.722656 26.96875 7.757812 27.335938 6.609375 C 26.386719 7.171875 25.332031 7.582031 24.210938 7.804688 C 23.3125 6.847656 22.03125 6.246094 20.617188 6.246094 C 17.898438 6.246094 15.691406 8.453125 15.691406 11.171875 C 15.691406 11.558594 15.734375 11.933594 15.820312 12.292969 C 11.726562 12.089844 8.097656 10.128906 5.671875 7.148438 C 5.246094 7.875 5.003906 8.722656 5.003906 9.625 C 5.003906 11.332031 5.871094 12.839844 7.195312 13.722656 C 6.386719 13.695312 5.628906 13.476562 4.964844 13.105469 C 4.964844 13.128906 4.964844 13.148438 4.964844 13.167969 C 4.964844 15.554688 6.660156 17.546875 8.914062 17.996094 C 8.5 18.109375 8.066406 18.171875 7.617188 18.171875 C 7.300781 18.171875 6.988281 18.140625 6.691406 18.082031 C 7.316406 20.039062 9.136719 21.460938 11.289062 21.503906 C 9.605469 22.824219 7.480469 23.609375 5.175781 23.609375 C 4.777344 23.609375 4.386719 23.585938 4 23.539062 C 6.179688 24.9375 8.765625 25.753906 11.546875 25.753906 C 20.605469 25.753906 25.558594 18.25 25.558594 11.742188 C 25.558594 11.53125 25.550781 11.316406 25.542969 11.105469 C 26.503906 10.410156 27.339844 9.542969 28 8.558594 Z M 28 8.558594 "/>
+</g>
+</svg>
+
+      </a>
+            
+    
+            
+    
+    
+  <a href="//index.xml" type="application/rss+xml" title="rss" aria-label="RSS Feed Link">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><circle fill="currentColor" cx="6.18" cy="17.82" r="2.18"/><path fill="currentColor" d="M5.59 10.23c-.84-.14-1.59.55-1.59 1.4 0 .71.53 1.28 1.23 1.4 2.92.51 5.22 2.82 5.74 5.74.12.7.69 1.23 1.4 1.23.85 0 1.54-.75 1.41-1.59-.68-4.2-3.99-7.51-8.19-8.18zm-.03-5.71C4.73 4.43 4 5.1 4 5.93c0 .73.55 1.33 1.27 1.4 6.01.6 10.79 5.38 11.39 11.39.07.73.67 1.28 1.4 1.28.84 0 1.5-.73 1.42-1.56-.73-7.34-6.57-13.19-13.92-13.92z"/></svg>
+  </a>
+
+  </div>
+</div>
+        
+        
+<aside id="gtt">
+  <div class="gtt">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M8.12 14.71L12 10.83l3.88 3.88c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L12.7 8.71c-.39-.39-1.02-.39-1.41 0L6.7 13.3c-.39.39-.39 1.02 0 1.41.39.38 1.03.39 1.42 0z"/></svg>
+  </div>
+</aside>
+
+    </div>
+    <hr />
+
+    
+    <div class="footer__poweredby">
+        
+            <p class="caption">
+                ©2019, All Rights Reserved
+            </p>
+        
+        <p class="caption">Powered by <a href="https://gohugo.io/" rel="noreferrer">Hugo</a></p>
+    </div>
+        
+</footer>
+        </div>    
+    </div>    
+</body>
+
+</html>

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Notes on Jason Tan&#39;s blog</title>
-    <link>https://betterme.xin/notes/</link>
-    <description>Recent content in Notes on Jason Tan&#39;s blog</description>
+    <title>电影 on Jason Tan&#39;s blog</title>
+    <link>https://betterme.xin/tags/%E7%94%B5%E5%BD%B1/</link>
+    <description>Recent content in 电影 on Jason Tan&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Sun, 01 Dec 2019 23:49:45 +0800</lastBuildDate>
     
-	<atom:link href="https://betterme.xin/notes/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://betterme.xin/tags/%E7%94%B5%E5%BD%B1/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,15 +18,6 @@
       
       <guid>https://betterme.xin/notes/2019-12-01/</guid>
       <description>时间总是静悄悄从我们身旁溜走 英雄会末路 美人也难逃迟暮 所有的旧日酣梦都会醒来 所有曾经时光给予我们的东西 我们也终将 如数奉还</description>
-    </item>
-    
-    <item>
-      <title>栏目说明</title>
-      <link>https://betterme.xin/notes/firt/</link>
-      <pubDate>Sun, 01 Dec 2019 13:53:59 +0800</pubDate>
-      
-      <guid>https://betterme.xin/notes/firt/</guid>
-      <description>随记 这里记录比文章短的一些语句，类似微博，Twitter短语。日常八卦、牢骚、毒鸡汤啊等等&amp;hellip;</description>
     </item>
     
   </channel>

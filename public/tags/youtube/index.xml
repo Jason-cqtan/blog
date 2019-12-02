@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>life on Jason Tan&#39;s blog</title>
-    <link>https://betterme.xin/categories/life/</link>
-    <description>Recent content in life on Jason Tan&#39;s blog</description>
+    <title>youtube on Jason Tan&#39;s blog</title>
+    <link>https://betterme.xin/tags/youtube/</link>
+    <description>Recent content in youtube on Jason Tan&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Mon, 02 Dec 2019 20:16:24 +0800</lastBuildDate>
     
-	<atom:link href="https://betterme.xin/categories/life/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://betterme.xin/tags/youtube/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,15 +18,6 @@
       
       <guid>https://betterme.xin/notes/youtube_share/</guid>
       <description>当你使用科学上网后，就可以看youtube，如果你不想在看视频的时候冒出广告打断你，可以尝试订阅YouTube Premium，单独买就很贵，</description>
-    </item>
-    
-    <item>
-      <title>如何免费使用Netflix</title>
-      <link>https://betterme.xin/posts/free_use_netflix/</link>
-      <pubDate>Sun, 01 Dec 2019 11:18:12 +0800</pubDate>
-      
-      <guid>https://betterme.xin/posts/free_use_netflix/</guid>
-      <description>netflix是什么 netflix中文名奈飞、网飞，是国外流媒体平台，提供在线看美剧、电影、电视节目等。 按月订阅，最高套餐支持一个账号4个人</description>
     </item>
     
   </channel>

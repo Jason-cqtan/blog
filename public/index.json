@@ -18,6 +18,15 @@
 	"content": ""
 },
 {
+	"uri": "https://betterme.xin/categories/life/",
+	"title": "life",
+	"tags": [],
+	"categories": [],
+	"series": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://betterme.xin/notes/",
 	"title": "Notes",
 	"tags": [],
@@ -45,6 +54,24 @@
 	"content": ""
 },
 {
+	"uri": "https://betterme.xin/tags/youtube/",
+	"title": "youtube",
+	"tags": [],
+	"categories": [],
+	"series": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://betterme.xin/notes/youtube_share/",
+	"title": "youtube订阅推荐",
+	"tags": ["youtube"],
+	"categories": [],
+	"series": [""],
+	"description": "",
+	"content": "当你使用科学上网后，就可以看youtube，如果你不想在看视频的时候冒出广告打断你，可以尝试订阅YouTube Premium，单独买就很贵，电报合租群可以合租，一年40-50rmb左右。另外还有很多服务都可以合租，spotify 、Adguard、HBO GO 、appletv+、amazon prime video、surge iOS、1password、office365、Disney+，甚至还有pornhub\n下面是个人订阅的部分youtube频道推荐，至于是哪些类型，自己看看就知道咯\n 李永乐老师 老高與小茉 Mr \u0026amp; Mrs Gao BIGDONGDONG She's Danni -Wen Zhao Official文昭談古論今 The Daily Dropout  "
+},
+{
 	"uri": "https://betterme.xin/notes/2019-12-01/",
 	"title": "大地惊雷",
 	"tags": ["电影"],
@@ -70,15 +97,6 @@
 	"series": [""],
 	"description": "",
 	"content": "随记 这里记录比文章短的一些语句，类似微博，Twitter短语。日常八卦、牢骚、毒鸡汤啊等等\u0026hellip;\n"
-},
-{
-	"uri": "https://betterme.xin/categories/life/",
-	"title": "life",
-	"tags": [],
-	"categories": [],
-	"series": [],
-	"description": "",
-	"content": ""
 },
 {
 	"uri": "https://betterme.xin/tags/netflix/",

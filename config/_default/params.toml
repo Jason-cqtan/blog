@@ -1,5 +1,6 @@
 logoText = "" # site navigation bar logo text.
-description = "blog" # for SEO
+description = "享受生活,乐于分享,happy coding,To be better me." # for SEO
+keywords = "Blog,生活,编程,分享"
 custom_css = [] # custom_css = ["scss/custom.scss"] and then make file at root/assets/scss/custom.scss
 custom_js = [] # custom_js = ["js/custom.js"] and then make file at root/assets/js/custom.js
 
@@ -104,13 +105,3 @@ commento = false
   telegram= "https://t.me/aeiou_93"
   twitter = "https://twitter.com/O_achengtan"
   github = "https://github.com/Jason-cqtan"
-  facebook = ""
-  stack-overflow = ""
-  instagram = ""
-  google-plus = ""
-  youtube = ""
-  medium = ""
-  tumblr = ""
-  linkedin = ""
-  pinterest = ""
-  stack-exchange = ""

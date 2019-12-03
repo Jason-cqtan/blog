@@ -14,6 +14,7 @@ enableEmoji = true
 paginate = 5 # Number of items per page in paginated lists.
 rssLimit = 100
 
+googleAnalytics = "G-EFCG87V923"
 pygmentsOptions = "linenos=table"
 pygmentsUseClasses = true
 

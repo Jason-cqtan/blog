@@ -1,4 +1,4 @@
-logoText = "Better" # site navigation bar logo text.
+logoText = "" # site navigation bar logo text.
 description = "blog" # for SEO
 custom_css = [] # custom_css = ["scss/custom.scss"] and then make file at root/assets/scss/custom.scss
 custom_js = [] # custom_js = ["js/custom.js"] and then make file at root/assets/js/custom.js

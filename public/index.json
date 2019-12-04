@@ -18,7 +18,7 @@
 	"content": ""
 },
 {
-	"uri": "https://betterme.xin/categories/life/",
+	"uri": "https://betterme.xin/tags/life/",
 	"title": "life",
 	"tags": [],
 	"categories": [],
@@ -47,6 +47,24 @@
 {
 	"uri": "https://betterme.xin/tags/",
 	"title": "Tags",
+	"tags": [],
+	"categories": [],
+	"series": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://betterme.xin/notes/2019-12/note1/",
+	"title": "选择",
+	"tags": ["life"],
+	"categories": [],
+	"series": [""],
+	"description": "生命可以归结为一种简单的选择，要么忙着生存，要么忙着死去！",
+	"content": "I guess it comes down to a simple choice: Get busy living or get busy die!\n生命可以归结为一种简单的选择，要么忙着生存，要么忙着死去！\n"
+},
+{
+	"uri": "https://betterme.xin/categories/life/",
+	"title": "life",
 	"tags": [],
 	"categories": [],
 	"series": [],

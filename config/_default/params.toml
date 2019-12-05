@@ -53,6 +53,13 @@ enableComment = true
 disqus_shortname = "" 
 commento = false
 
+# service
+baiduAnalytics = "" # china, alternative of google analytics
+enableBusuanzi = true # if set true, total page view, total unique visitors show up in the sidebar.
+busuanziSiteUV = true # unique visitors (total number of visitors)
+busuanziSitePV = true # site total page view count
+busuanziPagePV = true # post view count
+
 [gitment]          # Gitment is a comment system based on GitHub issues. see https://github.com/imsun/gitment
   owner = ""              # Your GitHub ID
   repo = ""               # The repo to store comments
@@ -105,3 +112,10 @@ commento = false
   telegram= "https://t.me/aeiou_93"
   twitter = "https://twitter.com/O_achengtan"
   github = "https://github.com/Jason-cqtan"
+
+
+
+[donationOptions] 
+  enable = true # if set, donation button will show up in the single page.
+  alipay = "images/alipay.png" # Alipay QR Code image (example path: images/donation/alipay-qrcode.png) and put your file at root/static/images/donation/
+  wechat = "images/wechat.png" # Wechat pay QR Code image (example path: same as above)

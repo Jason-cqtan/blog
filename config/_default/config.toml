@@ -12,7 +12,7 @@ summaryLength = 70
 copyright = "&copy;{year}, All Rights Reserved" # copyright symbol: $copy; current year: {year}
 timeout = 10000
 enableEmoji = true
-paginate = 5 # Number of items per page in paginated lists.
+paginate = 10 # Number of items per page in paginated lists.
 rssLimit = 100
 
 googleAnalytics = "G-EFCG87V923"

@@ -10,6 +10,7 @@ series:
 -
 categories:
 - life
+featured_image: "cover/youtube.png"
 ---
 
 当你使用科学上网后，就可以看youtube，如果你不想在看视频的时候冒出广告打断你，可以尝试订阅**YouTube Premium**，单独买就很贵，电报[合租群](https://t.me/hezu1)可以合租，一年40-50rmb左右。另外还有很多服务都可以合租，spotify

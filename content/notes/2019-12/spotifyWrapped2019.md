@@ -9,6 +9,7 @@ series:
 -
 categories:
 -
+featured_image: "cover/spotify2019.jpeg"
 ---
 
 spotify最近出了2019年听歌总结，分享我在2019年使用spotify听的音乐，虽然没用spotify多久。

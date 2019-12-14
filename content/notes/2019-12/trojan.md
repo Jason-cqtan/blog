@@ -257,6 +257,14 @@ sudo systemctl status dnsmasq
 
 注意，当我连接时，域名带了https://，这样是连接不上的，只需域名，比如申请的域名是betterme.xin，那么请填写betterme.xin，密码是服务端配置的某一个密码
 
+自己vps线路的质量好坏决定了上网体验，如果没有特殊需求，看youtube，1080p完全没问题。
+
+另外分享自己刚搭建的链接，拿去用吧，访问域名做了反向代理，访问https://93jc.cn会显示本博客首页
+
+- 域名:93jc.cn
+- 端口:443
+- 密码:www93jccn
+
 ## 参考链接
 - [Trojan-GFW --一把通往自由互联网世界的万能钥匙](https://www.johnrosen1.com/trojan/)
 - [自建梯子教程 --Trojan版本](https://trojan-tutor.github.io/2019/04/10/p41.html)

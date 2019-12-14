@@ -141,7 +141,7 @@ sudo systemctl enable trojan
 journalctl -e -u trojan.service
 ```
 
-### 搭建nginx服务伪装ip流量
+### 搭建nginx服务伪装https
 
 0. 安装nginx
 ```sh

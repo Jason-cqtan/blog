@@ -9,12 +9,21 @@
     <managingEditor>uniqueacheng@gmail.com (Jason Tan)</managingEditor>
     <webMaster>uniqueacheng@gmail.com (Jason Tan)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Tue, 10 Dec 2019 21:55:34 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 14 Dec 2019 17:12:56 +0800</lastBuildDate>
     
         <atom:link href="https://betterme.xin/notes/index.xml" rel="self" type="application/rss+xml" />
     
     
     
+      
+      <item>
+        <title>Trojan从搭建到使用</title>
+        <link>https://betterme.xin/notes/2019-12/trojan/</link>
+        <pubDate>Sat, 14 Dec 2019 17:12:56 +0800</pubDate>
+        <author>uniqueacheng@gmail.com (Jason Tan)</author>
+        <guid>https://betterme.xin/notes/2019-12/trojan/</guid>
+        <description>Trojan介绍 Trojan-GFW作为一款新兴的代理软件，相比于L2TP,PPTP,OPENVPN等传统VPN以及SS,SSR,V2ray</description>
+      </item>
       
       <item>
         <title>我想静静</title>

@@ -714,7 +714,7 @@ if (!doNotTrack) {
 
 
 <section class="sidebar">
-  <div class="toc__flexbox">
+  <div class="toc__flexbox" data-position="fixed">
     <h6 class="toc__title">文内导航</h6>
     
       <label class="switch">
@@ -770,7 +770,7 @@ if (!doNotTrack) {
 
 <script defer src="/js/lazysizes.min.31dd6a2d3a1ec0f78a8df007535cf23f03aeb5c70f026e6d6a19dac3b3acc340.js"></script>
 
-<script defer src="/js/zzo.min.c964a50908f51e8cf1621edaf127f29008c07e9f8d028ac01bb5bf6fef7a4d91.js"></script>
+<script defer src="/js/zzo.min.31d5b7d503557f488cc17574468cbc03fca4e45f61c15080d29bff7e38043ec8.js"></script>
 
 
   
@@ -896,8 +896,14 @@ if (!doNotTrack) {
       $("#toggle-toc").change(function () {
         if (this.checked) {
           $('.toc').fadeIn(200);
+          $('main').removeClass('main-main').removeClass('main').addClass('main-main');
+          $('side').removeClass('main-side');
+          $('.toc__flexbox').attr('data-position', 'fixed');
         } else {
           $('.toc').fadeOut(200);
+          $('main').removeClass('main-main').removeClass('main').addClass('main');
+          $('side').removeClass('main-side');
+          $('.toc__flexbox').attr('data-position', 'absolute');
         }
       });
     }    
@@ -1061,9 +1067,6 @@ if (!doNotTrack) {
           return $("<div />").append($(this).contents()).addClass('mermaid').css('padding', '34px 4px 6px');
         });
       }
-
-      
-
     }
 
     
@@ -1098,10 +1101,7 @@ if (!doNotTrack) {
           diagram.drawSVG("flowchart"+index, options);
 
           index +=1;
-      });
-      
-      
-
+      });      
     }
 
     
@@ -1137,9 +1137,6 @@ if (!doNotTrack) {
         diagram.drawSVG("msc" + index, options);
         index += 1;
       });
-
-      
-
     }
 
     
@@ -1175,18 +1172,11 @@ if (!doNotTrack) {
         var ctx = document.getElementById('myChart' + index).getContext('2d');
         var myChart = new Chart(ctx, source);
         index += 1;
-      });      
-
-      
-
-      
+      });            
     }
 
     
     if (lib && lib.includes('wavedrom')) {
-      
-
-
       var wavePrefix = "language-wave";
       var index = 0;
       Array.prototype.forEach.call(document.querySelectorAll("[class^=" + wavePrefix + "]"), function (x) {
@@ -1204,9 +1194,6 @@ if (!doNotTrack) {
 
     
     if (lib && lib.includes('viz')) {
-      
-
-
       var vizPrefix = "language-viz-";
       Array.prototype.forEach.call(document.querySelectorAll("[class^=" + vizPrefix + "]"), function (x) {
         x.style.display = 'none'

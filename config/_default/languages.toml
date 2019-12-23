@@ -1,9 +1,9 @@
 [en]
   title = "Jason Tan's blog"
   languageName = "English"
-  weight = 2
+  weight = 1
 
 [zh]
   title = "Jason Tan's blog"
   languageName = "中文"
-  weight = 1
+  weight = 2

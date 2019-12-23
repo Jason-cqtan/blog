@@ -102,9 +102,7 @@ busuanziPagePV = true # post view count
   scriptSrc = "" # "https://isso.example.com/js/embed.min.js"
   dataAttrs = "" # "data-isso='https://isso.example.com' data-isso-require-author='true'"
 
-[marketing]
-  google_analytics = "G-EFCG87V923"
-  google_tag_manager = ""
+
 
 [socialOptions] # if set, social icons will show up.
   email = "mailto:uniqueacheng@email.com"

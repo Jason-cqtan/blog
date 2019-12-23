@@ -6,11 +6,12 @@ keywords:
 - 科学上网
 - Trojan
 tags:
-- life
+- Trojan
 series:
 -
 categories:
--
+- life
+featured_image: "cover/trojan.png"
 ---
 
 ## Trojan介绍

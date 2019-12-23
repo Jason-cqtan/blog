@@ -1,15 +1,15 @@
 ---
-title: "《婚姻故事》影评"
+title: "《婚姻故事》剧情介绍"
 date: 2019-12-07T17:14:38+08:00
 description: "《婚姻故事》这部影片由获得奥斯卡奖提名的电影制作人诺亚·鲍姆巴赫执导，深刻而富有同情心地审视了一段瓦解的婚姻和一个团结凝聚的家庭。"
 keywords:
 - 婚姻故事
 tags:
-- life
+- 电影
 series:
--
+- 
 categories:
--
+- 剧情介绍
 featured_image: "cover/marriagestory.jpg"
 ---
 

@@ -9,6 +9,7 @@ series:
 -
 categories:
 -
+featured_image: "cover/words.jpeg"
 ---
 
 

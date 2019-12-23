@@ -5,16 +5,34 @@
     <link>https://betterme.xin/categories/life/</link>
     <description>Recent content in life on Jason Tan&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>zh</language>
     <managingEditor>uniqueacheng@gmail.com (Jason Tan)</managingEditor>
     <webMaster>uniqueacheng@gmail.com (Jason Tan)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 02 Dec 2019 20:16:24 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 14 Dec 2019 17:12:56 +0800</lastBuildDate>
     
         <atom:link href="https://betterme.xin/categories/life/index.xml" rel="self" type="application/rss+xml" />
     
     
     
+      
+      <item>
+        <title>Trojan从搭建到使用</title>
+        <link>https://betterme.xin/posts/trojan/</link>
+        <pubDate>Sat, 14 Dec 2019 17:12:56 +0800</pubDate>
+        <author>uniqueacheng@gmail.com (Jason Tan)</author>
+        <guid>https://betterme.xin/posts/trojan/</guid>
+        <description>Trojan介绍 Trojan-GFW作为一款新兴的代理软件，相比于L2TP,PPTP,OPENVPN等传统VPN以及SS,SSR,V2ray</description>
+      </item>
+      
+      <item>
+        <title>SpotifyWrapped</title>
+        <link>https://betterme.xin/notes/2019-12/spotifywrapped2019/</link>
+        <pubDate>Sat, 07 Dec 2019 10:30:03 +0800</pubDate>
+        <author>uniqueacheng@gmail.com (Jason Tan)</author>
+        <guid>https://betterme.xin/notes/2019-12/spotifywrapped2019/</guid>
+        <description>spotify最近出了2019年听歌总结，分享我在2019年使用spotify听的音乐，虽然没用spotify多久。</description>
+      </item>
       
       <item>
         <title>youtube订阅推荐</title>

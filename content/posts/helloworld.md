@@ -4,12 +4,14 @@ date: 2019-12-01T02:04:09+08:00
 description: "hello world"
 keywords:
 - hugo
+- blog
 tags:
 -
 series:
 -
 categories:
 -
+featured_image: "cover/back_newblog.jpg"
 ---
 
 ## hello world

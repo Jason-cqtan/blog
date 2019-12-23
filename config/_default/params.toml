@@ -54,7 +54,7 @@ disqus_shortname = ""
 commento = false
 
 # service
-baiduAnalytics = "" # china, alternative of google analytics
+baiduAnalytics = "41529cb128969aa66fe0861ad566a29e" # china, alternative of google analytics
 enableBusuanzi = true # if set true, total page view, total unique visitors show up in the sidebar.
 busuanziSiteUV = true # unique visitors (total number of visitors)
 busuanziSitePV = true # site total page view count
@@ -103,7 +103,7 @@ busuanziPagePV = true # post view count
   dataAttrs = "" # "data-isso='https://isso.example.com' data-isso-require-author='true'"
 
 [marketing]
-  google_analytics = ""
+  google_analytics = "G-EFCG87V923"
   google_tag_manager = ""
 
 [socialOptions] # if set, social icons will show up.

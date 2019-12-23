@@ -1,14 +1,15 @@
 ---
-title: "我的 SpotifyWrapped2019"
+title: "SpotifyWrapped"
 date: 2019-12-07T10:30:03+08:00
 description: ""
 keywords:
+- spotify
 tags:
 -
 series:
 -
 categories:
--
+- life
 featured_image: "cover/spotify2019.jpeg"
 ---
 

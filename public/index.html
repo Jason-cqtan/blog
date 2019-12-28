@@ -12,11 +12,17 @@
 
 <script>
   
+  var baseurl = null;
   var runSearch = function() {
     
-        var baseurl = location.origin + "/en";
+        var isSubDirDisabled = location.pathname.startsWith("/en");
+        if (isSubDirDisabled) {          
+          baseurl = location.origin + "/en";          
+        } else {
+          baseurl = location.origin;
+        }
     
-    
+
     var searchResults = null;
     var searchMenu = null;
     var fuse = null;
@@ -179,8 +185,8 @@
 <link rel="manifest" type="application/manifest&#43;json" title="webappmanifest" href="https://betterme.xin/index.webmanifest">
 <meta name="description" content="享受生活,乐于分享,happy coding,To be better me." />
 <meta name="keywords" content="">
-<meta name="created" content="2019-12-22T10:44:45&#43;0800">
-<meta name="modified" content="2019-12-22T10:44:45&#43;0800">
+<meta name="created" content="2019-12-28T11:21:26&#43;0800">
+<meta name="modified" content="2019-12-28T11:21:26&#43;0800">
 
 
 <meta property="og:site_name" content="Jason Tan&#39;s blog">
@@ -188,7 +194,7 @@
 <meta property="og:url" content="https://betterme.xin/">
 <meta property="og:type" content="website">
 
-<meta name="generator" content="Hugo 0.61.0" />
+<meta name="generator" content="Hugo 0.62.0" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://betterme.xin/">
@@ -239,22 +245,6 @@
 
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-    
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NWY4XJ1ZXG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-NWY4XJ1ZXG');
-</script>
-
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-PM6H4QZ');</script>
     
 </head>
 
@@ -440,6 +430,37 @@
     <div class="summary__container">
         
         
+        
+  <article class="summary-classic">
+  <div class="summary-classic__flex-box">
+    
+    
+    <div class="summary-classic__image-wrapper">
+      <a href="https://betterme.xin/posts/2019-12/vim/">
+        <img data-src="/images/cover/vim.png" alt="cover/vim.png" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24pt' height='24pt' viewBox='0 0 24 24' version='1.1'%3E%3Cg id='surface1035795'%3E%3Cpath style=' stroke:none;fill-rule:nonzero;fill:rgb(80%25,80%25,80%25);fill-opacity:1;' d='M 4 4 C 2.90625 4 2 4.90625 2 6 L 2 18 C 2 19.09375 2.90625 20 4 20 L 20 20 C 21.09375 20 22 19.09375 22 18 L 22 6 C 22 4.90625 21.09375 4 20 4 Z M 4 6 L 20 6 L 20 18 L 4 18 Z M 4 6 '/%3E%3C/g%3E%3C/svg%3E%0A" class="lazyload summary-classic__image" />
+      </a>
+    </div>
+    
+    <div class="summary-classic__content">
+      <header>
+        <h5 class="title h5"><a href='https://betterme.xin/posts/2019-12/vim/'> vim从陌生到入门</a> </h5>
+        <h6 class="subtitle caption">🕓 2019-12-28 &middot ☕2 分钟阅读
+        </h6>
+      </header>
+      <div>
+        <div class="summary-classic__text p2">
+          
+          vim从陌生到入门
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr />
+</article>
+
+        
+        
   <article class="summary-classic">
   <div class="summary-classic__flex-box">
     
@@ -475,14 +496,14 @@
     
     
     <div class="summary-classic__image-wrapper">
-      <a href="https://betterme.xin/posts/trojan/">
+      <a href="https://betterme.xin/posts/2019-12/trojan/">
         <img data-src="/images/cover/trojan.png" alt="cover/trojan.png" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24pt' height='24pt' viewBox='0 0 24 24' version='1.1'%3E%3Cg id='surface1035795'%3E%3Cpath style=' stroke:none;fill-rule:nonzero;fill:rgb(80%25,80%25,80%25);fill-opacity:1;' d='M 4 4 C 2.90625 4 2 4.90625 2 6 L 2 18 C 2 19.09375 2.90625 20 4 20 L 20 20 C 21.09375 20 22 19.09375 22 18 L 22 6 C 22 4.90625 21.09375 4 20 4 Z M 4 6 L 20 6 L 20 18 L 4 18 Z M 4 6 '/%3E%3C/g%3E%3C/svg%3E%0A" class="lazyload summary-classic__image" />
       </a>
     </div>
     
     <div class="summary-classic__content">
       <header>
-        <h5 class="title h5"><a href='https://betterme.xin/posts/trojan/'> Trojan从搭建到使用</a> </h5>
+        <h5 class="title h5"><a href='https://betterme.xin/posts/2019-12/trojan/'> Trojan从搭建到使用</a> </h5>
         <h6 class="subtitle caption">🕓 2019-12-14 &middot ☕5 分钟阅读
         </h6>
       </header>
@@ -625,14 +646,14 @@
     
     
     <div class="summary-classic__image-wrapper">
-      <a href="https://betterme.xin/posts/free_use_netflix/">
+      <a href="https://betterme.xin/posts/2019-12/free_use_netflix/">
         <img data-src="/images/cover/netflix.jpeg" alt="cover/netflix.jpeg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24pt' height='24pt' viewBox='0 0 24 24' version='1.1'%3E%3Cg id='surface1035795'%3E%3Cpath style=' stroke:none;fill-rule:nonzero;fill:rgb(80%25,80%25,80%25);fill-opacity:1;' d='M 4 4 C 2.90625 4 2 4.90625 2 6 L 2 18 C 2 19.09375 2.90625 20 4 20 L 20 20 C 21.09375 20 22 19.09375 22 18 L 22 6 C 22 4.90625 21.09375 4 20 4 Z M 4 6 L 20 6 L 20 18 L 4 18 Z M 4 6 '/%3E%3C/g%3E%3C/svg%3E%0A" class="lazyload summary-classic__image" />
       </a>
     </div>
     
     <div class="summary-classic__content">
       <header>
-        <h5 class="title h5"><a href='https://betterme.xin/posts/free_use_netflix/'> 如何免费使用Netflix</a> </h5>
+        <h5 class="title h5"><a href='https://betterme.xin/posts/2019-12/free_use_netflix/'> 如何免费使用Netflix</a> </h5>
         <h6 class="subtitle caption">🕓 2019-12-01 &middot ☕4 分钟阅读
         </h6>
       </header>
@@ -655,14 +676,14 @@
     
     
     <div class="summary-classic__image-wrapper">
-      <a href="https://betterme.xin/posts/helloworld/">
+      <a href="https://betterme.xin/posts/2019-12/helloworld/">
         <img data-src="/images/cover/back_newblog.jpg" alt="cover/back_newblog.jpg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24pt' height='24pt' viewBox='0 0 24 24' version='1.1'%3E%3Cg id='surface1035795'%3E%3Cpath style=' stroke:none;fill-rule:nonzero;fill:rgb(80%25,80%25,80%25);fill-opacity:1;' d='M 4 4 C 2.90625 4 2 4.90625 2 6 L 2 18 C 2 19.09375 2.90625 20 4 20 L 20 20 C 21.09375 20 22 19.09375 22 18 L 22 6 C 22 4.90625 21.09375 4 20 4 Z M 4 6 L 20 6 L 20 18 L 4 18 Z M 4 6 '/%3E%3C/g%3E%3C/svg%3E%0A" class="lazyload summary-classic__image" />
       </a>
     </div>
     
     <div class="summary-classic__content">
       <header>
-        <h5 class="title h5"><a href='https://betterme.xin/posts/helloworld/'> I&#39;m back!</a> </h5>
+        <h5 class="title h5"><a href='https://betterme.xin/posts/2019-12/helloworld/'> I&#39;m back!</a> </h5>
         <h6 class="subtitle caption">🕓 2019-12-01 &middot ☕1 分钟阅读
         </h6>
       </header>
@@ -679,8 +700,7 @@
 </article>
 
         
-    </div>
-    
+    </div>    
 
 
 </main>
@@ -790,6 +810,27 @@
 
     
     <section class="sidebar-recent">
+        <a href="/posts/" class="sidebar-recent__title p2">Posts</a>
+        <ul class="sidebar-recent__ul">
+            
+            
+            <li><a href="/posts/2019-12/vim/" class="sidebar-recent__a p2">vim从陌生到入门</a>
+            </li>
+            
+            <li><a href="/posts/2019-12/trojan/" class="sidebar-recent__a p2">Trojan从搭建到使用</a>
+            </li>
+            
+            <li><a href="/posts/2019-12/free_use_netflix/" class="sidebar-recent__a p2">如何免费使用Netflix</a>
+            </li>
+            
+            <li><a href="/posts/2019-12/helloworld/" class="sidebar-recent__a p2">I&#39;m back!</a>
+            </li>
+            
+            
+        </ul>
+    </section>
+    
+    <section class="sidebar-recent">
         <a href="/notes/" class="sidebar-recent__title p2">Notes</a>
         <ul class="sidebar-recent__ul">
             
@@ -807,24 +848,6 @@
             </li>
             
             <li><a href="/notes/youtube_share/" class="sidebar-recent__a p2">youtube订阅推荐</a>
-            </li>
-            
-            
-        </ul>
-    </section>
-    
-    <section class="sidebar-recent">
-        <a href="/posts/" class="sidebar-recent__title p2">Posts</a>
-        <ul class="sidebar-recent__ul">
-            
-            
-            <li><a href="/posts/trojan/" class="sidebar-recent__a p2">Trojan从搭建到使用</a>
-            </li>
-            
-            <li><a href="/posts/free_use_netflix/" class="sidebar-recent__a p2">如何免费使用Netflix</a>
-            </li>
-            
-            <li><a href="/posts/helloworld/" class="sidebar-recent__a p2">I&#39;m back!</a>
             </li>
             
             
@@ -873,6 +896,19 @@
                 <a href="/tags/trojan/" class="is-tags taxo__link">
                     <span class="taxo__text">
                         Trojan
+                    </span>
+                    <span class="taxo__num">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/vim/" class="is-tags taxo__link">
+                    <span class="taxo__text">
+                        vim
                     </span>
                     <span class="taxo__num">
                         1
@@ -936,6 +972,19 @@
         
         
             <span class="tag">
+                <a href="/categories/tools/" class="is-categories taxo__link">
+                    <span class="taxo__text">
+                        tools
+                    </span>
+                    <span class="taxo__num">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
                 <a href="/categories/%E5%89%A7%E6%83%85%E4%BB%8B%E7%BB%8D/" class="is-categories taxo__link">
                     <span class="taxo__text">
                         剧情介绍
@@ -959,6 +1008,19 @@
             </a>
         </span>
         
+        
+        
+        
+            <span class="tag">
+                <a href="/series/vim%E4%BB%8E%E9%99%8C%E7%94%9F%E5%88%B0%E5%85%A5%E9%97%A8/" class="is-series taxo__link">
+                    <span class="taxo__text">
+                        vim从陌生到入门
+                    </span>
+                    <span class="taxo__num">
+                        1
+                    </span>
+                </a>
+            </span>
         
         
     </section>

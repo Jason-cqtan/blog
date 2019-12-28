@@ -12,11 +12,17 @@
 
 <script>
   
+  var baseurl = null;
   var runSearch = function() {
     
-        var baseurl = location.origin + "/en";
+        var isSubDirDisabled = location.pathname.startsWith("/en");
+        if (isSubDirDisabled) {          
+          baseurl = location.origin + "/en";          
+        } else {
+          baseurl = location.origin;
+        }
     
-    
+
     var searchResults = null;
     var searchMenu = null;
     var fuse = null;
@@ -186,7 +192,7 @@
 <meta property="og:url" content="https://betterme.xin/archive/">
 <meta property="og:type" content="website">
 
-<meta name="generator" content="Hugo 0.61.0" />
+<meta name="generator" content="Hugo 0.62.0" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://betterme.xin/archive/">
@@ -237,22 +243,6 @@
 
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-    
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NWY4XJ1ZXG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-NWY4XJ1ZXG');
-</script>
-
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-PM6H4QZ');</script>
     
 </head>
 
@@ -409,6 +399,14 @@
       
       <li class="archive__li">
         <span class="archive__meta">
+          <span class="archive__type">posts</span>
+          <span class="archive__date">12-28</span>
+        </span>        
+        <a href="https://betterme.xin/posts/2019-12/vim/" class="archive__title">vim从陌生到入门</a>        
+      </li>
+      
+      <li class="archive__li">
+        <span class="archive__meta">
           <span class="archive__type">notes</span>
           <span class="archive__date">12-22</span>
         </span>        
@@ -420,7 +418,7 @@
           <span class="archive__type">posts</span>
           <span class="archive__date">12-14</span>
         </span>        
-        <a href="https://betterme.xin/posts/trojan/" class="archive__title">Trojan从搭建到使用</a>        
+        <a href="https://betterme.xin/posts/2019-12/trojan/" class="archive__title">Trojan从搭建到使用</a>        
       </li>
       
       <li class="archive__li">
@@ -460,7 +458,7 @@
           <span class="archive__type">posts</span>
           <span class="archive__date">12-01</span>
         </span>        
-        <a href="https://betterme.xin/posts/free_use_netflix/" class="archive__title">如何免费使用Netflix</a>        
+        <a href="https://betterme.xin/posts/2019-12/free_use_netflix/" class="archive__title">如何免费使用Netflix</a>        
       </li>
       
       <li class="archive__li">
@@ -468,7 +466,7 @@
           <span class="archive__type">posts</span>
           <span class="archive__date">12-01</span>
         </span>        
-        <a href="https://betterme.xin/posts/helloworld/" class="archive__title">I&#39;m back!</a>        
+        <a href="https://betterme.xin/posts/2019-12/helloworld/" class="archive__title">I&#39;m back!</a>        
       </li>
       
     </ul>

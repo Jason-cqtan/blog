@@ -12,11 +12,17 @@
 
 <script>
   
+  var baseurl = null;
   var runSearch = function() {
     
-        var baseurl = location.origin + "/en";
+        var isSubDirDisabled = location.pathname.startsWith("/en");
+        if (isSubDirDisabled) {          
+          baseurl = location.origin + "/en";          
+        } else {
+          baseurl = location.origin;
+        }
     
-    
+
     var searchResults = null;
     var searchMenu = null;
     var fuse = null;
@@ -186,7 +192,7 @@
 <meta property="og:url" content="https://betterme.xin/categories/%E5%89%A7%E6%83%85%E4%BB%8B%E7%BB%8D/">
 <meta property="og:type" content="website">
 
-<meta name="generator" content="Hugo 0.61.0" />
+<meta name="generator" content="Hugo 0.62.0" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://betterme.xin/categories/%E5%89%A7%E6%83%85%E4%BB%8B%E7%BB%8D/">
@@ -237,22 +243,6 @@
 
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-    
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NWY4XJ1ZXG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-NWY4XJ1ZXG');
-</script>
-
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-PM6H4QZ');</script>
     
 </head>
 
@@ -429,6 +419,7 @@
     <header class="list__header">
       <h5 class="list__header--title h5">剧情介绍</h5>
     </header>
+    
     <div class="list__header--desc p2">
       
     </div>
@@ -581,6 +572,19 @@
         
         
             <span class="tag">
+                <a href="/tags/vim/" class="is-tags taxo__link">
+                    <span class="taxo__text">
+                        vim
+                    </span>
+                    <span class="taxo__num">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
                 <a href="/tags/youtube/" class="is-tags taxo__link">
                     <span class="taxo__text">
                         youtube
@@ -634,6 +638,19 @@
         
         
             <span class="tag">
+                <a href="/categories/tools/" class="is-categories taxo__link">
+                    <span class="taxo__text">
+                        tools
+                    </span>
+                    <span class="taxo__num">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
                 <a href="/categories/%E5%89%A7%E6%83%85%E4%BB%8B%E7%BB%8D/" class="is-categories taxo__link">
                     <span class="taxo__text">
                         剧情介绍
@@ -657,6 +674,19 @@
             </a>
         </span>
         
+        
+        
+        
+            <span class="tag">
+                <a href="/series/vim%E4%BB%8E%E9%99%8C%E7%94%9F%E5%88%B0%E5%85%A5%E9%97%A8/" class="is-series taxo__link">
+                    <span class="taxo__text">
+                        vim从陌生到入门
+                    </span>
+                    <span class="taxo__num">
+                        1
+                    </span>
+                </a>
+            </span>
         
         
     </section>

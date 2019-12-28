@@ -12,11 +12,17 @@
 
 <script>
   
+  var baseurl = null;
   var runSearch = function() {
     
-        var baseurl = location.origin + "/en";
+        var isSubDirDisabled = location.pathname.startsWith("/en");
+        if (isSubDirDisabled) {          
+          baseurl = location.origin + "/en";          
+        } else {
+          baseurl = location.origin;
+        }
     
-    
+
     var searchResults = null;
     var searchMenu = null;
     var fuse = null;
@@ -185,7 +191,7 @@
 <meta property="og:url" content="https://betterme.xin/notes/2019-12/married_family/">
 <meta property="og:type" content="article">
 
-<meta name="generator" content="Hugo 0.61.0" />
+<meta name="generator" content="Hugo 0.62.0" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://betterme.xin/notes/2019-12/married_family/">
@@ -239,22 +245,6 @@
 
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-    
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NWY4XJ1ZXG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-NWY4XJ1ZXG');
-</script>
-
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-PM6H4QZ');</script>
     
 </head>
 
@@ -516,7 +506,7 @@
   
   <div class="grow"></div>
   
-    <a href="https://betterme.xin/posts/trojan/" class="pagination-single__right">      
+    <a href="https://betterme.xin/posts/2019-12/trojan/" class="pagination-single__right">      
       <div class="pagination-single__right-title">Trojan从搭建到使用</div>
       <div class="pagination-single__icon">
         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
@@ -629,7 +619,7 @@
       </label>
     
   </div>
-  <div class="toc">
+  <div class="toc ">
     <ul id="toc"></ul>
   </div>
 </section>
@@ -772,9 +762,13 @@
 
     
     
-    var enableToc = JSON.parse("true");
     
-    if (enableToc) {
+    
+    var enableToc = JSON.parse("true");
+    var toc = JSON.parse("null");
+    var hideToc = JSON.parse("null");
+    
+    if (enableToc || toc) {
       $("#toc").toc({ content: ".single__contents", headings: "h1,h2,h3,h4" });
       $('#toc > li').each(function () {
         $(this).find('ul').css('display', 'none');

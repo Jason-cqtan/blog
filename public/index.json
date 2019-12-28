@@ -18,8 +18,8 @@
 	"content": ""
 },
 {
-	"uri": "https://betterme.xin/notes/",
-	"title": "Notes",
+	"uri": "https://betterme.xin/posts/",
+	"title": "Posts",
 	"tags": [],
 	"categories": [],
 	"series": [],
@@ -38,6 +38,51 @@
 {
 	"uri": "https://betterme.xin/tags/",
 	"title": "Tags",
+	"tags": [],
+	"categories": [],
+	"series": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://betterme.xin/categories/tools/",
+	"title": "tools",
+	"tags": [],
+	"categories": [],
+	"series": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://betterme.xin/tags/vim/",
+	"title": "vim",
+	"tags": [],
+	"categories": [],
+	"series": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://betterme.xin/series/vim%E4%BB%8E%E9%99%8C%E7%94%9F%E5%88%B0%E5%85%A5%E9%97%A8/",
+	"title": "vim从陌生到入门",
+	"tags": [],
+	"categories": [],
+	"series": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://betterme.xin/posts/2019-12/vim/",
+	"title": "vim从陌生到入门",
+	"tags": ["vim"],
+	"categories": [],
+	"series": ["vim从陌生到入门"],
+	"description": "vim从陌生到入门",
+	"content": "什么是vim vim是vi的衍生版，目前最新版8.1，由布莱姆·米勒在1991年发布，文本编辑器，一般在类unix系统中使用。存在即合理，在计算机发展早期，将信息键入到计算机并没有鼠标和现在window系统这样的可视化界面（窗口可开关或缩小这样的），仅仅只是文字显示在显示器上，vi就是解决如何在这种环境中快速高效的键入文本或代码，类似的编辑器还有Emacs。更多关于vim请看官网或wiki\n为什么要使用vim 装逼，开玩笑怎么会呢。\n首先vim的出身是解决在无可视化系统上快速编辑，所以vim适用于在类unix系统上使用，是畅快使用类unix系统的一把利器，当然现在windows上和macOs上已经有了可视化vim编辑器。\nvim是运维工作者和使用类unix系统的必掌握工具之一。\n怎么入门呢 先摆正态度，不是为了学vim而学vim，而是学vim能快速的编辑文本，提升工作效率，更多时间来干其他的事情。如果学习vim并没有让你更轻松愉快，放弃吧，何必让自己难受。\nvim就是对文件操作，所以你还需要有linux基础，能在linux系统上切换目录，创建、删除、文件权限相关操作。\n好的，现在你还没走开，还有点兴趣。这个系列就是教你怎么入门，为什么不是精通，因为我不精通啊，本系列也只能教你入门，能使用vim进行简单的使用，也算是自己使用经验总结分享，take it easy，喝杯java压压惊。\n准备 在系统上安装上Ta，官网上寻找安装包，macOs内置vi，可用homebrew安装vimbrew install vim，windows上安装对应的版本vim。\n官方内置教程 安装好vim后，在控制台键入vimtutor + enter键即可进入\n先自己按着官方教程做，多实践，下篇文章将继续介绍vim入门相关，循序渐进，一步步来。\n"
+},
+{
+	"uri": "https://betterme.xin/notes/",
+	"title": "Notes",
 	"tags": [],
 	"categories": [],
 	"series": [],
@@ -81,15 +126,6 @@
 	"content": ""
 },
 {
-	"uri": "https://betterme.xin/posts/",
-	"title": "Posts",
-	"tags": [],
-	"categories": [],
-	"series": [],
-	"description": "",
-	"content": ""
-},
-{
 	"uri": "https://betterme.xin/tags/trojan/",
 	"title": "Trojan",
 	"tags": [],
@@ -99,7 +135,7 @@
 	"content": ""
 },
 {
-	"uri": "https://betterme.xin/posts/trojan/",
+	"uri": "https://betterme.xin/posts/2019-12/trojan/",
 	"title": "Trojan从搭建到使用",
 	"tags": ["Trojan"],
 	"categories": [],
@@ -162,7 +198,7 @@
 	"content": ""
 },
 {
-	"uri": "https://betterme.xin/posts/free_use_netflix/",
+	"uri": "https://betterme.xin/posts/2019-12/free_use_netflix/",
 	"title": "如何免费使用Netflix",
 	"tags": ["netflix", ""],
 	"categories": [],
@@ -180,7 +216,7 @@
 	"content": "每天发生在自己99%的事情，于别人而言根本毫无意义。\n0.做善于解决问题的人，你不能解决问题，你就是问题。\n1 想清楚，写清楚，说清楚，才是真正的清楚！\n2 多花点时间沟通清楚需求，才能把握正确方向！\n3 修复需求错误的成本是代码错误的几十倍！\n4 程序员最大的坏习惯就是：急于动手写代码！\n5 提高开发效率的捷径：一次做对，不返工！\n6 写代码之前三件事：\n 弄清楚做什么； 说清楚怎么做； 想清楚怎么测！  7 职业的程序员设计程序，业余的程序员调试程序；\n8 拷贝粘贴式的作业方式，最容易导入bug，最难调试！\n9 重复代码是万恶之源！\n10 小函数，小方法，以功能命名，可以消除注释！\n11 做一点，测一点，测试驱动的开发，返工最少，返工最易；\n12 一个方法的复杂度应该小于10，否则很难调试它！\n13 随时重构代码，不遗留垃圾代码!\n14 消除静态检查的warning和error！\n15 职业的程序员是预防BUG，业余程序员是修改BUG；\n16经常总结自己的经验教训，写下来！汇总在一起！\n17 任何复杂的问题都可以简化，两种简化的手段： 按时序拆分，按整体部分拆分；\n18 每日构建，每日确认，尽早发现错误，尽早返工！\n19 通过积累资产致富，要么购买他人的时间，为自己创造财富。你应该警惕，不要落入\u0026quot;时间换取收入\u0026quot;的陷井，不要只顾着为别人生产代码，而要注意积累自己的资产，以及适时开展属于自己的业务。\n20 你要想通，这一切并不重要。有人提交了烂代码，网站下线了，又怎么样？工作并不是你的整个生活。它们不是真正的问题，只是工作上的问题。真正重要的事情都发生在工作以外。我回到家，家里人正在等我，这才重要啊。\n"
 },
 {
-	"uri": "https://betterme.xin/posts/helloworld/",
+	"uri": "https://betterme.xin/posts/2019-12/helloworld/",
 	"title": "I&#39;m back!",
 	"tags": [""],
 	"categories": [],

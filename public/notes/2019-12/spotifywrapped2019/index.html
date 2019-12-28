@@ -12,11 +12,17 @@
 
 <script>
   
+  var baseurl = null;
   var runSearch = function() {
     
-        var baseurl = location.origin + "/en";
+        var isSubDirDisabled = location.pathname.startsWith("/en");
+        if (isSubDirDisabled) {          
+          baseurl = location.origin + "/en";          
+        } else {
+          baseurl = location.origin;
+        }
     
-    
+
     var searchResults = null;
     var searchMenu = null;
     var fuse = null;
@@ -185,7 +191,7 @@
 <meta property="og:url" content="https://betterme.xin/notes/2019-12/spotifywrapped2019/">
 <meta property="og:type" content="article">
 
-<meta name="generator" content="Hugo 0.61.0" />
+<meta name="generator" content="Hugo 0.62.0" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
 <link rel="canonical" href="https://betterme.xin/notes/2019-12/spotifywrapped2019/">
@@ -239,22 +245,6 @@
 
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-    
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NWY4XJ1ZXG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-NWY4XJ1ZXG');
-</script>
-
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-PM6H4QZ');</script>
     
 </head>
 
@@ -505,11 +495,11 @@
         </li>
         
         <li>
-          <a href="/posts/free_use_netflix/" class="related__link">如何免费使用Netflix</a>
+          <a href="/posts/2019-12/free_use_netflix/" class="related__link">如何免费使用Netflix</a>
         </li>
         
         <li>
-          <a href="/posts/helloworld/" class="related__link">I&#39;m back!</a>
+          <a href="/posts/2019-12/helloworld/" class="related__link">I&#39;m back!</a>
         </li>
         
     </ul>
@@ -640,7 +630,7 @@
       </label>
     
   </div>
-  <div class="toc">
+  <div class="toc ">
     <ul id="toc"></ul>
   </div>
 </section>
@@ -783,9 +773,13 @@
 
     
     
-    var enableToc = JSON.parse("true");
     
-    if (enableToc) {
+    
+    var enableToc = JSON.parse("true");
+    var toc = JSON.parse("null");
+    var hideToc = JSON.parse("null");
+    
+    if (enableToc || toc) {
       $("#toc").toc({ content: ".single__contents", headings: "h1,h2,h3,h4" });
       $('#toc > li').each(function () {
         $(this).find('ul').css('display', 'none');

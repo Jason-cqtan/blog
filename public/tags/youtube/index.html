@@ -13,18 +13,36 @@
 <script>
   
   var baseurl = null;
+  
+  var siteBaseURL = JSON.parse("\"https://betterme.xin/\"");
+  var siteBaseChecker = /\/\w+\//i;
+  var isSlug = siteBaseChecker.test(siteBaseURL);
+  
   var runSearch = function() {
     
-        var isSubDirDisabled = location.pathname.startsWith("/en");
-        if (isSubDirDisabled) {          
-          baseurl = location.origin + "/en";          
+        var hasLangPostfix = location.pathname.includes("/en");
+        if (hasLangPostfix) {
+          if (isSlug) {
+            baseurl = location.origin + siteBaseURL.match(siteBaseChecker)[0] + "en";
+          } else {
+            baseurl = location.origin + "/en";
+          }
         } else {
-          baseurl = location.origin;
+          if (isSlug) {
+            baseurl = location.origin + siteBaseURL.match(siteBaseChecker)[0];
+          } else {
+            baseurl = location.origin;
+          }
         }
     
 
     var searchResults = null;
     var searchMenu = null;
+    var searchText = null;
+    
+    
+    var enableSearchHighlight = JSON.parse("null");
+
     var fuse = null;
 
     function endsWith(str, suffix) {
@@ -44,7 +62,14 @@
       })
         .done(function (index) {
           fuse = new Fuse(index, {
-            keys: ['title', 'description', 'content']
+            keys: ['title', 'description', 'content'],
+            includeMatches: enableSearchHighlight,
+            shouldSort: true,
+            threshold: 0.4,
+            location: 0,
+            distance: 100,
+            maxPatternLength: 32,
+            minMatchCharLength: 1,
           });
         })
         .fail(function (jqxhr, textStatus, error) {
@@ -53,7 +78,7 @@
         });
     }
 
-    function renderSearchResults(results) {
+    function renderSearchResults(results) { 
       searchResults = document.getElementById('search-results');
       searchMenu = document.getElementById('search-menu');
       searchResults.setAttribute('class', 'dropdown is-active');
@@ -67,6 +92,37 @@
           item.setAttribute('href', result.uri);
           item.setAttribute('class', 'dropdown-item');
           item.innerHTML = `<div class="menu-item"><div class="menu-item__title">📄 ${result.title}</div><div class="menu-item__desc">${result.description ? result.description : result.content}</div></div>`;
+          content.appendChild(item);
+        });
+      } else {
+        var item = document.createElement('span');
+        item.setAttribute('class', 'dropdown-item');
+        item.innerText = 'No results found';
+        content.appendChild(item);
+      }
+
+      while (searchMenu.hasChildNodes()) {
+        searchMenu.removeChild(
+          searchMenu.lastChild
+        );
+      }
+      searchMenu.appendChild(content);
+    }
+
+    function renderSearchHighlightResults(results) {      
+      searchResults = document.getElementById('search-results');
+      searchMenu = document.getElementById('search-menu');
+      searchResults.setAttribute('class', 'dropdown is-active');
+
+      var content = document.createElement('div');
+      content.setAttribute('class', 'dropdown-content search-content');
+
+      if (results.length > 0) {
+        results.forEach(function (result) {
+          var item = document.createElement('a');
+          item.setAttribute('href', result.item.uri);
+          item.setAttribute('class', 'dropdown-item');
+          item.innerHTML = `<div class="menu-item"><div class="menu-item__title">📄 ${generateHighlightedText(result.item.title, result.matches[0].indices)}</div><div class="menu-item__desc">${result.matches[1] ? generateHighlightedText(result.item.description, result.matches[1].indices) : result.matches[2] ? generateHighlightedText(result.item.content, result.matches[2].indices) : ''}</div></div>`;
           content.appendChild(item);
         });
       } else {
@@ -106,6 +162,48 @@
       searchResults.appendChild(content);
     }
 
+    function renderSearchHighlightResultsMobile(results) {
+      searchResults = document.getElementById('search-mobile-results');
+
+      var content = document.createElement('div');
+      content.setAttribute('class', 'mobile-search__content');
+
+      if (results.length > 0) {
+        results.forEach(function (result) {
+          var item = document.createElement('a');
+          item.setAttribute('href', result.item.uri);
+          item.innerHTML = `<div class="mobile-search__item"><div class="mobile-search__item--title">📄 ${generateHighlightedText(result.item.title, result.matches[0].indices)}</div><div class="mobile-search__item--desc">${result.matches[1] ? generateHighlightedText(result.item.description, result.matches[1].indices) : result.matches[2] ? generateHighlightedText(result.item.content, result.matches[2].indices) : ''}</div></div>`;
+          content.appendChild(item);
+        });
+      } else {
+        var item = document.createElement('span');
+        content.appendChild(item);
+      }
+
+      $('#search-mobile-results').empty();
+      searchResults.appendChild(content);
+    }
+
+    function generateHighlightedText(text, regions) {
+      if(!regions) return text;
+      
+      var content = '', nextUnhighlightedRegionStartingIndex = 0;
+
+      regions.forEach(function(region) {
+        content += '' +
+          text.substring(nextUnhighlightedRegionStartingIndex, region[0]) +
+          '<span class="search__highlight">' +
+            text.substring(region[0], region[1] + 1) +
+          '</span>' +
+        '';
+        nextUnhighlightedRegionStartingIndex = region[1] + 1;
+      });
+
+      content += text.substring(nextUnhighlightedRegionStartingIndex);
+
+      return content;
+    };
+
     initFuse();
 
     $("#search").on('input', function (e) {
@@ -118,8 +216,13 @@
         return null;
       } 
 
+      searchText = e.target.value;
       var results = fuse.search(e.target.value);
-      renderSearchResults(results);
+      if (enableSearchHighlight) {
+        renderSearchHighlightResults(results);
+      } else {
+        renderSearchResults(results);
+      }
     });
 
     $('#search').on('blur', function () {
@@ -139,8 +242,14 @@
         $('#search-results').attr('class', 'dropdown');
         return null;
       }
+      
+      searchText = e.target.value;
       var results = fuse.search(e.target.value);
-      renderSearchResults(results);
+      if (enableSearchHighlight) {
+        renderSearchHighlightResults(results);
+      } else {
+        renderSearchResults(results);
+      }
     });
 
     $('#search').on('keydown', function (e) {
@@ -169,8 +278,14 @@
         return null;
       }
 
+      searchText = e.target.value;
       var results = fuse.search(e.target.value);
       renderSearchResultsMobile(results);
+      if (enableSearchHighlight) {
+        renderSearchHighlightResultsMobile(results);
+      } else {
+        renderSearchResultsMobile(results);
+      }
     });
   }
 </script>    
@@ -363,17 +478,38 @@
 </div>
 
     
-    <a href="/posts" class="navbar__menu-item navbar__slide-down">文章</a>
     
+      
+      
+      
+      
+      
+        <a href="/posts" class="navbar__menu-item navbar__slide-down ">文章</a>
+      
     
-    <a href="/notes" class="navbar__menu-item navbar__slide-down">随记</a>
+      
+      
+      
+      
+      
+        <a href="/notes" class="navbar__menu-item navbar__slide-down ">随记</a>
+      
     
+      
+      
+      
+      
+      
+        <a href="/archive" class="navbar__menu-item navbar__slide-down ">归档</a>
+      
     
-    <a href="/archive" class="navbar__menu-item navbar__slide-down">归档</a>
-    
-    
-    <a href="/about" class="navbar__menu-item navbar__slide-down">关于我</a>
-    
+      
+      
+      
+      
+      
+        <a href="/about" class="navbar__menu-item navbar__slide-down ">关于我</a>
+      
     
   </div>
 </nav>
@@ -692,7 +828,7 @@
 
 <script defer src="/js/lazysizes.min.31dd6a2d3a1ec0f78a8df007535cf23f03aeb5c70f026e6d6a19dac3b3acc340.js"></script>
 
-<script defer src="/js/zzo.min.31d5b7d503557f488cc17574468cbc03fca4e45f61c15080d29bff7e38043ec8.js"></script>
+<script defer src="/js/zzo.min.815b3fb123d050336929844ca1ba3dff615a7c7d331ebe919b787e0dafc1a8ac.js"></script>
 
 <script>
   window.onload = function() {
@@ -793,7 +929,7 @@
 
                 
             <p class="caption">
-                ©2019, All Rights Reserved
+                ©2020, All Rights Reserved
             </p>
         
         

@@ -1,6 +1,0 @@
-<div class="single__infos">
-  🕓 {{ .Date.Format (i18n "single-dateformat") }} · ☕{{ .ReadingTime }} 分钟阅读
-  {{ if (and .Site.Params.enableBusuanzi .Site.Params.busuanziPagePV) }}        
-  · 👀 <span id="busuanzi_value_page_pv">...</span> {{ i18n "counter-page-pv" }}
-  {{ end }}
-</div>

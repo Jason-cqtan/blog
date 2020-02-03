@@ -1,8 +1,15 @@
 logoText = "" # site navigation bar logo text.
+logoType = "short" # long, short
 description = "享受生活,乐于分享,happy coding,To be better me." # for SEO
 keywords = "Blog,生活,编程,分享"
 custom_css = [] # custom_css = ["scss/custom.scss"] and then make file at root/assets/scss/custom.scss
 custom_js = [] # custom_js = ["js/custom.js"] and then make file at root/assets/js/custom.js
+useFaviconGenerator = false # https://www.favicon-generator.org/
+
+themeOptions = ["dark", "light", "hacker", "solarized", "kimbie"]
+notAllowedTypesInHome = ["contact", "talks", "about", "showcase"]
+notAllowedTypesInHomeSidebar = ["about", "archive", "showcase"]
+notAllowedTypesInArchive = ["about", "talks", "showcase"]
 
 # header
 homeHeaderType = "text" # text, img, slide
@@ -15,11 +22,13 @@ enableBreadcrumb = true # breadcrumb for list, single page
 enablePhotoSwipe = true # image viewer for gallery, single page
 enableSearch = true # site search with lunr
 enableGoToTop = true # scroll to top
-enableWhoami = false # at the end of single page
+enableWhoami = true # at the end of single page
 summaryShape = "classic" # card, classic, compact
 archiveGroupByDate = "2006-01" # "2006-01": group by month, "2006": group by year
-archivePaginate = 20 # items per page
+archivePaginate = 13 # items per page
 paginateWindow = 1 # setting it to 1 gives 7 buttons, 2 gives 9, etc. If set 1: [1 ... 4 5 6 ... 356] [1 2 3 4 5 ... 356] etc
+talksPaginate = 5
+talksGroupByDate = "2006"
 
 # whoami: usage - home page sidebar, single page bottom of post. all values can be empty
 myname = "Jason Tan"
@@ -28,7 +37,7 @@ whoami = "Developer"
 useGravatar = false
 location = "Chongqing, China"
 organization = ""
-link = ""
+link = "https://betterme.xin"
 
 # sidebar
 enableBio = true # home page sidebar
@@ -36,17 +45,22 @@ enableSidebar = true # if you want to make full width of contents
 enableSidebarTags = true # if you want to use tags.
 enableSidebarSeries = true
 enableSidebarCategories = true
+enableHomeSidebarTitles = true
+enableListSidebarTitles = true
 enableToc = true # single page table of contents
+hideToc = false
+tocFolding = true
+tocPosition = "inner" # inner, outer
 enableTocSwitch = true # single page table of contents visibility switch
 itemsPerCategory = 5 # maximum number of posts shown in the sidebar.
-searchLanguages = ['en'] # lunr multilanguage search. https://github.com/MihaiValentin/lunr-languages
+sidebarPosition = "right"
+
 
 # footer
 showPoweredBy = true # show footer text: Powered by Hugo and Zzo theme
 showFeedLinks = true # RSS Feed 
 showSocialLinks = true # email, facebook, twitter ...
 enableLangChange = false # show button at bottom left of footer.
-themeOptions = ["dark", "light", "hacker", "solarized", "custom"] # select options for site color theme
 
 # comment
 enableComment = true
@@ -80,13 +94,13 @@ busuanziPagePV = true # post view count
 # You can get your appid and appkey from https://leancloud.cn
 # more info please open https://valine.js.org
 [valine]
-  enable = false
-  appId = '你的appId'
-  appKey = '你的appKey'
+  enable = true
+  appId = 'xtjpWNdvY6l8B1vzar9yb2Jv-gzGzoHsz'
+  appKey = '2BlMiFSTXnaKXeCBjqNB8cNO'
   notify = false  # mail notifier , https://github.com/xCss/Valine/wiki
-  verify = false # Verification code
+  verify = true # Verification code
   avatar = 'mm' 
-  placeholder = '说点什么吧...'
+  placeholder = 'say something...'
   visitor = false
 
 [changyan]
@@ -105,6 +119,7 @@ busuanziPagePV = true # post view count
 
 
 [socialOptions] # if set, social icons will show up.
+  phone = "tel:+14243452149"
   email = "mailto:uniqueacheng@email.com"
   steam = "https://steamcommunity.com/id/93jc"
   telegram= "https://t.me/aeiou_93"
@@ -117,3 +132,12 @@ busuanziPagePV = true # post view count
   enable = true # if set, donation button will show up in the single page.
   alipay = "images/alipay.png" # Alipay QR Code image (example path: images/donation/alipay-qrcode.png) and put your file at root/static/images/donation/
   wechat = "images/wechat.png" # Wechat pay QR Code image (example path: same as above)
+
+# possible share name: ["facebook","twitter", "reddit", "linkedin", "tumblr", "weibo", "douban", "line"]
+[[share]]
+  name = "facebook"
+  username = ""
+[[share]]
+  name = "twitter"
+[[share]]
+  name = "weibo"

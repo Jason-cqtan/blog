@@ -1,8 +1,12 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
-description: ""
-keywords:
+description:
+draft: false
+hideToc: false
+enableToc: true
+enableTocContent: false
+tocPosition: inner
 tags:
 -
 series:

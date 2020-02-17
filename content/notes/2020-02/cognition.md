@@ -26,9 +26,10 @@ date: 2020-02-16T23:12:56+08:00
 
 我个人更偏向于p4实验室泄露，因为有新闻揭露在18年武汉曾研究出SARS病毒、目前中国还不允许美国专家介入...不管怎样，但愿抗体药物早点研制出来，实在不行等温度上升，病毒无法存活自然消失
 
-## 接下来谈谈认知
+## 谈谈认知
 
-早在19年12月30号，文昭先生曾发布武汉疑似非典病毒已在武汉蔓延->[https://www.youtube.com/watch?v=QIZLTGcWxsY&t=921s](https://www.youtube.com/watch?v=QIZLTGcWxsY&t=921s)，
+早在19年12月31号，文昭先生曾发布武汉疑似非典病毒已在武汉蔓延
+<a href="https://www.youtube.com/watch?v=QIZLTGcWxsY&t=921s" target="_blank">https://www.youtube.com/watch?v=QIZLTGcWxsY&t=921s</a>,
 那会并没有放在心上，按获取信息处理，事实并非如此，早该买口罩自用。
 为什么人家会有这样的消息，其实是收集民间消息，当然在我们国家从来都是报喜不报忧，等到忧无法掩盖时才暴露出来。很多隐藏消息只能通过科学上网来获取，至于真实性还得有自己的理性分析。
 
@@ -53,7 +54,6 @@ date: 2020-02-16T23:12:56+08:00
 
 最近统计我博客访问量，发现查看搭建trojan的剧增，还有网友打赏感谢的，这里再次谢谢你。
 ![alt viewtrojan](https://betterme.xin/images/viewtrojan.png "受访页面")
-
 
 ## 自己科学上网部分经验分享，只给需要的人
 

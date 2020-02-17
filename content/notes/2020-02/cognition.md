@@ -92,7 +92,7 @@ vmess://eyJhZGQiOiJ4eHgudGpjY3E5My54eXoiLCJhaWQiOiI2OCIsImhvc3QiOiJ4eHgudGpjY3E5
 - <a href="https://xtunnel.cc/auth/register?code=d3Yk" target="_blank">xtunnel</a>
 全v2ray中转节点，节点不是很多，但够用了，刚开张不久，最近7折优惠，便宜实惠
 
-推荐的机场都可以流畅性看4k（自己网路质量要好），都支持奈飞等流媒体观看
+推荐的机场都可以流畅性看4k（自己网络质量要好），都支持奈飞等流媒体观看
 
 最后，祝各位身体健康，吃嘛嘛香。
 

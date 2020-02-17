@@ -9,12 +9,25 @@
     <managingEditor>uniqueacheng@gmail.com (Jason Tan)</managingEditor>
     <webMaster>uniqueacheng@gmail.com (Jason Tan)</webMaster>
     <copyright>&amp;copy;2019-{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Sat, 28 Dec 2019 11:21:26 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 16 Feb 2020 23:12:56 +0800</lastBuildDate>
     
         <atom:link href="https://betterme.xin/index.xml" rel="self" type="application/rss+xml" />
     
     
     
+      
+      
+      
+
+      
+      <item>
+        <title>认知</title>
+        <link>https://betterme.xin/notes/2020-02/cognition/</link>
+        <pubDate>Sun, 16 Feb 2020 23:12:56 +0800</pubDate>
+        <author>uniqueacheng@gmail.com (Jason Tan)</author>
+        <guid>https://betterme.xin/notes/2020-02/cognition/</guid>
+        <description>上一篇博客已经是19年12月底了，距离现在过了一个多月，过去的一个月中，回老家过年，2月1号回重庆，然后上了两周远程班，王者荣耀用鲁班从黄金</description>
+      </item>
       
       <item>
         <title>vim从陌生到入门</title>
@@ -97,6 +110,7 @@
         <description>hello world 我又回来了。 现已开启在hugo上写博客，自己曾有过博客系统，上面的文章也只是自己当笔记偶尔看看， 但是界面写的不美观，很少做优化，也没什么</description>
       </item>
       
+
     
   </channel>
 </rss>

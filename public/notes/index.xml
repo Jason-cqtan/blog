@@ -9,12 +9,22 @@
     <managingEditor>uniqueacheng@gmail.com (Jason Tan)</managingEditor>
     <webMaster>uniqueacheng@gmail.com (Jason Tan)</webMaster>
     <copyright>&amp;copy;2019-{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Sun, 22 Dec 2019 10:44:45 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 16 Feb 2020 23:12:56 +0800</lastBuildDate>
     
         <atom:link href="https://betterme.xin/notes/index.xml" rel="self" type="application/rss+xml" />
     
     
     
+
+      
+      <item>
+        <title>认知</title>
+        <link>https://betterme.xin/notes/2020-02/cognition/</link>
+        <pubDate>Sun, 16 Feb 2020 23:12:56 +0800</pubDate>
+        <author>uniqueacheng@gmail.com (Jason Tan)</author>
+        <guid>https://betterme.xin/notes/2020-02/cognition/</guid>
+        <description>上一篇博客已经是19年12月底了，距离现在过了一个多月，过去的一个月中，回老家过年，2月1号回重庆，然后上了两周远程班，王者荣耀用鲁班从黄金</description>
+      </item>
       
       <item>
         <title>《何以为家》剧情介绍</title>
@@ -61,6 +71,7 @@
         <description>当你使用科学上网后，就可以看youtube，如果你不想在看视频的时候冒出广告打断你，可以尝试订阅YouTube Premium，单独买就很贵，</description>
       </item>
       
+
     
   </channel>
 </rss>

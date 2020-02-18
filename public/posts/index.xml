@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Posts on Jason Tan&#39;s blog</title>
     <link>https://betterme.xin/posts/</link>
@@ -22,8 +27,35 @@
         <link>https://betterme.xin/posts/2019-12/vim/</link>
         <pubDate>Sat, 28 Dec 2019 11:21:26 +0800</pubDate>
         <author>uniqueacheng@gmail.com (Jason Tan)</author>
+        <atom:modified>Sat, 28 Dec 2019 11:21:26 +0800</atom:modified>
         <guid>https://betterme.xin/posts/2019-12/vim/</guid>
         <description>什么是vim vim是vi的衍生版，目前最新版8.1，由布莱姆·米勒在1991年发布，文本编辑器，一般在类unix系统中使用。存在即合理，在计</description>
+        
+        <dc:creator>Jason Tan</dc:creator>
+        
+        <media:content url="https://betterme.xin/image/cover/vim.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+          
+            
+              <category>vim</category>
+            
+          
+        
+        
+          
+            
+              <category>tools</category>
+            
+          
+        
+        
+          
+            
+              <category>vim从陌生到入门</category>
+            
+          
+        
       </item>
       
       <item>
@@ -31,8 +63,33 @@
         <link>https://betterme.xin/posts/2019-12/trojan/</link>
         <pubDate>Sat, 14 Dec 2019 17:12:56 +0800</pubDate>
         <author>uniqueacheng@gmail.com (Jason Tan)</author>
+        <atom:modified>Sat, 14 Dec 2019 17:12:56 +0800</atom:modified>
         <guid>https://betterme.xin/posts/2019-12/trojan/</guid>
         <description>Trojan介绍 Trojan-GFW作为一款新兴的代理软件，相比于L2TP,PPTP,OPENVPN等传统VPN以及SS,SSR,V2ray</description>
+        
+        <dc:creator>Jason Tan</dc:creator>
+        
+        <media:content url="https://betterme.xin/image/cover/trojan.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+          
+            
+              <category>Trojan</category>
+            
+          
+        
+        
+          
+            
+              <category>life</category>
+            
+          
+        
+        
+          
+            
+          
+        
       </item>
       
       <item>
@@ -40,8 +97,35 @@
         <link>https://betterme.xin/posts/2019-12/free_use_netflix/</link>
         <pubDate>Sun, 01 Dec 2019 11:18:12 +0800</pubDate>
         <author>uniqueacheng@gmail.com (Jason Tan)</author>
+        <atom:modified>Sun, 01 Dec 2019 11:18:12 +0800</atom:modified>
         <guid>https://betterme.xin/posts/2019-12/free_use_netflix/</guid>
         <description>netflix是什么 netflix中文名奈飞、网飞，是国外流媒体平台，提供在线看美剧、韩剧、日剧、动漫、电影、电视节目等。 按月订阅，最高套餐</description>
+        
+        <dc:creator>Jason Tan</dc:creator>
+        
+        <media:content url="https://betterme.xin/image/cover/netflix.jpeg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+          
+            
+              <category>netflix</category>
+            
+          
+            
+          
+        
+        
+          
+            
+              <category>life</category>
+            
+          
+        
+        
+          
+            
+          
+        
       </item>
       
       <item>
@@ -49,8 +133,29 @@
         <link>https://betterme.xin/posts/2019-12/helloworld/</link>
         <pubDate>Sun, 01 Dec 2019 02:04:09 +0800</pubDate>
         <author>uniqueacheng@gmail.com (Jason Tan)</author>
+        <atom:modified>Sun, 01 Dec 2019 02:04:09 +0800</atom:modified>
         <guid>https://betterme.xin/posts/2019-12/helloworld/</guid>
         <description>hello world 我又回来了。 现已开启在hugo上写博客，自己曾有过博客系统，上面的文章也只是自己当笔记偶尔看看， 但是界面写的不美观，很少做优化，也没什么</description>
+        
+        <dc:creator>Jason Tan</dc:creator>
+        
+        <media:content url="https://betterme.xin/image/cover/back_newblog.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+          
+            
+          
+        
+        
+          
+            
+          
+        
+        
+          
+            
+          
+        
       </item>
       
 

@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>netflix on Jason Tan&#39;s blog</title>
     <link>https://betterme.xin/tags/netflix/</link>
@@ -22,8 +27,35 @@
         <link>https://betterme.xin/posts/2019-12/free_use_netflix/</link>
         <pubDate>Sun, 01 Dec 2019 11:18:12 +0800</pubDate>
         <author>uniqueacheng@gmail.com (Jason Tan)</author>
+        <atom:modified>Sun, 01 Dec 2019 11:18:12 +0800</atom:modified>
         <guid>https://betterme.xin/posts/2019-12/free_use_netflix/</guid>
         <description>netflix是什么 netflix中文名奈飞、网飞，是国外流媒体平台，提供在线看美剧、韩剧、日剧、动漫、电影、电视节目等。 按月订阅，最高套餐</description>
+        
+        <dc:creator>Jason Tan</dc:creator>
+        
+        <media:content url="https://betterme.xin/image/cover/netflix.jpeg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+          
+            
+              <category>netflix</category>
+            
+          
+            
+          
+        
+        
+          
+            
+              <category>life</category>
+            
+          
+        
+        
+          
+            
+          
+        
       </item>
       
 

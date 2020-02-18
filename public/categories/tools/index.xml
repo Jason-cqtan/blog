@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>tools on Jason Tan&#39;s blog</title>
     <link>https://betterme.xin/categories/tools/</link>
@@ -22,8 +27,35 @@
         <link>https://betterme.xin/posts/2019-12/vim/</link>
         <pubDate>Sat, 28 Dec 2019 11:21:26 +0800</pubDate>
         <author>uniqueacheng@gmail.com (Jason Tan)</author>
+        <atom:modified>Sat, 28 Dec 2019 11:21:26 +0800</atom:modified>
         <guid>https://betterme.xin/posts/2019-12/vim/</guid>
         <description>什么是vim vim是vi的衍生版，目前最新版8.1，由布莱姆·米勒在1991年发布，文本编辑器，一般在类unix系统中使用。存在即合理，在计</description>
+        
+        <dc:creator>Jason Tan</dc:creator>
+        
+        <media:content url="https://betterme.xin/image/cover/vim.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+          
+            
+              <category>vim</category>
+            
+          
+        
+        
+          
+            
+              <category>tools</category>
+            
+          
+        
+        
+          
+            
+              <category>vim从陌生到入门</category>
+            
+          
+        
       </item>
       
 

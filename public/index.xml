@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Jason Tan&#39;s blog</title>
     <link>https://betterme.xin/</link>
@@ -25,8 +30,17 @@
         <link>https://betterme.xin/notes/2020-02/cognition/</link>
         <pubDate>Sun, 16 Feb 2020 23:12:56 +0800</pubDate>
         <author>uniqueacheng@gmail.com (Jason Tan)</author>
+        <atom:modified>Sun, 16 Feb 2020 23:12:56 +0800</atom:modified>
         <guid>https://betterme.xin/notes/2020-02/cognition/</guid>
         <description>上一篇博客已经是19年12月底了，距离现在过了一个多月，过去的一个月中，回老家过年，2月1号回重庆，然后上了两周远程班，王者荣耀用鲁班从黄金</description>
+        
+        <dc:creator>Jason Tan</dc:creator>
+        
+        <media:content url="https://betterme.xin/image/cover/confusion.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+        
       </item>
       
       <item>
@@ -34,8 +48,35 @@
         <link>https://betterme.xin/posts/2019-12/vim/</link>
         <pubDate>Sat, 28 Dec 2019 11:21:26 +0800</pubDate>
         <author>uniqueacheng@gmail.com (Jason Tan)</author>
+        <atom:modified>Sat, 28 Dec 2019 11:21:26 +0800</atom:modified>
         <guid>https://betterme.xin/posts/2019-12/vim/</guid>
         <description>什么是vim vim是vi的衍生版，目前最新版8.1，由布莱姆·米勒在1991年发布，文本编辑器，一般在类unix系统中使用。存在即合理，在计</description>
+        
+        <dc:creator>Jason Tan</dc:creator>
+        
+        <media:content url="https://betterme.xin/image/cover/vim.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+          
+            
+              <category>vim</category>
+            
+          
+        
+        
+          
+            
+              <category>tools</category>
+            
+          
+        
+        
+          
+            
+              <category>vim从陌生到入门</category>
+            
+          
+        
       </item>
       
       <item>
@@ -43,8 +84,33 @@
         <link>https://betterme.xin/notes/2019-12/%E4%BD%95%E4%BB%A5%E4%B8%BA%E5%AE%B6/</link>
         <pubDate>Sun, 22 Dec 2019 10:44:45 +0800</pubDate>
         <author>uniqueacheng@gmail.com (Jason Tan)</author>
+        <atom:modified>Sun, 22 Dec 2019 10:44:45 +0800</atom:modified>
         <guid>https://betterme.xin/notes/2019-12/%E4%BD%95%E4%BB%A5%E4%B8%BA%E5%AE%B6/</guid>
         <description>剧情介绍 影片以小孩被检测画面开始，衣着单薄，还可以看到小 jj ，还有一群妇女被询问，为什么被检测、询问，发生了什么，给人以神秘感。 接着一群小孩，</description>
+        
+        <dc:creator>Jason Tan</dc:creator>
+        
+        <media:content url="https://betterme.xin/image/cover/heyiweijia.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+          
+            
+              <category>电影</category>
+            
+          
+        
+        
+          
+            
+              <category>剧情介绍</category>
+            
+          
+        
+        
+          
+            
+          
+        
       </item>
       
       <item>
@@ -52,8 +118,33 @@
         <link>https://betterme.xin/posts/2019-12/trojan/</link>
         <pubDate>Sat, 14 Dec 2019 17:12:56 +0800</pubDate>
         <author>uniqueacheng@gmail.com (Jason Tan)</author>
+        <atom:modified>Sat, 14 Dec 2019 17:12:56 +0800</atom:modified>
         <guid>https://betterme.xin/posts/2019-12/trojan/</guid>
         <description>Trojan介绍 Trojan-GFW作为一款新兴的代理软件，相比于L2TP,PPTP,OPENVPN等传统VPN以及SS,SSR,V2ray</description>
+        
+        <dc:creator>Jason Tan</dc:creator>
+        
+        <media:content url="https://betterme.xin/image/cover/trojan.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+          
+            
+              <category>Trojan</category>
+            
+          
+        
+        
+          
+            
+              <category>life</category>
+            
+          
+        
+        
+          
+            
+          
+        
       </item>
       
       <item>
@@ -61,8 +152,33 @@
         <link>https://betterme.xin/notes/2019-12/married_family/</link>
         <pubDate>Sat, 07 Dec 2019 17:14:38 +0800</pubDate>
         <author>uniqueacheng@gmail.com (Jason Tan)</author>
+        <atom:modified>Sat, 07 Dec 2019 17:14:38 +0800</atom:modified>
         <guid>https://betterme.xin/notes/2019-12/married_family/</guid>
         <description>《婚姻故事》这部影片由获得奥斯卡奖提名的电影制作人诺亚·鲍姆巴赫执导，深刻而富有同情心地审视了一段瓦解的婚姻和一个团结凝聚的家庭。 一家人，丈</description>
+        
+        <dc:creator>Jason Tan</dc:creator>
+        
+        <media:content url="https://betterme.xin/image/cover/marriagestory.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+          
+            
+              <category>电影</category>
+            
+          
+        
+        
+          
+            
+              <category>剧情介绍</category>
+            
+          
+        
+        
+          
+            
+          
+        
       </item>
       
       <item>
@@ -70,8 +186,31 @@
         <link>https://betterme.xin/notes/2019-12/spotifywrapped2019/</link>
         <pubDate>Sat, 07 Dec 2019 10:30:03 +0800</pubDate>
         <author>uniqueacheng@gmail.com (Jason Tan)</author>
+        <atom:modified>Sat, 07 Dec 2019 10:30:03 +0800</atom:modified>
         <guid>https://betterme.xin/notes/2019-12/spotifywrapped2019/</guid>
         <description>spotify最近出了2019年听歌总结，分享我在2019年使用spotify听的音乐，虽然没用spotify多久。</description>
+        
+        <dc:creator>Jason Tan</dc:creator>
+        
+        <media:content url="https://betterme.xin/image/cover/spotify2019.jpeg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+          
+            
+          
+        
+        
+          
+            
+              <category>life</category>
+            
+          
+        
+        
+          
+            
+          
+        
       </item>
       
       <item>
@@ -79,8 +218,29 @@
         <link>https://betterme.xin/notes/2019-12/note2/</link>
         <pubDate>Wed, 04 Dec 2019 21:23:00 +0800</pubDate>
         <author>uniqueacheng@gmail.com (Jason Tan)</author>
+        <atom:modified>Wed, 04 Dec 2019 21:23:00 +0800</atom:modified>
         <guid>https://betterme.xin/notes/2019-12/note2/</guid>
         <description>0.知识或者技能这种东西，学到了就跟你一辈子 1.我们养成习惯，然后习惯养成我们 2.吸星大法（围剿式学习）：通过观察对方的沟通、演讲、写作方式</description>
+        
+        <dc:creator>Jason Tan</dc:creator>
+        
+        <media:content url="https://betterme.xin/image/cover/words.jpeg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+          
+            
+          
+        
+        
+          
+            
+          
+        
+        
+          
+            
+          
+        
       </item>
       
       <item>
@@ -88,8 +248,33 @@
         <link>https://betterme.xin/notes/youtube_share/</link>
         <pubDate>Mon, 02 Dec 2019 20:16:24 +0800</pubDate>
         <author>uniqueacheng@gmail.com (Jason Tan)</author>
+        <atom:modified>Mon, 02 Dec 2019 20:16:24 +0800</atom:modified>
         <guid>https://betterme.xin/notes/youtube_share/</guid>
         <description>当你使用科学上网后，就可以看youtube，如果你不想在看视频的时候冒出广告打断你，可以尝试订阅YouTube Premium，单独买就很贵，</description>
+        
+        <dc:creator>Jason Tan</dc:creator>
+        
+        <media:content url="https://betterme.xin/image/cover/youtube.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+          
+            
+              <category>youtube</category>
+            
+          
+        
+        
+          
+            
+              <category>life</category>
+            
+          
+        
+        
+          
+            
+          
+        
       </item>
       
       <item>
@@ -97,8 +282,35 @@
         <link>https://betterme.xin/posts/2019-12/free_use_netflix/</link>
         <pubDate>Sun, 01 Dec 2019 11:18:12 +0800</pubDate>
         <author>uniqueacheng@gmail.com (Jason Tan)</author>
+        <atom:modified>Sun, 01 Dec 2019 11:18:12 +0800</atom:modified>
         <guid>https://betterme.xin/posts/2019-12/free_use_netflix/</guid>
         <description>netflix是什么 netflix中文名奈飞、网飞，是国外流媒体平台，提供在线看美剧、韩剧、日剧、动漫、电影、电视节目等。 按月订阅，最高套餐</description>
+        
+        <dc:creator>Jason Tan</dc:creator>
+        
+        <media:content url="https://betterme.xin/image/cover/netflix.jpeg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+          
+            
+              <category>netflix</category>
+            
+          
+            
+          
+        
+        
+          
+            
+              <category>life</category>
+            
+          
+        
+        
+          
+            
+          
+        
       </item>
       
       <item>
@@ -106,8 +318,29 @@
         <link>https://betterme.xin/posts/2019-12/helloworld/</link>
         <pubDate>Sun, 01 Dec 2019 02:04:09 +0800</pubDate>
         <author>uniqueacheng@gmail.com (Jason Tan)</author>
+        <atom:modified>Sun, 01 Dec 2019 02:04:09 +0800</atom:modified>
         <guid>https://betterme.xin/posts/2019-12/helloworld/</guid>
         <description>hello world 我又回来了。 现已开启在hugo上写博客，自己曾有过博客系统，上面的文章也只是自己当笔记偶尔看看， 但是界面写的不美观，很少做优化，也没什么</description>
+        
+        <dc:creator>Jason Tan</dc:creator>
+        
+        <media:content url="https://betterme.xin/image/cover/back_newblog.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+          
+            
+          
+        
+        
+          
+            
+          
+        
+        
+          
+            
+          
+        
       </item>
       
 

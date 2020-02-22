@@ -99,7 +99,7 @@ vmess://ewogICJ2IjogIjIiLAogICJwcyI6ICJ3dWxhYmluZ193d3cubmxnYmdmdy54eXoiLAogICJh
 
 ### 第三方稳定机场推荐
 
-- <a href="https://www.flycloud.win/auth/register?code=Jjxk" target="_blank">flycloud</a>
+- <a href="https://www.flycloud.io/auth/register?code=Jjxk" target="_blank">flycloud</a>
 提供v2ray，BGP，IPLC专线节点，三种套餐等级，节点超多，等级一30+节点
 
 - <a href="https://xtunnel.cc/auth/register?code=d3Yk" target="_blank">xtunnel</a>

@@ -10,9 +10,15 @@ themeOptions = ["light","dark","hacker", "solarized", "kimbie"]
 notAllowedTypesInHome = ["contact", "talks", "about", "showcase"]
 notAllowedTypesInHomeSidebar = ["about", "archive", "showcase"]
 notAllowedTypesInArchive = ["about", "talks", "showcase"]
+notAllowedTypesInHomeFeed = ["about", "archive", "contact", "talks", "showcase", "publication", "presentation", "resume", "gallery"]
+
+enableUiAnimation = true
 
 # header
 homeHeaderType = "text" # text, img, slide
+
+# menu
+showMobileMenuTerms = ["tags", "categories", "series"]
 
 # navbar
 enableThemeChange = true # site color theme
@@ -21,6 +27,7 @@ enableThemeChange = true # site color theme
 enableBreadcrumb = true # breadcrumb for list, single page
 enablePhotoSwipe = true # image viewer for gallery, single page
 enableSearch = true # site search with lunr
+enableSearchHighlight = true
 enableGoToTop = true # scroll to top
 enableWhoami = true # at the end of single page
 summaryShape = "classic" # card, classic, compact
@@ -29,6 +36,7 @@ archivePaginate = 13 # items per page
 paginateWindow = 1 # setting it to 1 gives 7 buttons, 2 gives 9, etc. If set 1: [1 ... 4 5 6 ... 356] [1 2 3 4 5 ... 356] etc
 talksPaginate = 5
 talksGroupByDate = "2006"
+pubPaginate = 20
 
 # whoami: usage - home page sidebar, single page bottom of post. all values can be empty
 myname = "Jason Tan"
@@ -54,7 +62,8 @@ tocPosition = "inner" # inner, outer
 enableTocSwitch = true # single page table of contents visibility switch
 itemsPerCategory = 5 # maximum number of posts shown in the sidebar.
 sidebarPosition = "right"
-
+tocLevels = ["h2", "h3", "h4"]
+enableSidebarPostsByOrder = false
 
 # footer
 showPoweredBy = true # show footer text: Powered by Hugo and Zzo theme
@@ -62,17 +71,23 @@ showFeedLinks = true # RSS Feed
 showSocialLinks = true # email, facebook, twitter ...
 enableLangChange = false # show button at bottom left of footer.
 
-# comment
-enableComment = true
-disqus_shortname = "" 
-commento = false
-
 # service
+googleTagManager = "" # GTM-XXXXXX
 baiduAnalytics = "41529cb128969aa66fe0861ad566a29e" # china, alternative of google analytics
 enableBusuanzi = true # if set true, total page view, total unique visitors show up in the sidebar.
 busuanziSiteUV = true # unique visitors (total number of visitors)
 busuanziSitePV = true # site total page view count
 busuanziPagePV = true # post view count
+
+# rss
+updatePeriod = "" # Possible values: 'hourly', 'daily', 'weekly', 'monthly', or 'yearly'.
+updateFrequency = ""
+fullContents = false
+
+# comment
+enableComment = true
+disqus_shortname = "" 
+commento = false
 
 [gitment]          # Gitment is a comment system based on GitHub issues. see https://github.com/imsun/gitment
   owner = ""              # Your GitHub ID
@@ -100,7 +115,7 @@ busuanziPagePV = true # post view count
   notify = false  # mail notifier , https://github.com/xCss/Valine/wiki
   verify = true # Verification code
   avatar = 'mm' 
-  placeholder = 'say something...'
+  placeholder = '点击这里讨论，支持markdown语法'
   visitor = false
 
 [changyan]
@@ -141,3 +156,10 @@ busuanziPagePV = true # post view count
   name = "twitter"
 [[share]]
   name = "weibo"
+
+[[footerLinks]]
+  name = ""
+  link = ""
+[[footerLinks]]
+  name = ""
+  link = ""

@@ -3,7 +3,7 @@
 
 <head prefix="og: http://ogp.me/ns#">
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>youtube订阅推荐 – Jason Tan&#39;s blog</title>
     
@@ -78,7 +78,30 @@
   }
   
 
+
   document.addEventListener('DOMContentLoaded', function () {
+    
+    var navCollapseBtn = document.querySelector('.navbar__burger');
+    navCollapseBtn ? navCollapseBtn.addEventListener('click', function (e) {
+      var navCollapse = document.querySelector('.navbarm__collapse');
+
+      if (navCollapse) {
+        var dataOpen = navCollapse.getAttribute('data-open');
+
+        if (dataOpen === 'true') {
+          navCollapse.setAttribute('data-open', 'false');
+          navCollapse.style.maxHeight = 0;
+          navCollapseBtn.classList.remove('is-active');
+        } else {
+          navCollapse.setAttribute('data-open', 'true');
+          navCollapse.style.maxHeight = navCollapse.scrollHeight + "px";
+          navCollapseBtn.classList.add('is-active');
+        }
+      }
+    }) : null;
+    
+
+
     
     var summaryContainer = document.querySelector('.summary__container');
     var searchResult = document.querySelector('.search-result');
@@ -215,7 +238,7 @@
     
     var tocFolding = JSON.parse("true");
     
-    var tocLevels = JSON.parse("null");
+    var tocLevels = JSON.parse("[\"h2\",\"h3\",\"h4\"]");
     
     if (tocLevels) {
       tocLevels = tocLevels.toString();
@@ -417,26 +440,44 @@
 
 
   
-    var navbarBurgerElem = document.querySelector('.navbar__burger');
-    var navbarMenuElem = document.querySelector('.navbar__menu');
-    navbarBurgerElem ?
-    navbarBurgerElem.addEventListener('click', function () {
-      if (navbarBurgerElem.classList.contains('is-active')) {
-        navbarBurgerElem.classList.remove('is-active');
-        navbarMenuElem.classList.remove('is-active');
-      } else {
-        navbarBurgerElem.classList.add('is-active');
-        navbarMenuElem.classList.add('is-active');
-      }
-    }) : null;
-  
-
-
-  
     var localTheme = localStorage.getItem('theme');
     var rootEleme = document.getElementById('root');
     var selectThemeElem = document.querySelectorAll('.select-theme');
     var selectThemeItemElem = document.querySelectorAll('.select-theme__item');
+
+    var setMetaColor = function(themeColor) {
+      var metaMsapplicationTileColor = document.getElementsByName('msapplication-TileColor')[0];
+      var metaThemeColor = document.getElementsByName('theme-color')[0];
+      var metaMsapplicationNavbuttonColor = document.getElementsByName('msapplication-navbutton-color')[0];
+      var metaAppleMobileWebAappStatusBarStyle = document.getElementsByName('apple-mobile-web-app-status-bar-style')[0];
+
+      if (themeColor.includes('dark')) {
+        metaMsapplicationTileColor.setAttribute('content', '#fcfcfa');
+        metaThemeColor.setAttribute('content', '#403E41');
+        metaMsapplicationNavbuttonColor.setAttribute('content', '#403E41');
+        metaAppleMobileWebAappStatusBarStyle.setAttribute('content', '#403E41');
+      } else if (themeColor.includes('light')) {
+        metaMsapplicationTileColor.setAttribute('content', '#555');
+        metaThemeColor.setAttribute('content', '#eee');
+        metaMsapplicationNavbuttonColor.setAttribute('content', '#eee');
+        metaAppleMobileWebAappStatusBarStyle.setAttribute('content', '#eee');
+      } else if (themeColor.includes('hacker')) {
+        metaMsapplicationTileColor.setAttribute('content', '#e3cd26');
+        metaThemeColor.setAttribute('content', '#252526');
+        metaMsapplicationNavbuttonColor.setAttribute('content', '#252526');
+        metaAppleMobileWebAappStatusBarStyle.setAttribute('content', '#252526');
+      } else if (themeColor.includes('solarized')) {
+        metaMsapplicationTileColor.setAttribute('content', '#d3af86');
+        metaThemeColor.setAttribute('content', '#51412c');
+        metaMsapplicationNavbuttonColor.setAttribute('content', '#51412c');
+        metaAppleMobileWebAappStatusBarStyle.setAttribute('content', '#51412c');
+      } else if (themeColor.includes('kimbie')) {
+        metaMsapplicationTileColor.setAttribute('content', '#586e75');
+        metaThemeColor.setAttribute('content', '#eee8d5');
+        metaMsapplicationNavbuttonColor.setAttribute('content', '#eee8d5');
+        metaAppleMobileWebAappStatusBarStyle.setAttribute('content', '#eee8d5');
+      } 
+    }
     
     if (localTheme) {
       selectThemeItemElem ? 
@@ -447,6 +488,10 @@
           elem.classList.remove('is-active');
         }
       }) : null;
+
+      setMetaColor(localTheme);
+    } else {
+      setMetaColor(rootEleme.className);
     }
 
     selectThemeItemElem ? 
@@ -454,6 +499,7 @@
       v.addEventListener('click', function (e) {
         var selectedThemeVariant = e.target.text.trim();
         localStorage.setItem('theme', selectedThemeVariant);
+        setMetaColor(selectedThemeVariant);
 
         rootEleme.removeAttribute('class');
         rootEleme.classList.add('theme__' + selectedThemeVariant);
@@ -503,7 +549,7 @@
     var searchText = null;
     
     
-    var enableSearchHighlight = JSON.parse("null");
+    var enableSearchHighlight = JSON.parse("true");
     
     var searchResultPosition = JSON.parse("null");
     
@@ -518,7 +564,7 @@
       xhr.onload = function () {
         if (xhr.status === 200) {
           fuse = new Fuse(JSON.parse(xhr.response.toString('utf-8')), {
-            keys: sectionType.includes('publication') ? ['title', 'description', 'content'] : ['title', 'abstract'],
+            keys: sectionType.includes('publication') ? ['title', 'abstract'] : ['title', 'description', 'content'],
             includeMatches: enableSearchHighlight,
             shouldSort: true,
             threshold: 0.4,
@@ -1164,16 +1210,24 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="">
 
-<meta name="generator" content="Hugo 0.64.1" />
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="theme-color" content="#ffffff">
+<meta name="generator" content="Hugo 0.65.3" />
+<meta name="msapplication-TileColor" content="#fff">
+
+<meta name="theme-color" content="#fff">
+
+<meta name="msapplication-navbutton-color" content="#fff">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="#fff">
+
 <link rel="canonical" href="https://betterme.xin/notes/youtube_share/">
+
 <link rel="manifest" href="/manifest.json">
 
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
+  
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="/logo.svg" sizes="any" type="image/svg+xml" />
+  <link rel="icon" href="/favicon.png" sizes="any" type="image/png" />
+  
+
 
     <script type="application/ld+json">
   {
@@ -1230,9 +1284,8 @@
         var localTheme = localStorage.getItem('theme');
         if (localTheme) {
             document.getElementById('root').className = 'theme__' + localTheme;
-        }        
+        }
     </script>
-    
     <div id="container">
         
         <div class="wrapper" data-type="notes" data-kind="page">
@@ -1249,9 +1302,9 @@
       </a>
     
   </div>
+
   
-  
-<div class="theme-mobile" data-ani="true">
+<div class="theme theme-mobile" data-ani="true">
   <div class="dropdown">
     <button class="dropdown-trigger navbar__slide-down" aria-label="Select Theme Button" style="" data-ani="true">
       <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" d="M24 0H0v24h24V0z"/><path fill="currentColor" d="M6.34 7.93c-3.12 3.12-3.12 8.19 0 11.31C7.9 20.8 9.95 21.58 12 21.58s4.1-.78 5.66-2.34c3.12-3.12 3.12-8.19 0-11.31l-4.95-4.95c-.39-.39-1.02-.39-1.41 0L6.34 7.93zM12 19.59c-1.6 0-3.11-.62-4.24-1.76C6.62 16.69 6 15.19 6 13.59s.62-3.11 1.76-4.24L12 5.1v14.49z"/></svg>      
@@ -1284,7 +1337,7 @@
   </div>
 </div>
 
-  
+
 <div id="mobileSearchBtn" class="mobile-search__btn" data-ani="true">
   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M15.5 14h-.79l-.28-.27c1.2-1.4 1.82-3.31 1.48-5.34-.47-2.78-2.79-5-5.59-5.34-4.23-.52-7.79 3.04-7.27 7.27.34 2.8 2.56 5.12 5.34 5.59 2.03.34 3.94-.28 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
 </div>
@@ -1301,15 +1354,89 @@
   </div>
 </div>
 
-  
-  <a role="button" class="navbar__burger" aria-label="menu" aria-expanded="false" data-ani="true">
-    <span aria-hidden="true"></span>
-    <span aria-hidden="true"></span>
-    <span aria-hidden="true"></span>
-  </a>  
 
-  <div class="navbar__menu">
+<a role="button" class="navbar__burger" aria-label="menu" aria-expanded="false"
+  data-ani="true">
+  <span aria-hidden="true"></span>
+  <span aria-hidden="true"></span>
+  <span aria-hidden="true"></span>
+</a>
+<div class="navbarm__collapse" data-open="false">
+  <ul dir="ltr">
     
+    
+      
+      
+      
+      
+
+      
+        <li class="navbarm__menu--item ">
+          <a href="/posts">文章</a>
+        </li>
+      
+      
+    
+      
+      
+      
+      
+
+      
+        <li class="navbarm__menu--item active">
+          <a href="/notes">随记</a>
+        </li>
+      
+      
+    
+      
+      
+      
+      
+
+      
+        <li class="navbarm__menu--item ">
+          <a href="/archive">归档</a>
+        </li>
+      
+      
+    
+      
+      
+      
+      
+
+      
+        <li class="navbarm__menu--item ">
+          <a href="/about">关于我</a>
+        </li>
+      
+      
+    
+
+    
+      <li class="navbarm__menu--item ">
+        <a href="/tags" class="navbarm__menu--term" data-index="0">
+          Tags
+        </a>
+      </li>
+    
+      <li class="navbarm__menu--item ">
+        <a href="/categories" class="navbarm__menu--term" data-index="1">
+          Categories
+        </a>
+      </li>
+    
+      <li class="navbarm__menu--item ">
+        <a href="/series" class="navbarm__menu--term" data-index="2">
+          Series
+        </a>
+      </li>
+    
+  </ul>
+</div>
+  <div class="navbar__menu">
+  
 <div class="theme" data-ani="true">
   <div class="dropdown">
     <button class="dropdown-trigger navbar__slide-down" aria-label="Select Theme Button" data-ani="true">
@@ -1343,41 +1470,41 @@
   </div>
 </div>
 
-    
-    
-      
-      
-      
-      
-      
-        <a href="/posts" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">文章</a>
-      
-    
-      
-      
-      
-      
-      
-        <a href="/notes" class="navbar__menu-item navbar__slide-down active" dir="ltr" data-ani="true">随记</a>
-      
-    
-      
-      
-      
-      
-      
-        <a href="/archive" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">归档</a>
-      
-    
-      
-      
-      
-      
-      
-        <a href="/about" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">关于我</a>
-      
-    
-  </div>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/posts" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">文章</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/notes" class="navbar__menu-item navbar__slide-down active" dir="ltr" data-ani="true">随记</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/archive" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">归档</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/about" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">关于我</a>
+  
+  
+</div>
 </nav>
             
             
@@ -1417,11 +1544,10 @@
   
 </nav>
   
-  <noscript>
-    Please enable Javascript to view the contents
-  </noscript>
-  <div class="single hide">
-    <script>document.querySelector('.single').classList.remove('hide')</script>
+  
+  <div class="single ">
+    <div class="single__nojs">This page looks best with JavaScript enabled</div>
+    <script>document.querySelector('.single').classList.remove('hide'); document.querySelector('.single__nojs').classList.add('hide');</script>
     <h2 class="single__title" data-ani="true">youtube订阅推荐</h2>
     <div class="single__meta">
       
@@ -1458,6 +1584,7 @@
 </ul>
 
     </article>
+    
     <script>
   'use strict';
   
@@ -1599,7 +1726,7 @@
     <div class="whoami__social">
       
       
-      <a href="mailto:uniqueacheng@email.com" title="email" aria-label="email">
+      <a href="mailto:uniqueacheng@gmail.com" title="email" aria-label="email">
         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-.4 4.25l-7.07 4.42c-.32.2-.74.2-1.06 0L4.4 8.25c-.25-.16-.4-.43-.4-.72 0-.67.73-1.07 1.3-.72L12 11l6.7-4.19c.57-.35 1.3.05 1.3.72 0 .29-.15.56-.4.72z"/></svg>
       </a>
       
@@ -1683,7 +1810,7 @@
       notify:  false ,
       verify:  true ,
       avatar:'mm',
-      placeholder: 'say something...',
+      placeholder: '点击这里讨论，支持markdown语法',
       visitor:  false 
   });
 </script>
@@ -2093,7 +2220,13 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       }
 
-      document.getElementsByClassName('navbar__burger')[0].classList.remove('is-active');
+      var navCollapseBtn = document.querySelector('.navbar__burger');
+      var navCollapse = document.getElementsByClassName('navbarm__collapse')[0];
+      if (navCollapse) {
+        navCollapse.setAttribute('data-open', false);
+        navCollapse.style.maxHeight = 0;
+        navCollapseBtn.classList.remove('is-active');
+      }
       document.getElementsByClassName('navbar__menu')[0].classList.remove('is-active');
       document.getElementsByClassName('mobile-search')[0].classList.add('hide');
     },
@@ -2683,13 +2816,13 @@ document.addEventListener('DOMContentLoaded', function () {
   <div class="social">
     
       
-      <a target="_blank" href="mailto:uniqueacheng@email.com" title="email" aria-label="email">
+      <a href="mailto:uniqueacheng@gmail.com" title="email" aria-label="email">
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-.4 4.25l-7.07 4.42c-.32.2-.74.2-1.06 0L4.4 8.25c-.25-.16-.4-.43-.4-.72 0-.67.73-1.07 1.3-.72L12 11l6.7-4.19c.57-.35 1.3.05 1.3.72 0 .29-.15.56-.4.72z"/></svg>
       </a>
             
     
       
-      <a target="_blank" href="https://github.com/Jason-cqtan" title="github" aria-label="github">
+      <a href="https://github.com/Jason-cqtan" title="github" aria-label="github">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 24 24" version="1.1">
 <g id="surface3680">
 <path fill="currentColor" d="M 10.898438 2.101562 C 6.300781 2.601562 2.601562 6.300781 2.101562 10.800781 C 1.601562 15.5 4.300781 19.699219 8.398438 21.300781 C 8.699219 21.398438 9 21.199219 9 20.800781 L 9 19.199219 C 9 19.199219 8.601562 19.300781 8.101562 19.300781 C 6.699219 19.300781 6.101562 18.101562 6 17.398438 C 5.898438 17 5.699219 16.699219 5.398438 16.398438 C 5.101562 16.300781 5 16.300781 5 16.199219 C 5 16 5.300781 16 5.398438 16 C 6 16 6.5 16.699219 6.699219 17 C 7.199219 17.800781 7.800781 18 8.101562 18 C 8.5 18 8.800781 17.898438 9 17.800781 C 9.101562 17.101562 9.398438 16.398438 10 16 C 7.699219 15.5 6 14.199219 6 12 C 6 10.898438 6.5 9.800781 7.199219 9 C 7.101562 8.800781 7 8.300781 7 7.601562 C 7 7.199219 7 6.601562 7.300781 6 C 7.300781 6 8.699219 6 10.101562 7.300781 C 10.601562 7.101562 11.300781 7 12 7 C 12.699219 7 13.398438 7.101562 14 7.300781 C 15.300781 6 16.800781 6 16.800781 6 C 17 6.601562 17 7.199219 17 7.601562 C 17 8.398438 16.898438 8.800781 16.800781 9 C 17.5 9.800781 18 10.800781 18 12 C 18 14.199219 16.300781 15.5 14 16 C 14.601562 16.5 15 17.398438 15 18.300781 L 15 20.898438 C 15 21.199219 15.300781 21.5 15.699219 21.398438 C 19.398438 19.898438 22 16.300781 22 12.101562 C 22 6.101562 16.898438 1.398438 10.898438 2.101562 Z M 10.898438 2.101562 "/>
@@ -2700,25 +2833,25 @@ document.addEventListener('DOMContentLoaded', function () {
             
     
       
-      <a target="_blank" href="tel:&#43;14243452149" title="phone" aria-label="phone">
+      <a href="tel:&#43;14243452149" title="phone" aria-label="phone">
         <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32"><path fill="currentColor" d="M 8.65625 3 C 8.132813 3 7.617188 3.1875 7.1875 3.53125 L 7.125 3.5625 L 7.09375 3.59375 L 3.96875 6.8125 L 4 6.84375 C 3.035156 7.734375 2.738281 9.066406 3.15625 10.21875 C 3.160156 10.226563 3.152344 10.242188 3.15625 10.25 C 4.003906 12.675781 6.171875 17.359375 10.40625 21.59375 C 14.65625 25.84375 19.402344 27.925781 21.75 28.84375 L 21.78125 28.84375 C 22.996094 29.25 24.3125 28.960938 25.25 28.15625 L 28.40625 25 C 29.234375 24.171875 29.234375 22.734375 28.40625 21.90625 L 24.34375 17.84375 L 24.3125 17.78125 C 23.484375 16.953125 22.015625 16.953125 21.1875 17.78125 L 19.1875 19.78125 C 18.464844 19.433594 16.742188 18.542969 15.09375 16.96875 C 13.457031 15.40625 12.621094 13.609375 12.3125 12.90625 L 14.3125 10.90625 C 15.152344 10.066406 15.167969 8.667969 14.28125 7.84375 L 14.3125 7.8125 L 14.21875 7.71875 L 10.21875 3.59375 L 10.1875 3.5625 L 10.125 3.53125 C 9.695313 3.1875 9.179688 3 8.65625 3 Z M 8.65625 5 C 8.730469 5 8.804688 5.035156 8.875 5.09375 L 12.875 9.1875 L 12.96875 9.28125 C 12.960938 9.273438 13.027344 9.378906 12.90625 9.5 L 10.40625 12 L 9.9375 12.4375 L 10.15625 13.0625 C 10.15625 13.0625 11.304688 16.136719 13.71875 18.4375 L 13.9375 18.625 C 16.261719 20.746094 19 21.90625 19 21.90625 L 19.625 22.1875 L 22.59375 19.21875 C 22.765625 19.046875 22.734375 19.046875 22.90625 19.21875 L 27 23.3125 C 27.171875 23.484375 27.171875 23.421875 27 23.59375 L 23.9375 26.65625 C 23.476563 27.050781 22.988281 27.132813 22.40625 26.9375 C 20.140625 26.046875 15.738281 24.113281 11.8125 20.1875 C 7.855469 16.230469 5.789063 11.742188 5.03125 9.5625 C 4.878906 9.15625 4.988281 8.554688 5.34375 8.25 L 5.40625 8.1875 L 8.4375 5.09375 C 8.507813 5.035156 8.582031 5 8.65625 5 Z"/></svg>
       </a>
             
     
       
-      <a target="_blank" href="https://steamcommunity.com/id/93jc" title="steam" aria-label="steam">
+      <a href="https://steamcommunity.com/id/93jc" title="steam" aria-label="steam">
         <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="32" height="32"><path fill="currentColor" d="M 25 3 C 13.59 3 4.209375 11.680781 3.109375 22.800781 L 14.300781 28.529297 C 15.430781 27.579297 16.9 27 18.5 27 L 18.550781 27 C 18.940781 26.4 19.389375 25.649141 19.859375 24.869141 C 20.839375 23.259141 21.939531 21.439062 23.019531 20.039062 C 23.259531 15.569063 26.97 12 31.5 12 C 36.19 12 40 15.81 40 20.5 C 40 25.03 36.430937 28.740469 31.960938 28.980469 C 30.560938 30.060469 28.750859 31.160859 27.130859 32.130859 C 26.350859 32.610859 25.6 33.059219 25 33.449219 L 25 33.5 C 25 37.09 22.09 40 18.5 40 C 14.91 40 12 37.09 12 33.5 C 12 33.33 12.009531 33.17 12.019531 33 L 3.2792969 28.519531 C 4.9692969 38.999531 14.05 47 25 47 C 37.15 47 47 37.15 47 25 C 47 12.85 37.15 3 25 3 z M 31.5 14 C 27.92 14 25 16.92 25 20.5 C 25 24.08 27.92 27 31.5 27 C 35.08 27 38 24.08 38 20.5 C 38 16.92 35.08 14 31.5 14 z M 31.5 16 C 33.99 16 36 18.01 36 20.5 C 36 22.99 33.99 25 31.5 25 C 29.01 25 27 22.99 27 20.5 C 27 18.01 29.01 16 31.5 16 z M 18.5 29 C 17.71 29 16.960313 29.200312 16.320312 29.570312 L 19.640625 31.269531 C 20.870625 31.899531 21.350469 33.410625 20.730469 34.640625 C 20.280469 35.500625 19.41 36 18.5 36 C 18.11 36 17.729375 35.910469 17.359375 35.730469 L 14.029297 34.019531 C 14.289297 36.259531 16.19 38 18.5 38 C 20.99 38 23 35.99 23 33.5 C 23 31.01 20.99 29 18.5 29 z"/></svg>
       </a>
             
     
       
-      <a target="_blank" href="https://t.me/aeiou_93" title="telegram" aria-label="telegram">
+      <a href="https://t.me/aeiou_93" title="telegram" aria-label="telegram">
         <svg data-name="telegram" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32"><path fill="currentColor" d="M 26.070313 3.996094 C 25.734375 4.011719 25.417969 4.109375 25.136719 4.21875 L 25.132813 4.21875 C 24.847656 4.332031 23.492188 4.902344 21.433594 5.765625 C 19.375 6.632813 16.703125 7.757813 14.050781 8.875 C 8.753906 11.105469 3.546875 13.300781 3.546875 13.300781 L 3.609375 13.277344 C 3.609375 13.277344 3.25 13.394531 2.875 13.652344 C 2.683594 13.777344 2.472656 13.949219 2.289063 14.21875 C 2.105469 14.488281 1.957031 14.902344 2.011719 15.328125 C 2.101563 16.050781 2.570313 16.484375 2.90625 16.722656 C 3.246094 16.964844 3.570313 17.078125 3.570313 17.078125 L 3.578125 17.078125 L 8.460938 18.722656 C 8.679688 19.425781 9.949219 23.597656 10.253906 24.558594 C 10.433594 25.132813 10.609375 25.492188 10.828125 25.765625 C 10.933594 25.90625 11.058594 26.023438 11.207031 26.117188 C 11.265625 26.152344 11.328125 26.179688 11.390625 26.203125 C 11.410156 26.214844 11.429688 26.21875 11.453125 26.222656 L 11.402344 26.210938 C 11.417969 26.214844 11.429688 26.226563 11.441406 26.230469 C 11.480469 26.242188 11.507813 26.246094 11.558594 26.253906 C 12.332031 26.488281 12.953125 26.007813 12.953125 26.007813 L 12.988281 25.980469 L 15.871094 23.355469 L 20.703125 27.0625 L 20.8125 27.109375 C 21.820313 27.550781 22.839844 27.304688 23.378906 26.871094 C 23.921875 26.433594 24.132813 25.875 24.132813 25.875 L 24.167969 25.785156 L 27.902344 6.65625 C 28.007813 6.183594 28.035156 5.742188 27.917969 5.3125 C 27.800781 4.882813 27.5 4.480469 27.136719 4.265625 C 26.769531 4.046875 26.40625 3.980469 26.070313 3.996094 Z M 25.96875 6.046875 C 25.964844 6.109375 25.976563 6.101563 25.949219 6.222656 L 25.949219 6.234375 L 22.25 25.164063 C 22.234375 25.191406 22.207031 25.25 22.132813 25.308594 C 22.054688 25.371094 21.992188 25.410156 21.667969 25.28125 L 15.757813 20.75 L 12.1875 24.003906 L 12.9375 19.214844 C 12.9375 19.214844 22.195313 10.585938 22.59375 10.214844 C 22.992188 9.84375 22.859375 9.765625 22.859375 9.765625 C 22.886719 9.3125 22.257813 9.632813 22.257813 9.632813 L 10.082031 17.175781 L 10.078125 17.15625 L 4.242188 15.191406 L 4.242188 15.1875 C 4.238281 15.1875 4.230469 15.183594 4.226563 15.183594 C 4.230469 15.183594 4.257813 15.171875 4.257813 15.171875 L 4.289063 15.15625 L 4.320313 15.144531 C 4.320313 15.144531 9.53125 12.949219 14.828125 10.71875 C 17.480469 9.601563 20.152344 8.476563 22.207031 7.609375 C 24.261719 6.746094 25.78125 6.113281 25.867188 6.078125 C 25.949219 6.046875 25.910156 6.046875 25.96875 6.046875 Z"/></svg>
       </a>
             
     
       
-      <a target="_blank" href="https://twitter.com/O_achengtan" title="twitter" aria-label="twitter">
+      <a href="https://twitter.com/O_achengtan" title="twitter" aria-label="twitter">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32" version="1.1">
 <g id="surface676">
 <path fill="currentColor" d="M 28 8.558594 C 27.117188 8.949219 26.167969 9.214844 25.171875 9.332031 C 26.1875 8.722656 26.96875 7.757812 27.335938 6.609375 C 26.386719 7.171875 25.332031 7.582031 24.210938 7.804688 C 23.3125 6.847656 22.03125 6.246094 20.617188 6.246094 C 17.898438 6.246094 15.691406 8.453125 15.691406 11.171875 C 15.691406 11.558594 15.734375 11.933594 15.820312 12.292969 C 11.726562 12.089844 8.097656 10.128906 5.671875 7.148438 C 5.246094 7.875 5.003906 8.722656 5.003906 9.625 C 5.003906 11.332031 5.871094 12.839844 7.195312 13.722656 C 6.386719 13.695312 5.628906 13.476562 4.964844 13.105469 C 4.964844 13.128906 4.964844 13.148438 4.964844 13.167969 C 4.964844 15.554688 6.660156 17.546875 8.914062 17.996094 C 8.5 18.109375 8.066406 18.171875 7.617188 18.171875 C 7.300781 18.171875 6.988281 18.140625 6.691406 18.082031 C 7.316406 20.039062 9.136719 21.460938 11.289062 21.503906 C 9.605469 22.824219 7.480469 23.609375 5.175781 23.609375 C 4.777344 23.609375 4.386719 23.585938 4 23.539062 C 6.179688 24.9375 8.765625 25.753906 11.546875 25.753906 C 20.605469 25.753906 25.558594 18.25 25.558594 11.742188 C 25.558594 11.53125 25.550781 11.316406 25.542969 11.105469 C 26.503906 10.410156 27.339844 9.542969 28 8.558594 Z M 28 8.558594 "/>
@@ -2751,6 +2884,10 @@ document.addEventListener('DOMContentLoaded', function () {
     <hr />
 
     <div class="basicflex">
+        
+            <a href="" class="footer__link" target="_blank" rel="noreferrer"></a>
+        
+            <a href="" class="footer__link" target="_blank" rel="noreferrer"></a>
         
     </div>
 
@@ -2787,7 +2924,7 @@ document.addEventListener('DOMContentLoaded', function () {
         
 
         
-            <p class="caption">Powered by <a href="https://gohugo.io/" rel="noreferrer">Hugo</a> and the <a href="https://github.com/zzossig/hugo-theme-zzo" rel="noreferrer">Zzo theme</a></p>
+            <p class="caption">Powered by <a href="https://gohugo.io/" target="_blank" rel="noreferrer">Hugo</a> and the <a href="https://github.com/zzossig/hugo-theme-zzo" target="_blank" rel="noreferrer">Zzo theme</a></p>
         
         
     </div> 

@@ -74,32 +74,24 @@ featured_image: "cover/confusion.jpg"
 
 ### 自建梯子节点，懂的人自然懂
 
-- **v2ray**:
+**v2ray**:
 
 ```text
 vmess://ewogICJ2IjogIjIiLAogICJwcyI6ICJ3dWxhYmluZ193d3cubmxnYmdmdy54eXoiLAogICJhZGQiOiAid3d3Lm5sZ2JnZncueHl6IiwKICAicG9ydCI6ICI0NDMiLAogICJpZCI6ICI0OTUxZTQ1Ny0yZWUzLTRlNGItYjI3YS00OGM0NWU4NzQ4OTYiLAogICJhaWQiOiAiMiIsCiAgIm5ldCI6ICJ3cyIsCiAgInR5cGUiOiAibm9uZSIsCiAgImhvc3QiOiAid3d3Lm5sZ2JnZncueHl6IiwKICAicGF0aCI6ICIvM2NlYjMyZDEvIiwKICAidGxzIjogInRscyIKfQo=
 ```
 
-
-- **trojan**
-
-节点1
-
-- 域名:93jc.cn
-- 端口:443
-- 密码:www93jccn
-
-节点2
+**trojan**:
 
 - 域名:ttjoy.cc
 - 端口:443
-- 密码:wwwttjoycc
+- 密码1:wwwttjoycc
+- 密码2:ttjoycc
 
 这些节点都是搭在搬瓦工上面，不支持奈飞等流媒体观看，不出意外vps到期之前都可以免费用，个人用来备用，用的多的还是机场。
 
 ### 第三方稳定机场推荐
 
-- <a href="https://www.flycloud.io/auth/register?code=Jjxk" target="_blank">flycloud</a>
+- <a href="https://www.flycloud.gg/?code=Jjxk" target="_blank">flycloud</a>
 提供v2ray，BGP，IPLC专线节点，三种套餐等级，节点超多，等级一30+节点
 
 - <a href="https://xtunnel.cc/auth/register?code=d3Yk" target="_blank">xtunnel</a>

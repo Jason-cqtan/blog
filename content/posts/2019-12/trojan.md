@@ -260,11 +260,11 @@ sudo systemctl status dnsmasq
 
 自己vps线路的质量好坏决定了上网体验，如果没有特殊需求，看youtube，1080p完全没问题。
 
-另外分享自己刚搭建的链接，拿去用吧，访问域名做了反向代理，访问https://93jc.cn会显示本博客首页
+另外分享自己刚搭建的链接，拿去用吧，访问域名做了反向代理，访问[https://ttjoy.cc](https://ttjoy.cc)会显示本博客首页
 
-- 域名:93jc.cn
+- 域名:ttjoy.cc
 - 端口:443
-- 密码:www93jccn
+- 密码:||||小|额|打|赏|可|见||并解锁另外一个节点|||
 
 ## 参考链接
 - [Trojan-GFW --一把通往自由互联网世界的万能钥匙](https://www.johnrosen1.com/trojan/)

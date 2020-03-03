@@ -144,7 +144,6 @@ commento = false
 
 
 [donationOptions] 
-  enable = true # if set, donation button will show up in the single page.
   alipay = "images/alipay.png" # Alipay QR Code image (example path: images/donation/alipay-qrcode.png) and put your file at root/static/images/donation/
   wechat = "images/wechat.png" # Wechat pay QR Code image (example path: same as above)
 

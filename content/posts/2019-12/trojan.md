@@ -262,6 +262,9 @@ sudo systemctl status dnsmasq
 
 另外分享自己刚搭建的链接，拿去用吧，访问域名做了反向代理，访问[https://ttjoy.cc](https://ttjoy.cc)会显示本博客首页
 
+本人亲自测试，电信200M，看youtube 4k60帧
+![alt youtube 4k60帧](https://betterme.xin/images/4ktrojantest.png "youtube 4k60帧")
+
 - 域名:ttjoy.cc
 - 端口:443
 - 密码:||||小|额|打|赏|可|见||并解锁另外一个节点|||

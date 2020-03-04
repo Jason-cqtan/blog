@@ -269,6 +269,8 @@ sudo systemctl status dnsmasq
 - 端口:443
 - 密码:||||小|额|打|赏|可|见||并解锁另外一个节点|||
 
+### Attention!!! 打赏的电报或邮箱联系告知密码，告知打赏来源，或者探索网站其他文章，有惊喜哟:)
+
 ## 参考链接
 - [Trojan-GFW --一把通往自由互联网世界的万能钥匙](https://www.johnrosen1.com/trojan/)
 - [自建梯子教程 --Trojan版本](https://trojan-tutor.github.io/2019/04/10/p41.html)

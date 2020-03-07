@@ -1215,7 +1215,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="介绍搭建新型科学上网工具及使用">
 
-<meta name="generator" content="Hugo 0.65.3" />
+<meta name="generator" content="Hugo 0.66.0" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1557,7 +1557,7 @@
     <div class="single__meta">
       
 <div class="single__infos">
-  <time class="single__info" title="Written At">📅&nbsp;2019-12-14 17:12 </time>  &middot; <span class="single__info" title="Reading Time"> ☕ 5 min read </span>
+  <time class="single__info" title="Written At">📅&nbsp;2019-12-14 17:12 </time>  &middot; <span class="single__info" title="Reading Time"> ☕ 6 min read </span>
   <span class="single__info">
      &middot; 👀<span id="busuanzi_value_page_pv">...</span> 浏览
   </span>
@@ -1847,25 +1847,46 @@ server {
 </code></pre></td></tr></table>
 </div>
 </div><p>这样访问自己的域名就正常了。</p>
-<h3 id="选装bbr">选装bbr</h3>
-<p>启用BBR并禁用TCP慢启动提高吞吐量以及加快连接建立</p>
+<h3 id="选装bbrplus并禁用tcp慢启动提高吞吐量以及加快连接建立">选装bbrplus并禁用TCP慢启动提高吞吐量以及加快连接建立</h3>
+<p>使用一键脚本</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">sudo <span class="nb">echo</span> <span class="s2">&#34;net.ipv4.tcp_slow_start_after_idle = 0&#34;</span> &gt;&gt; /etc/sysctl.conf
-sudo <span class="nb">echo</span> <span class="s2">&#34;net.core.default_qdisc=fq&#34;</span> &gt;&gt; /etc/sysctl.conf
-sudo <span class="nb">echo</span> <span class="s2">&#34;net.ipv4.tcp_congestion_control=bbr&#34;</span> &gt;&gt; /etc/sysctl.conf
-sudo sysctl -p
-
+<pre class="chroma"><code class="language-sh" data-lang="sh">wget -N --no-check-certificate <span class="s2">&#34;https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh&#34;</span>
+chmod +x tcp.sh
+./tcp.sh
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="选装dns缓存配置">选装dns缓存配置</h3>
+</div><p>TCP加速 一键安装管理脚本 [v1.3.2]<br />
+&ndash; 就是爱生活 | 94ish.me &ndash;</p>
+<ol start="0">
+<li>升级脚本<br />
+————————————内核管理————————————</li>
+<li>安装 BBR/BBR魔改版内核</li>
+<li>安装 BBRplus版内核</li>
+<li>安装 Lotserver(锐速)内核<br />
+————————————加速管理————————————</li>
+<li>使用BBR加速</li>
+<li>使用BBR魔改版加速</li>
+<li>使用暴力BBR魔改版加速(不支持部分系统)</li>
+<li>使用BBRplus版加速</li>
+<li>使用Lotserver(锐速)加速<br />
+————————————杂项管理————————————</li>
+<li>卸载全部加速</li>
+<li>系统配置优化</li>
+<li>退出脚本<br />
+————————————————————————————————</li>
+</ol>
+<p>选择2 enter，当提示是否卸载内核时，选择[否/no]，安装后重启，登录vps后，再执行一次<code>./tcp.sh</code> 选择7启用bbr plus</p>
+<p>查看是否启用成功<br />
+<code>sudo sysctl -p</code><br />
+当显示<br />
+<code>net.ipv4.tcp_congestion_control = bbrplus</code>表示启用bbrplus成功</p>
+<h3 id="选装dns缓存配置">选装dns缓存配置</h3>
 <p>备份原有配置文件、自己新建</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -2507,7 +2528,7 @@ document.addEventListener('DOMContentLoaded', function () {
       <ul>
         <li><a href="#搭建trojan服务">搭建trojan服务</a></li>
         <li><a href="#搭建nginx服务伪装https">搭建nginx服务伪装https</a></li>
-        <li><a href="#选装bbr">选装bbr</a></li>
+        <li><a href="#选装bbrplus并禁用tcp慢启动提高吞吐量以及加快连接建立">选装bbrplus并禁用TCP慢启动提高吞吐量以及加快连接建立</a></li>
         <li><a href="#选装dns缓存配置">选装dns缓存配置</a></li>
       </ul>
     </li>

@@ -203,17 +203,42 @@ nginx -s reload
 
 这样访问自己的域名就正常了。
 
-### 选装bbr
+### 选装bbrplus并禁用TCP慢启动提高吞吐量以及加快连接建立
 
-启用BBR并禁用TCP慢启动提高吞吐量以及加快连接建立
+使用一键脚本
 
 ```sh
-sudo echo "net.ipv4.tcp_slow_start_after_idle = 0" >> /etc/sysctl.conf
-sudo echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
-sudo echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
-sudo sysctl -p
-
+wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh"
+chmod +x tcp.sh
+./tcp.sh
 ```
+
+ TCP加速 一键安装管理脚本 [v1.3.2]
+  -- 就是爱生活 | 94ish.me --
+
+ 0. 升级脚本
+————————————内核管理————————————
+ 1. 安装 BBR/BBR魔改版内核
+ 2. 安装 BBRplus版内核
+ 3. 安装 Lotserver(锐速)内核
+————————————加速管理————————————
+ 4. 使用BBR加速
+ 5. 使用BBR魔改版加速
+ 6. 使用暴力BBR魔改版加速(不支持部分系统)
+ 7. 使用BBRplus版加速
+ 8. 使用Lotserver(锐速)加速
+————————————杂项管理————————————
+ 9. 卸载全部加速
+ 10. 系统配置优化
+ 11. 退出脚本
+————————————————————————————————
+
+选择2 enter，当提示是否卸载内核时，选择[否/no]，安装后重启，登录vps后，再执行一次`./tcp.sh` 选择7启用bbr plus
+
+查看是否启用成功
+`sudo sysctl -p`
+当显示
+`net.ipv4.tcp_congestion_control = bbrplus`表示启用bbrplus成功
 
 ### 选装dns缓存配置
 

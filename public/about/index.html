@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="zh" dir="ltr">
 
 <head prefix="og: http://ogp.me/ns#">
     <meta charset="utf-8">
@@ -1292,12 +1292,12 @@
             <nav class="navbar" role="navigation" aria-label="main navigation" data-dir="ltr">
   <div class="navbar__brand">
     
-    <a href="/" title="Home" rel="home" class="navbar__logo-link">
+    <a href="/" title="主页" rel="home" class="navbar__logo-link">
       <img src="/logo.png" alt="Home" class="navbar__logo">
     </a>
     
     
-      <a href="/" title="Home" rel="home" class="navbar__title-link">
+      <a href="/" title="主页" rel="home" class="navbar__title-link">
         <h6 class="navbar__title"></h6>
       </a>
     
@@ -1417,19 +1417,19 @@
     
       <li class="navbarm__menu--item ">
         <a href="/tags" class="navbarm__menu--term" data-index="0">
-          Tags
+          标签
         </a>
       </li>
     
       <li class="navbarm__menu--item ">
         <a href="/categories" class="navbarm__menu--term" data-index="1">
-          Categories
+          分类
         </a>
       </li>
     
       <li class="navbarm__menu--item ">
         <a href="/series" class="navbarm__menu--term" data-index="2">
-          Series
+          系列
         </a>
       </li>
     
@@ -1538,7 +1538,7 @@
             <h5 class="list__header--title capitalize h5">关于我</h5>
         </header>
 
-        <div class="list__header--desc p2">
+        <div class="list__header--desc single__contents p2">
             <p>每天发生在自己99%的事情，于别人而言根本毫无意义。</p>
 <p>0.做善于解决问题的人，你不能解决问题，你就是问题。</p>
 <p>1 想清楚，写清楚，说清楚，才是真正的清楚！</p>
@@ -1628,7 +1628,7 @@
     <section>
         <span class="title p2">
             <a href="/tags/" class="taxo__title">
-                Tags
+                标签
             </a>
         </span>
         
@@ -1705,7 +1705,7 @@
     <section>
         <span class="title p2">
             <a href="/categories/" class="taxo__title">
-                Categories
+                分类
             </a>
         </span>
         
@@ -1756,7 +1756,7 @@
     <section>
         <span class="title p2">
             <a href="/series/" class="taxo__title">
-                Series
+                系列
             </a>
         </span>
         
@@ -1801,6 +1801,7 @@
         gridSmall = 'r';
         gridBig = 'lm'
     }
+
     enquire.register("screen and (max-width: 769px)", {
         match: function () {
             if (enableSidebar) {
@@ -1818,6 +1819,7 @@
                     listSideElem.classList.add('hide');
                 }
             }
+
         },
         unmatch: function () {
             if (enableSidebar) {
@@ -1843,14 +1845,19 @@
                 navCollapse.style.maxHeight = 0;
                 navCollapseBtn.classList.remove('is-active');
             }
-            document.getElementsByClassName('navbar__menu')[0].classList.remove('is-active');
-            document.getElementsByClassName('mobile-search')[0].classList.add('hide');
+            if (document.getElementsByClassName('navbar__menu')[0]) {
+                document.getElementsByClassName('navbar__menu')[0].classList.remove('is-active');
+            }
+            if (document.getElementsByClassName('mobile-search')[0]) {
+                document.getElementsByClassName('mobile-search')[0].classList.add('hide');
+            }
         },
         setup: function () { },
         deferSetup: true,
         destroy: function () { },
     });
 </script>
+
 
 
             

@@ -57,7 +57,7 @@ Unlimited movies, TV shows, and more.Watch anywhere. Cancel anytime.
 #### 网络支持
    * 自己良好的网络环境。如果你在国内，那么需要科学上网工具了。比较简单的方式是买服务，买支持观看奈飞的科学上网服务；
 或者自己搭，但是很多vps一般都被奈飞封ip不给看，像搬瓦工、vultr。但谷歌云、阿里云国际有些支持，搭建教程略。我目前有买服务和谷歌云送的一年300美金搭的香港节点，
-服务是[flycloud](https://www.flycloud.best/auth/register?code=Jjxk)，若你要买的话，按照自己实际需求，偶尔看，套餐一即可，一年100元以内。
+服务是[flycloud](https://www.flycloud.gg/?code=Jjxk)，若你要买的话，按照自己实际需求，偶尔看，套餐一即可，一年100元以内。
 遗憾的是，这篇文章发布错过了他们商店双十一打折，不然还能便宜点。
    * 在国外且奈飞支持观看的国家不需要科学上网工具
   

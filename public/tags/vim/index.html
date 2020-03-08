@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="zh" dir="ltr">
 
 <head prefix="og: http://ogp.me/ns#">
     <meta charset="utf-8">
@@ -1292,12 +1292,12 @@
             <nav class="navbar" role="navigation" aria-label="main navigation" data-dir="ltr">
   <div class="navbar__brand">
     
-    <a href="/" title="Home" rel="home" class="navbar__logo-link">
+    <a href="/" title="主页" rel="home" class="navbar__logo-link">
       <img src="/logo.png" alt="Home" class="navbar__logo">
     </a>
     
     
-      <a href="/" title="Home" rel="home" class="navbar__title-link">
+      <a href="/" title="主页" rel="home" class="navbar__title-link">
         <h6 class="navbar__title"></h6>
       </a>
     
@@ -1417,19 +1417,19 @@
     
       <li class="navbarm__menu--item active">
         <a href="/tags" class="navbarm__menu--term" data-index="0">
-          Tags
+          标签
         </a>
       </li>
     
       <li class="navbarm__menu--item ">
         <a href="/categories" class="navbarm__menu--term" data-index="1">
-          Categories
+          分类
         </a>
       </li>
     
       <li class="navbarm__menu--item ">
         <a href="/series" class="navbarm__menu--term" data-index="2">
-          Series
+          系列
         </a>
       </li>
     
@@ -1529,7 +1529,7 @@
   
   <li >
     
-      <a href="https://betterme.xin/tags/" class="capitalize">Tags</a>
+      <a href="https://betterme.xin/tags/" class="capitalize">标签</a>
     
   </li>
   
@@ -1568,7 +1568,7 @@
     <div class="summary-classic__content">
       <header>
         <h5 class="title h5"><a href='https://betterme.xin/posts/2019-12/vim/'> vim从陌生到入门</a> </h5>
-        <h6 class="subtitle caption"><time title="Written At" dir="ltr">📅 2019-12-28 </time>  <span title="Reading Time" dir="ltr"> &middot; ☕ 2 min read </span></h6>
+        <h6 class="subtitle caption"><time title="创建日期" dir="ltr">📅 2019年12月28日 </time>  <span title="阅读时长" dir="ltr"> &middot; ☕ 2 分钟 </span></h6>
       </header>
       <div>
         <div class="summary-classic__text p2">
@@ -1646,7 +1646,7 @@
     <section>
         <span class="title p2">
             <a href="/tags/" class="taxo__title">
-                Tags
+                标签
             </a>
         </span>
         
@@ -1723,7 +1723,7 @@
     <section>
         <span class="title p2">
             <a href="/categories/" class="taxo__title">
-                Categories
+                分类
             </a>
         </span>
         
@@ -1774,7 +1774,7 @@
     <section>
         <span class="title p2">
             <a href="/series/" class="taxo__title">
-                Series
+                系列
             </a>
         </span>
         
@@ -1803,73 +1803,79 @@
 </main>
 
 <script>
-  
-  var sidebarPosition = JSON.parse("\"right\"");
-  
-  var enableSidebar = JSON.parse("true");
+    
+    var sidebarPosition = JSON.parse("\"right\"");
+    
+    var enableSidebar = JSON.parse("true");
 
-  var listMainElem = document.querySelector('.list__main');
-  var listSideElem = document.querySelector('.list__sidebar');
+    var listMainElem = document.querySelector('.list__main');
+    var listSideElem = document.querySelector('.list__sidebar');
 
-  var gridSmall = 'l';
-  var gridBig = 'mr';
-  var gridFull = 'lmr'
+    var gridSmall = 'l';
+    var gridBig = 'mr';
+    var gridFull = 'lmr'
 
-  if (sidebarPosition === "right") {
-      gridSmall = 'r';
-      gridBig = 'lm'
-  }
+    if (sidebarPosition === "right") {
+        gridSmall = 'r';
+        gridBig = 'lm'
+    }
 
-  enquire.register("screen and (max-width: 769px)", {
-    match: function () {
-      if (enableSidebar) {
-        listMainElem.classList.remove(gridBig);
-        listMainElem.classList.add(gridFull);
-        listSideElem.classList.remove(gridSmall);
-        listSideElem.classList.add('hide');
-      } else {
-        if (listMainElem && !listMainElem.classList.contains(gridFull)) {
-          listMainElem.classList.remove(gridBig);
-          listMainElem.classList.add(gridFull);
-        }
+    enquire.register("screen and (max-width: 769px)", {
+        match: function () {
+            if (enableSidebar) {
+                listMainElem.classList.remove(gridBig);
+                listMainElem.classList.add(gridFull);
+                listSideElem.classList.remove(gridSmall);
+                listSideElem.classList.add('hide');
+            } else {
+                if (listMainElem && !listMainElem.classList.contains(gridFull)) {
+                    listMainElem.classList.remove(gridBig);
+                    listMainElem.classList.add(gridFull);
+                }
 
-        if (listSideElem && !listSideElem.classList.contains('hide')) {
-          listSideElem.classList.add('hide');
-        }
-      }
-    },
-    unmatch: function () {
-      if (enableSidebar) {
-        listMainElem.classList.remove(gridFull);
-        listMainElem.classList.add(gridBig);
-        listSideElem.classList.add(gridSmall);
-        listSideElem.classList.remove('hide');
-      } else {
-        if (listMainElem && !listMainElem.classList.contains(gridFull)) {
-          listMainElem.classList.remove(gridBig);
-          listMainElem.classList.add(gridFull);
-        }
+                if (listSideElem && !listSideElem.classList.contains('hide')) {
+                    listSideElem.classList.add('hide');
+                }
+            }
 
-        if (listSideElem && !listSideElem.classList.contains('hide')) {
-          listSideElem.classList.add('hide');
-        }
-      }
-      
-      var navCollapseBtn = document.querySelector('.navbar__burger');
-      var navCollapse = document.getElementsByClassName('navbarm__collapse')[0];
-      if (navCollapse) {
-        navCollapse.setAttribute('data-open', false);
-        navCollapse.style.maxHeight = 0;
-        navCollapseBtn.classList.remove('is-active');
-      }
-      document.getElementsByClassName('navbar__menu')[0].classList.remove('is-active');
-      document.getElementsByClassName('mobile-search')[0].classList.add('hide');
-    },
-    setup: function () { },
-    deferSetup: true,
-    destroy: function () { },
-  });
+        },
+        unmatch: function () {
+            if (enableSidebar) {
+                listMainElem.classList.remove(gridFull);
+                listMainElem.classList.add(gridBig);
+                listSideElem.classList.add(gridSmall);
+                listSideElem.classList.remove('hide');
+            } else {
+                if (listMainElem && !listMainElem.classList.contains(gridFull)) {
+                    listMainElem.classList.remove(gridBig);
+                    listMainElem.classList.add(gridFull);
+                }
+
+                if (listSideElem && !listSideElem.classList.contains('hide')) {
+                    listSideElem.classList.add('hide');
+                }
+            }
+
+            var navCollapseBtn = document.querySelector('.navbar__burger');
+            var navCollapse = document.getElementsByClassName('navbarm__collapse')[0];
+            if (navCollapse) {
+                navCollapse.setAttribute('data-open', false);
+                navCollapse.style.maxHeight = 0;
+                navCollapseBtn.classList.remove('is-active');
+            }
+            if (document.getElementsByClassName('navbar__menu')[0]) {
+                document.getElementsByClassName('navbar__menu')[0].classList.remove('is-active');
+            }
+            if (document.getElementsByClassName('mobile-search')[0]) {
+                document.getElementsByClassName('mobile-search')[0].classList.add('hide');
+            }
+        },
+        setup: function () { },
+        deferSetup: true,
+        destroy: function () { },
+    });
 </script>
+
 
 
             

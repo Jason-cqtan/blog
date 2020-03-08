@@ -109,7 +109,7 @@ commento = false
 # You can get your appid and appkey from https://leancloud.cn
 # more info please open https://valine.js.org
 [valine]
-  enable = true
+  enable = false
   appId = 'xtjpWNdvY6l8B1vzar9yb2Jv-gzGzoHsz'
   appKey = '2BlMiFSTXnaKXeCBjqNB8cNO'
   notify = false  # mail notifier , https://github.com/xCss/Valine/wiki
@@ -144,8 +144,10 @@ commento = false
 
 
 [donationOptions] 
-  alipay = "images/alipay.png" # Alipay QR Code image (example path: images/donation/alipay-qrcode.png) and put your file at root/static/images/donation/
-  wechat = "images/wechat.png" # Wechat pay QR Code image (example path: same as above)
+  enable = true
+  alipay = "/images/alipay.png" # Alipay QR Code image (example path: images/donation/alipay-qrcode.png) and put your file at root/static/images/donation/
+  wechat = "/images/wechat.png" # Wechat pay QR Code image (example path: same as above)
+  paypal = "https://paypal.me/jasontan2?locale.x=zh_XC"
 
 # possible share name: ["facebook","twitter", "reddit", "linkedin", "tumblr", "weibo", "douban", "line"]
 [[share]]

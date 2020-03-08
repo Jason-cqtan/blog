@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="zh" dir="ltr">
 
 <head prefix="og: http://ogp.me/ns#">
     <meta charset="utf-8">
@@ -1292,12 +1292,12 @@
             <nav class="navbar" role="navigation" aria-label="main navigation" data-dir="ltr">
   <div class="navbar__brand">
     
-    <a href="/" title="Home" rel="home" class="navbar__logo-link">
+    <a href="/" title="主页" rel="home" class="navbar__logo-link">
       <img src="/logo.png" alt="Home" class="navbar__logo">
     </a>
     
     
-      <a href="/" title="Home" rel="home" class="navbar__title-link">
+      <a href="/" title="主页" rel="home" class="navbar__title-link">
         <h6 class="navbar__title"></h6>
       </a>
     
@@ -1417,19 +1417,19 @@
     
       <li class="navbarm__menu--item ">
         <a href="/tags" class="navbarm__menu--term" data-index="0">
-          Tags
+          标签
         </a>
       </li>
     
       <li class="navbarm__menu--item ">
         <a href="/categories" class="navbarm__menu--term" data-index="1">
-          Categories
+          分类
         </a>
       </li>
     
       <li class="navbarm__menu--item ">
         <a href="/series" class="navbarm__menu--term" data-index="2">
-          Series
+          系列
         </a>
       </li>
     
@@ -1538,7 +1538,7 @@
             <h5 class="list__header--title capitalize h5">Posts</h5>
         </header>
 
-        <div class="list__header--desc p2">
+        <div class="list__header--desc single__contents p2">
             
         </div>
 
@@ -1560,7 +1560,7 @@
     <div class="summary-classic__content">
       <header>
         <h5 class="title h5"><a href='https://betterme.xin/posts/2019-12/vim/'> vim从陌生到入门</a> </h5>
-        <h6 class="subtitle caption"><time title="Written At" dir="ltr">📅 2019-12-28 </time>  <span title="Reading Time" dir="ltr"> &middot; ☕ 2 min read </span></h6>
+        <h6 class="subtitle caption"><time title="创建日期" dir="ltr">📅 2019年12月28日 </time>  <span title="阅读时长" dir="ltr"> &middot; ☕ 2 分钟 </span></h6>
       </header>
       <div>
         <div class="summary-classic__text p2">
@@ -1593,7 +1593,7 @@
     <div class="summary-classic__content">
       <header>
         <h5 class="title h5"><a href='https://betterme.xin/posts/2019-12/trojan/'> Trojan从搭建到使用</a> </h5>
-        <h6 class="subtitle caption"><time title="Written At" dir="ltr">📅 2019-12-14 </time>  <span title="Reading Time" dir="ltr"> &middot; ☕ 6 min read </span></h6>
+        <h6 class="subtitle caption"><time title="创建日期" dir="ltr">📅 2019年12月14日 </time>  <span title="阅读时长" dir="ltr"> &middot; ☕ 6 分钟 </span></h6>
       </header>
       <div>
         <div class="summary-classic__text p2">
@@ -1626,7 +1626,7 @@
     <div class="summary-classic__content">
       <header>
         <h5 class="title h5"><a href='https://betterme.xin/posts/2019-12/free_use_netflix/'> 如何免费使用Netflix</a> </h5>
-        <h6 class="subtitle caption"><time title="Written At" dir="ltr">📅 2019-12-01 </time>  <span title="Reading Time" dir="ltr"> &middot; ☕ 5 min read </span></h6>
+        <h6 class="subtitle caption"><time title="创建日期" dir="ltr">📅 2019年12月01日 </time>  <span title="阅读时长" dir="ltr"> &middot; ☕ 5 分钟 </span></h6>
       </header>
       <div>
         <div class="summary-classic__text p2">
@@ -1659,7 +1659,7 @@
     <div class="summary-classic__content">
       <header>
         <h5 class="title h5"><a href='https://betterme.xin/posts/2019-12/helloworld/'> I&#39;m back!</a> </h5>
-        <h6 class="subtitle caption"><time title="Written At" dir="ltr">📅 2019-12-01 </time>  <span title="Reading Time" dir="ltr"> &middot; ☕ 1 min read </span></h6>
+        <h6 class="subtitle caption"><time title="创建日期" dir="ltr">📅 2019年12月01日 </time>  <span title="阅读时长" dir="ltr"> &middot; ☕ 1 分钟 </span></h6>
       </header>
       <div>
         <div class="summary-classic__text p2">
@@ -1749,7 +1749,7 @@
     <section>
         <span class="title p2">
             <a href="/tags/" class="taxo__title">
-                Tags
+                标签
             </a>
         </span>
         
@@ -1826,7 +1826,7 @@
     <section>
         <span class="title p2">
             <a href="/categories/" class="taxo__title">
-                Categories
+                分类
             </a>
         </span>
         
@@ -1877,7 +1877,7 @@
     <section>
         <span class="title p2">
             <a href="/series/" class="taxo__title">
-                Series
+                系列
             </a>
         </span>
         
@@ -1922,6 +1922,7 @@
         gridSmall = 'r';
         gridBig = 'lm'
     }
+
     enquire.register("screen and (max-width: 769px)", {
         match: function () {
             if (enableSidebar) {
@@ -1939,6 +1940,7 @@
                     listSideElem.classList.add('hide');
                 }
             }
+
         },
         unmatch: function () {
             if (enableSidebar) {
@@ -1964,14 +1966,19 @@
                 navCollapse.style.maxHeight = 0;
                 navCollapseBtn.classList.remove('is-active');
             }
-            document.getElementsByClassName('navbar__menu')[0].classList.remove('is-active');
-            document.getElementsByClassName('mobile-search')[0].classList.add('hide');
+            if (document.getElementsByClassName('navbar__menu')[0]) {
+                document.getElementsByClassName('navbar__menu')[0].classList.remove('is-active');
+            }
+            if (document.getElementsByClassName('mobile-search')[0]) {
+                document.getElementsByClassName('mobile-search')[0].classList.add('hide');
+            }
         },
         setup: function () { },
         deferSetup: true,
         destroy: function () { },
     });
 </script>
+
 
 
             

@@ -14,13 +14,49 @@
     <managingEditor>uniqueacheng@gmail.com (Jason Tan)</managingEditor>
     <webMaster>uniqueacheng@gmail.com (Jason Tan)</webMaster>
     <copyright>&amp;copy;2019-{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Sat, 28 Dec 2019 11:21:26 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 30 Mar 2020 13:18:19 +0800</lastBuildDate>
     
         <atom:link href="https://betterme.xin/categories/tools/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>vimtutor简单总结</title>
+        <link>https://betterme.xin/posts/2020-03/vim01/</link>
+        <pubDate>Mon, 30 Mar 2020 13:18:19 +0800</pubDate>
+        <author>uniqueacheng@gmail.com (Jason Tan)</author>
+        <atom:modified>Mon, 30 Mar 2020 13:18:19 +0800</atom:modified>
+        <guid>https://betterme.xin/posts/2020-03/vim01/</guid>
+        <description>vimtutor讲解 简单总结下vim官方内置教程讲解要点。 第一讲 光标在屏幕文本中的移动既可以用箭头键，也可以使用 hjkl 字母键。 h (左移) j (下行</description>
+        
+        <dc:creator>Jason Tan</dc:creator>
+        
+        <media:content url="https://betterme.xin/image/cover/vim.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+          
+            
+              <category>vim</category>
+            
+          
+        
+        
+          
+            
+              <category>tools</category>
+            
+          
+        
+        
+          
+            
+              <category>vim从陌生到入门</category>
+            
+          
+        
+      </item>
       
       <item>
         <title>vim从陌生到入门</title>

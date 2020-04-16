@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://betterme.xin/</loc>
-    <lastmod>2020-03-30T13:18:19+08:00</lastmod>
+    <lastmod>2020-04-16T22:55:16+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -19,7 +19,7 @@
   
   <url>
     <loc>https://betterme.xin/categories/</loc>
-    <lastmod>2020-03-30T13:18:19+08:00</lastmod>
+    <lastmod>2020-04-16T22:55:16+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -33,8 +33,53 @@
   </url>
   
   <url>
+    <loc>https://betterme.xin/tags/docker/</loc>
+    <lastmod>2020-04-16T22:55:16+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://betterme.xin/tags/laradock/</loc>
+    <lastmod>2020-04-16T22:55:16+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://betterme.xin/tags/php/</loc>
+    <lastmod>2020-04-16T22:55:16+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://betterme.xin/posts/</loc>
-    <lastmod>2020-03-30T13:18:19+08:00</lastmod>
+    <lastmod>2020-04-16T22:55:16+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://betterme.xin/tags/</loc>
+    <lastmod>2020-04-16T22:55:16+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://betterme.xin/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://betterme.xin/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://betterme.xin/categories/tools/</loc>
+    <lastmod>2020-04-16T22:55:16+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://betterme.xin/posts/2020-04/laradock/</loc>
+    <lastmod>2020-04-16T22:55:16+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://betterme.xin/categories/%E5%BC%80%E5%8F%91/</loc>
+    <lastmod>2020-04-16T22:55:16+08:00</lastmod>
   </url>
   
   <url>
@@ -50,26 +95,6 @@
                 hreflang="zh"
                 href="https://betterme.xin/series/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://betterme.xin/tags/</loc>
-    <lastmod>2020-03-30T13:18:19+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://betterme.xin/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://betterme.xin/tags/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://betterme.xin/categories/tools/</loc>
-    <lastmod>2020-03-30T13:18:19+08:00</lastmod>
   </url>
   
   <url>

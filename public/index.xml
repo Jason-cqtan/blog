@@ -14,7 +14,7 @@
     <managingEditor>uniqueacheng@gmail.com (Jason Tan)</managingEditor>
     <webMaster>uniqueacheng@gmail.com (Jason Tan)</webMaster>
     <copyright>&amp;copy;2019-{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 30 Mar 2020 13:18:19 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 16 Apr 2020 22:55:16 +0800</lastBuildDate>
     
         <atom:link href="https://betterme.xin/index.xml" rel="self" type="application/rss+xml" />
     
@@ -42,6 +42,52 @@
         
       
 
+      
+      <item>
+        <title>小玩Laradock</title>
+        <link>https://betterme.xin/posts/2020-04/laradock/</link>
+        <pubDate>Thu, 16 Apr 2020 22:55:16 +0800</pubDate>
+        <author>uniqueacheng@gmail.com (Jason Tan)</author>
+        <atom:modified>Thu, 16 Apr 2020 22:55:16 +0800</atom:modified>
+        <guid>https://betterme.xin/posts/2020-04/laradock/</guid>
+        <description>laradock 是一个利用docker容器编排，提供一系列包括不仅限于php环境，在不“污染”本地环境下，将开发环境搭建在docker内；需执行各种命令时</description>
+        
+        <dc:creator>Jason Tan</dc:creator>
+        
+        <media:content url="https://betterme.xin/image/cover/laradock.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+          
+            
+              <category>php</category>
+            
+          
+            
+              <category>laradock</category>
+            
+          
+            
+              <category>docker</category>
+            
+          
+        
+        
+          
+            
+              <category>开发</category>
+            
+          
+            
+              <category>tools</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
       
       <item>
         <title>vimtutor简单总结</title>

@@ -82,17 +82,16 @@ vmess://ewogICJ2IjogIjIiLAogICJwcyI6ICJ3dWxhYmluZ193d3cubmxnYmdmdy54eXoiLAogICJh
 
 **trojan**:
 
-- 域名:ttjoy.cc
+- 域名:93jc.cn
 - 端口:443
-- 密码1:wwwttjoycc
-- 密码2:ttjoycc
+- 密码:bettermexin
 
 这些节点都是搭在搬瓦工上面，不支持奈飞等流媒体观看，不出意外vps到期之前都可以免费用，个人用来备用，用的多的还是机场。
 
 ### 第三方稳定机场推荐
 
-- <a href="https://www.flycloud.gg/?code=Jjxk" target="_blank">flycloud</a>
-提供v2ray，BGP，IPLC专线节点，三种套餐等级，节点超多，等级一30+节点
+- <a href="https://aaex.uk/aff.php?aff=1795" target="_blank">aaex</a>
+门槛超高型机场，主要提供bgp，iplc节点，现合并各大机场
 
 - <a href="https://xtunnel.cc/auth/register?code=d3Yk" target="_blank">xtunnel</a>
 全v2ray中转节点，节点不是很多，但够用了，刚开张不久，最近7折优惠，便宜实惠

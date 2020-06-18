@@ -9,11 +9,14 @@
     
 
 
+  
+  <script defer src="/js/fuse.min.94c78ad70b02749822921660cf4e9f0b3701bc0680c421afb784a78228de0275.js"></script>
+
+
+
 <script src="/js/enquire.min.dfb99dee1e029d51d6cfb672d847929890b1585402de17f5ed092edd72a688b4.js"></script>
 
 <script defer src="/js/lazysizes.min.31dd6a2d3a1ec0f78a8df007535cf23f03aeb5c70f026e6d6a19dac3b3acc340.js"></script>
-
-<script defer src="/js/fuse.min.94c78ad70b02749822921660cf4e9f0b3701bc0680c421afb784a78228de0275.js"></script>
 
 <script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
 
@@ -551,11 +554,15 @@
 
   
     
+    var baseurl = JSON.parse("\"https://betterme.xin/\"");
+    
     var permalink = JSON.parse("\"https://betterme.xin/\"");
     var searchResults = null;
     var searchMenu = null;
     var searchText = null;
     
+    
+    var enableSearch = JSON.parse("true");
     
     var enableSearchHighlight = JSON.parse("true");
     
@@ -564,31 +571,33 @@
     var sectionType = JSON.parse("\"page\"");
 
     var fuse = null;
-
-    (function initFuse() {
-      var xhr = new XMLHttpRequest();
-      xhr.open('GET', permalink + "index.json");
-      xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
-      xhr.onload = function () {
-        if (xhr.status === 200) {
-          fuse = new Fuse(JSON.parse(xhr.response.toString('utf-8')), {
-            keys: sectionType.includes('publication') ? ['title', 'abstract'] : ['title', 'description', 'content'],
-            includeMatches: enableSearchHighlight,
-            shouldSort: true,
-            threshold: 0.4,
-            location: 0,
-            distance: 100,
-            maxPatternLength: 32,
-            minMatchCharLength: 1,
-          });
-          window.fuse = fuse;
-        }
-        else {
-          console.error('[' + xhr.status + ']Error:', xhr.statusText);
-        }
-      };
-      xhr.send();
-    })();
+    
+    if (enableSearch) {
+      (function initFuse() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', baseurl + "/index.json");
+        xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+        xhr.onload = function () {
+          if (xhr.status === 200) {
+            fuse = new Fuse(JSON.parse(xhr.response.toString('utf-8')), {
+              keys: sectionType.includes('publication') ? ['title', 'abstract'] : ['title', 'description', 'content'],
+              includeMatches: enableSearchHighlight,
+              shouldSort: true,
+              threshold: 0.4,
+              location: 0,
+              distance: 100,
+              maxPatternLength: 32,
+              minMatchCharLength: 1,
+            });
+            window.fuse = fuse;
+          }
+          else {
+            console.error('[' + xhr.status + ']Error:', xhr.statusText);
+          }
+        };
+        xhr.send();
+      })();
+    }
 
     function makeLi(ulElem, obj) {
       var li = document.createElement('li');
@@ -1221,7 +1230,7 @@
 <meta property="og:type" content="website">
 <meta property="og:description" content="享受生活,乐于分享,happy coding,To be better me.">
 
-<meta name="generator" content="Hugo 0.70.0" />
+<meta name="generator" content="Hugo 0.72.0" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1571,6 +1580,10 @@
             
             
             
+            
+            
+            
+            
                 
   <article class="summary-classic" data-ani="true">
   <div class="summary-classic__flex-box" >
@@ -1585,7 +1598,7 @@
 
     <div class="summary-classic__content">
       <header>
-        <h5 class="title h5"><a href='https://betterme.xin/posts/2020-04/laradock/'> 小玩Laradock</a> </h5>
+        <h5 class="title h5"><a href='https://betterme.xin/posts/2020-04/laradock/'>小玩Laradock</a> </h5>
         <h6 class="subtitle caption">
           <time title="创建日期" dir="ltr">📅&nbsp;2020年04月16日 </time>
           
@@ -1623,7 +1636,7 @@
 
     <div class="summary-classic__content">
       <header>
-        <h5 class="title h5"><a href='https://betterme.xin/posts/2020-03/vim01/'> vimtutor简单总结</a> </h5>
+        <h5 class="title h5"><a href='https://betterme.xin/posts/2020-03/vim01/'>vimtutor简单总结</a> </h5>
         <h6 class="subtitle caption">
           <time title="创建日期" dir="ltr">📅&nbsp;2020年03月30日 </time>
           
@@ -1661,7 +1674,7 @@
 
     <div class="summary-classic__content">
       <header>
-        <h5 class="title h5"><a href='https://betterme.xin/notes/2020-02/cognition/'> 认知</a> </h5>
+        <h5 class="title h5"><a href='https://betterme.xin/notes/2020-02/cognition/'>认知</a> </h5>
         <h6 class="subtitle caption">
           <time title="创建日期" dir="ltr">📅&nbsp;2020年02月16日 </time>
           
@@ -1699,7 +1712,7 @@
 
     <div class="summary-classic__content">
       <header>
-        <h5 class="title h5"><a href='https://betterme.xin/posts/2019-12/vim/'> vim从陌生到入门</a> </h5>
+        <h5 class="title h5"><a href='https://betterme.xin/posts/2019-12/vim/'>vim从陌生到入门</a> </h5>
         <h6 class="subtitle caption">
           <time title="创建日期" dir="ltr">📅&nbsp;2019年12月28日 </time>
           
@@ -1737,7 +1750,7 @@
 
     <div class="summary-classic__content">
       <header>
-        <h5 class="title h5"><a href='https://betterme.xin/notes/2019-12/%E4%BD%95%E4%BB%A5%E4%B8%BA%E5%AE%B6/'> 《何以为家》剧情介绍</a> </h5>
+        <h5 class="title h5"><a href='https://betterme.xin/notes/2019-12/%E4%BD%95%E4%BB%A5%E4%B8%BA%E5%AE%B6/'>《何以为家》剧情介绍</a> </h5>
         <h6 class="subtitle caption">
           <time title="创建日期" dir="ltr">📅&nbsp;2019年12月22日 </time>
           
@@ -1775,7 +1788,7 @@
 
     <div class="summary-classic__content">
       <header>
-        <h5 class="title h5"><a href='https://betterme.xin/posts/2019-12/trojan/'> Trojan从搭建到使用</a> </h5>
+        <h5 class="title h5"><a href='https://betterme.xin/posts/2019-12/trojan/'>Trojan从搭建到使用</a> </h5>
         <h6 class="subtitle caption">
           <time title="创建日期" dir="ltr">📅&nbsp;2019年12月14日 </time>
           
@@ -1813,7 +1826,7 @@
 
     <div class="summary-classic__content">
       <header>
-        <h5 class="title h5"><a href='https://betterme.xin/notes/2019-12/married_family/'> 《婚姻故事》剧情介绍</a> </h5>
+        <h5 class="title h5"><a href='https://betterme.xin/notes/2019-12/married_family/'>《婚姻故事》剧情介绍</a> </h5>
         <h6 class="subtitle caption">
           <time title="创建日期" dir="ltr">📅&nbsp;2019年12月07日 </time>
           
@@ -1851,7 +1864,7 @@
 
     <div class="summary-classic__content">
       <header>
-        <h5 class="title h5"><a href='https://betterme.xin/notes/2019-12/spotifywrapped2019/'> SpotifyWrapped</a> </h5>
+        <h5 class="title h5"><a href='https://betterme.xin/notes/2019-12/spotifywrapped2019/'>SpotifyWrapped</a> </h5>
         <h6 class="subtitle caption">
           <time title="创建日期" dir="ltr">📅&nbsp;2019年12月07日 </time>
           
@@ -1889,7 +1902,7 @@
 
     <div class="summary-classic__content">
       <header>
-        <h5 class="title h5"><a href='https://betterme.xin/notes/2019-12/note2/'> 逼近26岁，25岁时记的话</a> </h5>
+        <h5 class="title h5"><a href='https://betterme.xin/notes/2019-12/note2/'>逼近26岁，25岁时记的话</a> </h5>
         <h6 class="subtitle caption">
           <time title="创建日期" dir="ltr">📅&nbsp;2019年12月04日 </time>
           
@@ -1927,7 +1940,7 @@
 
     <div class="summary-classic__content">
       <header>
-        <h5 class="title h5"><a href='https://betterme.xin/notes/youtube_share/'> youtube订阅推荐</a> </h5>
+        <h5 class="title h5"><a href='https://betterme.xin/notes/youtube_share/'>youtube订阅推荐</a> </h5>
         <h6 class="subtitle caption">
           <time title="创建日期" dir="ltr">📅&nbsp;2019年12月02日 </time>
           
@@ -1965,7 +1978,7 @@
 
     <div class="summary-classic__content">
       <header>
-        <h5 class="title h5"><a href='https://betterme.xin/posts/2019-12/free_use_netflix/'> 如何免费使用Netflix</a> </h5>
+        <h5 class="title h5"><a href='https://betterme.xin/posts/2019-12/free_use_netflix/'>如何免费使用Netflix</a> </h5>
         <h6 class="subtitle caption">
           <time title="创建日期" dir="ltr">📅&nbsp;2019年12月01日 </time>
           
@@ -2003,7 +2016,7 @@
 
     <div class="summary-classic__content">
       <header>
-        <h5 class="title h5"><a href='https://betterme.xin/posts/2019-12/helloworld/'> I&#39;m back!</a> </h5>
+        <h5 class="title h5"><a href='https://betterme.xin/posts/2019-12/helloworld/'>I&#39;m back!</a> </h5>
         <h6 class="subtitle caption">
           <time title="创建日期" dir="ltr">📅&nbsp;2019年12月01日 </time>
           
@@ -2251,6 +2264,7 @@
         </span>
         
         
+        
             <span class="tag">
                 <a href="/tags/docker/" class="is-tags taxo__link" data-dir="ltr">
                     <span class="taxo__text">
@@ -2367,6 +2381,7 @@
         </span>
         
         
+        
             <span class="tag">
                 <a href="/categories/life/" class="is-categories taxo__link" data-dir="ltr">
                     <span class="taxo__text">
@@ -2429,6 +2444,7 @@
                 系列
             </a>
         </span>
+        
         
         
             <span class="tag">

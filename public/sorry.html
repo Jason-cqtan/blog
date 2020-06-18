@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+    <style>
+       body{
+           background:#ff6188
+       }
+       #box {
+            /* background: #ddd; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        #child {
+            /* background: orange; */
+        }
+
+    </style>
+    <title>sorry,Maria</title>
+</head>
+<body>
+    <div class="container">
+
+<div class="row">
+    <div class="col-md-12">
+        <div id="box">
+            <div id="child"><h3>也许是我的幼稚刺伤了你的心，请接受我真诚道歉，对不起！</h3></div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <button type="button" class="btn btn-primary" id="back">回复TA</button>
+    </div>
+</div>
+<div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">回复Ta</h4>
+            </div>
+            <div class="modal-body" id="txt">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default accept" >接受</button>
+                <button type="button" class="btn btn-primary accept">同意</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+    </div>
+
+
+<script>
+    $(function(){
+        $("#back").on('click',function(){
+           $('#myModal').modal('show');
+        })
+
+        function truncated(str, num){
+            let s = '';
+            for (let v of str) {
+                s += v;
+                num--;
+                if (num <= 0) {
+                    break;
+                }
+            }
+            return s;
+        }
+
+        function randomNum(minNum, maxNum) {
+            switch (arguments.length) {
+                case 1:
+                    return parseInt(Math.random() * minNum + 1, 10);
+                    break;
+                case 2:
+                    return parseInt(Math.random() * (maxNum - minNum + 1) + minNum, 10);
+                    break;
+                default:
+                    return 0;
+                    break;
+            }
+        }
+
+
+        function randEmog() {
+            var str = '😁😀😊😆🌹🌝';
+            return truncated(str, randomNum(1,17));
+        }
+
+        $(".accept").on('click',function(){
+                $('#txt').append(randEmog());
+        })
+
+
+    })
+</script>
+</body>
+</html>

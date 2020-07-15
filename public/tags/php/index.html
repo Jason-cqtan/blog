@@ -557,6 +557,8 @@
     var baseurl = JSON.parse("\"https://betterme.xin/\"");
     
     var permalink = JSON.parse("\"https://betterme.xin/tags/php/\"");
+    
+    var langprefix = JSON.parse("\"\"");
     var searchResults = null;
     var searchMenu = null;
     var searchText = null;
@@ -569,13 +571,20 @@
     var searchResultPosition = JSON.parse("null");
     
     var sectionType = JSON.parse("\"tags\"");
-
-    var fuse = null;
     
+    var kind = JSON.parse("\"term\"");
+    
+    var fuse = null;
+
     if (enableSearch) {
       (function initFuse() {
         var xhr = new XMLHttpRequest();
-        xhr.open('GET', baseurl + "/index.json");
+        if (sectionType === "publication" && kind !== "page") {
+          xhr.open('GET', permalink + "index.json");
+        } else {
+          xhr.open('GET', baseurl + langprefix + "/index.json");
+        }
+        
         xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
         xhr.onload = function () {
           if (xhr.status === 200) {
@@ -1230,7 +1239,7 @@
 <meta property="og:type" content="website">
 <meta property="og:description" content="享受生活,乐于分享,happy coding,To be better me.">
 
-<meta name="generator" content="Hugo 0.72.0" />
+<meta name="generator" content="Hugo 0.74.1" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1310,7 +1319,7 @@
 
 
 
-        <div class="wrapper" data-type="tags" data-kind="taxonomy">
+        <div class="wrapper" data-type="tags" data-kind="term">
             <nav class="navbar" role="navigation" aria-label="main navigation" data-dir="ltr">
   <div class="navbar__brand">
     

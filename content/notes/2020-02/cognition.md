@@ -90,6 +90,9 @@ vmess://ewogICJ2IjogIjIiLAogICJwcyI6ICJ3dWxhYmluZ193d3cubmxnYmdmdy54eXoiLAogICJh
 
 ### 第三方稳定机场推荐
 
+- <a href="https://ntt-co-jp.club/auth/register?code=Og0L" target="_blank">CNIX</a>
+薯条，超级超级多的节点，多地区的节点支持且支持IPLC | IEPL 节点，推荐
+
 - <a href="https://aaex.uk/aff.php?aff=1795" target="_blank">aaex</a>
 门槛超高型机场，主要提供bgp，iplc节点，现合并各大机场
 

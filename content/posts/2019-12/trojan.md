@@ -195,7 +195,7 @@ server {
 nginx -t
 ```
 
-软启动nginx 
+软启动nginx
 
 ```sh
 nginx -s reload
@@ -285,14 +285,14 @@ sudo systemctl status dnsmasq
 
 自己vps线路的质量好坏决定了上网体验，如果没有特殊需求，看youtube，1080p完全没问题。
 
-另外分享自己刚搭建的链接，拿去用吧，访问域名做了反向代理，访问[https://ttjoy.cc](https://ttjoy.cc)会显示本博客首页
+另外分享自己刚搭建的链接，拿去用吧，访问域名做了反向代理，访问[https://93jc.cn](https://93jc.cn)会显示本博客首页
 
 本人亲自测试，电信200M，看youtube 4k60帧
 ![alt youtube 4k60帧](https://betterme.xin/images/4ktrojantest.png "youtube 4k60帧")
 
-- 域名:ttjoy.cc
+- 域名:93jc.cn
 - 端口:443
-- 密码:||||小|额|打|赏|可|见||并解锁另外一个节点|||
+- 密码:||||小|额|打|赏|可|见|||
 
 ### Attention!!! 打赏的电报或邮箱联系告知密码，告知打赏来源，或者探索网站其他文章，有惊喜哟:)
 

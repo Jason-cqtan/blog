@@ -77,7 +77,7 @@ featured_image: "cover/confusion.jpg"
 **v2ray**:
 
 ```text
-vmess://ewogICJ2IjogIjIiLAogICJwcyI6ICJ3dWxhYmluZ193d3cubmxnYmdmdy54eXoiLAogICJhZGQiOiAid3d3Lm5sZ2JnZncueHl6IiwKICAicG9ydCI6ICI0NDMiLAogICJpZCI6ICI0OTUxZTQ1Ny0yZWUzLTRlNGItYjI3YS00OGM0NWU4NzQ4OTYiLAogICJhaWQiOiAiMiIsCiAgIm5ldCI6ICJ3cyIsCiAgInR5cGUiOiAibm9uZSIsCiAgImhvc3QiOiAid3d3Lm5sZ2JnZncueHl6IiwKICAicGF0aCI6ICIvM2NlYjMyZDEvIiwKICAidGxzIjogInRscyIKfQo=
+vmess://eyJhZGQiOiI5NTIyNDMyMTQueHl6IiwiYWlkIjoiMCIsImhvc3QiOiIiLCJpZCI6IjdmYTkyZDIwLWZmMTgtNGQ0Yy1iYTA5LWVjY2JhOTc4ODg2ZSIsIm5ldCI6IiIsInBhdGgiOiIiLCJwb3J0IjoiNDQzIiwicHMiOiI5NTIyNDMyMTQueHl6IiwidGxzIjoidGxzIiwidHlwZSI6Im5vbmUiLCJ2IjoiMiJ9
 ```
 
 **trojan**:
@@ -86,7 +86,7 @@ vmess://ewogICJ2IjogIjIiLAogICJwcyI6ICJ3dWxhYmluZ193d3cubmxnYmdmdy54eXoiLAogICJh
 - 端口:443
 - 密码:bettermexin
 
-这些节点都是搭在搬瓦工上面，不支持奈飞等流媒体观看，不出意外vps到期之前都可以免费用，个人用来备用，用的多的还是机场。
+这些节点都是搭在vps上面，不支持奈飞等流媒体观看，不出意外vps到期之前都可以免费用，个人用来备用，用的多的还是机场。
 
 ### 第三方稳定机场推荐
 

@@ -14,13 +14,47 @@
     <managingEditor>uniqueacheng@gmail.com (Jason Tan)</managingEditor>
     <webMaster>uniqueacheng@gmail.com (Jason Tan)</webMaster>
     <copyright>&amp;copy;2019-{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Thu, 16 Apr 2020 22:55:16 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 31 Oct 2020 22:13:37 +0800</lastBuildDate>
     
         <atom:link href="https://betterme.xin/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>HBO GO</title>
+        <link>https://betterme.xin/posts/2020-10/hbo/</link>
+        <pubDate>Sat, 31 Oct 2020 22:13:37 +0800</pubDate>
+        <author>uniqueacheng@gmail.com (Jason Tan)</author>
+        <atom:modified>Sat, 31 Oct 2020 22:13:37 +0800</atom:modified>
+        <guid>https://betterme.xin/posts/2020-10/hbo/</guid>
+        <description>很想写关于hbo的文章，但了解不够清楚，迟迟不敢动手，经过我零星了解归类分析后，刚终于弄明白了如何订阅菲律宾的hbo go，下面分享一下。 主要</description>
+        
+        <dc:creator>Jason Tan</dc:creator>
+        
+        <media:content url="https://betterme.xin/image/cover/hbogo.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+          
+            
+              <category>hbo</category>
+            
+          
+        
+        
+          
+            
+              <category>life</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
       
       <item>
         <title>小玩Laradock</title>

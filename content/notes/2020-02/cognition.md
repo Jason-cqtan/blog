@@ -90,14 +90,17 @@ vmess://eyJhZGQiOiI5NTIyNDMyMTQueHl6IiwiYWlkIjoiMCIsImhvc3QiOiIiLCJpZCI6IjdmYTky
 
 ### 第三方稳定机场推荐
 
+- <a href="https://fnf.xyz/auth/register?code=WUkO" target="_blank">FOO&FRIENDS.</a>
+主要看中提供稀有节点，菲律宾、土耳其、巴西、阿根廷满足你各种使用场景，支持ssr和v2ray两种订阅，还有共享netflix账号套餐
+
+- <a href="https://xtunnel.cc/auth/register?code=d3Yk" target="_blank">xtunnel</a>
+全v2ray中转节点，节点不是很多，但够用了，刚开张不久，最近7折优惠，便宜实惠
+
 - <a href="https://ntt-co-jp.club/auth/register?code=Og0L" target="_blank">CNIX</a>
 薯条，超级超级多的节点，多地区的节点支持且支持IPLC | IEPL 节点，推荐
 
 - <a href="https://aaex.uk/aff.php?aff=1795" target="_blank">aaex</a>
 门槛超高型机场，主要提供bgp，iplc节点，现合并各大机场
-
-- <a href="https://xtunnel.cc/auth/register?code=d3Yk" target="_blank">xtunnel</a>
-全v2ray中转节点，节点不是很多，但够用了，刚开张不久，最近7折优惠，便宜实惠
 
 推荐的机场都可以流畅性看4k（自己网络质量要好），都支持奈飞等流媒体观看
 

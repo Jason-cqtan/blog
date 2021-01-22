@@ -93,10 +93,10 @@ vmess://eyJhZGQiOiI5NTIyNDMyMTQueHl6IiwiYWlkIjoiMCIsImhvc3QiOiIiLCJpZCI6IjdmYTky
 - <a href="https://fnf.xyz/auth/register?code=WUkO" target="_blank">FOO&FRIENDS.</a>
 主要看中提供稀有节点，菲律宾、土耳其、巴西、阿根廷满足你各种使用场景，支持ssr和v2ray两种订阅，还有共享netflix账号套餐
 
-- <a href="https://xtunnel.cc/auth/register?code=d3Yk" target="_blank">xtunnel</a>
+- <a href="https://xtunnel-aff.icu/auth/register?code=d3Yk" target="_blank">xtunnel</a>
 全v2ray中转节点，节点不是很多，但够用了，刚开张不久，最近7折优惠，便宜实惠
 
-- <a href="https://ntt-co-jp.club/auth/register?code=Og0L" target="_blank">CNIX</a>
+- <a href="https://xn--01-jp1gx8m.xn--d4ty0ojsqzfd.com/auth/register?code=Og0L" target="_blank">CNIX</a>
 薯条，超级超级多的节点，多地区的节点支持且支持IPLC | IEPL 节点，推荐
 
 - <a href="https://aaex.uk/aff.php?aff=1795" target="_blank">aaex</a>

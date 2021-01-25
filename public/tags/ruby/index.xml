@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>ruby on Jason Tan&#39;s blog</title>
+    <link>https://betterme.xin/tags/ruby/</link>
+    <description>Recent content in ruby on Jason Tan&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <managingEditor>uniqueacheng@gmail.com (Jason Tan)</managingEditor>
+    <webMaster>uniqueacheng@gmail.com (Jason Tan)</webMaster>
+    <copyright>&amp;copy;2019-{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Mon, 25 Jan 2021 10:02:47 +0800</lastBuildDate>
+    
+        <atom:link href="https://betterme.xin/tags/ruby/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>安装ruby</title>
+        <link>https://betterme.xin/posts/2021-01/ruby01/</link>
+        <pubDate>Mon, 25 Jan 2021 10:02:47 +0800</pubDate>
+        <author>uniqueacheng@gmail.com (Jason Tan)</author>
+        <atom:modified>Mon, 25 Jan 2021 10:02:47 +0800</atom:modified>
+        <guid>https://betterme.xin/posts/2021-01/ruby01/</guid>
+        <description>ruby 始于1993年，由日本计算机科学家松本行弘（Matz）设计并开发，是一种面向对象，动态语言，Ruby于2006年为TIOBE获选为年度编程</description>
+        
+        <dc:creator>Jason Tan</dc:creator>
+        
+        <media:content url="https://betterme.xin/image/cover/Ruby_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+          
+            
+              <category>ruby</category>
+            
+          
+        
+        
+          
+            
+              <category>开发</category>
+            
+          
+        
+        
+          
+            
+              <category>ruby从陌生到入门</category>
+            
+          
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

@@ -14,11 +14,29 @@
     <managingEditor>uniqueacheng@gmail.com (Jason Tan)</managingEditor>
     <webMaster>uniqueacheng@gmail.com (Jason Tan)</webMaster>
     <copyright>&amp;copy;2019-{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Sat, 31 Oct 2020 22:13:37 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 25 Jan 2021 10:02:47 +0800</lastBuildDate>
     
         <atom:link href="https://betterme.xin/tags/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>ruby</title>
+        <link>https://betterme.xin/tags/ruby/</link>
+        <pubDate>Mon, 25 Jan 2021 10:02:47 +0800</pubDate>
+        <author>uniqueacheng@gmail.com (Jason Tan)</author>
+        
+        <guid>https://betterme.xin/tags/ruby/</guid>
+        <description></description>
+        
+        <dc:creator>Jason Tan</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>hbo</title>

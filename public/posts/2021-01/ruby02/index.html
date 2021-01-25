@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>安装ruby – Jason Tan&#39;s blog</title>
+    <title>Ruby基础语法 – Jason Tan&#39;s blog</title>
     
 
 
@@ -653,7 +653,7 @@
     
     var baseurl = JSON.parse("\"https://betterme.xin/\"");
     
-    var permalink = JSON.parse("\"https://betterme.xin/posts/2021-01/ruby01/\"");
+    var permalink = JSON.parse("\"https://betterme.xin/posts/2021-01/ruby02/\"");
     
     var langprefix = JSON.parse("\"\"");
     var searchResults = null;
@@ -1323,25 +1323,25 @@
 
 
     
-<meta name="description" content="初识ruby，在mac上安装" />
+<meta name="description" content="Ruby基础语法" />
+
+<meta name="keywords" content="ruby语法">
+
 
 <meta name="keywords" content="ruby">
 
-
-<meta name="keywords" content="ruby">
-
-<meta name="created" content="2021-01-25T10:02:47&#43;0800">
-<meta name="modified" content="2021-01-25T10:02:47&#43;0800">
-<meta property="article:published_time" content="2021-01-25T10:02:47&#43;0800">
+<meta name="created" content="2021-01-25T10:30:13&#43;0800">
+<meta name="modified" content="2021-01-25T10:30:13&#43;0800">
+<meta property="article:published_time" content="2021-01-25T10:30:13&#43;0800">
 
 <meta name="author" content="Jason Tan">
 
 
 <meta property="og:site_name" content="Jason Tan&#39;s blog">
-<meta property="og:title" content="安装ruby">
-<meta property="og:url" content="https://betterme.xin/posts/2021-01/ruby01/">
+<meta property="og:title" content="Ruby基础语法">
+<meta property="og:url" content="https://betterme.xin/posts/2021-01/ruby02/">
 <meta property="og:type" content="article">
-<meta property="og:description" content="初识ruby，在mac上安装">
+<meta property="og:description" content="Ruby基础语法">
 
 <meta name="generator" content="Hugo 0.80.0" />
 <meta name="msapplication-TileColor" content="#fff">
@@ -1352,7 +1352,7 @@
 
 <meta name="apple-mobile-web-app-status-bar-style" content="#fff">
 
-<link rel="canonical" href="https://betterme.xin/posts/2021-01/ruby01/">
+<link rel="canonical" href="https://betterme.xin/posts/2021-01/ruby02/">
 
 <link rel="manifest" href="/manifest.json">
 
@@ -1366,11 +1366,11 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "headline": "安装ruby",
-    "datePublished": "2021-01-25T10:02:47+08:00",
-    "dateModified": "2021-01-25T10:02:47+08:00",
-    "url" : "https://betterme.xin/posts/2021-01/ruby01/",
-    "description": "初识ruby，在mac上安装",
+    "headline": "Ruby基础语法",
+    "datePublished": "2021-01-25T10:30:13+08:00",
+    "dateModified": "2021-01-25T10:30:13+08:00",
+    "url" : "https://betterme.xin/posts/2021-01/ruby02/",
+    "description": "Ruby基础语法",
     "keywords": ["ruby"],
     "mainEntityOfPage": {
       "@type": "WebPage",
@@ -1676,7 +1676,7 @@
   
   <li  class="is-active" >
     
-      <span>安装ruby</span>
+      <span>Ruby基础语法</span>
     
   </li>
   
@@ -1688,14 +1688,14 @@
   <div class="single ">
     <div class="single__nojs">Please enable Javascript to view the contents</div>
     <script>document.querySelector('.single').classList.remove('hide'); document.querySelector('.single__nojs').classList.add('hide');</script>
-    <h2 class="single__title" data-ani="true">安装ruby</h2>
+    <h2 class="single__title" data-ani="true">Ruby基础语法</h2>
     <h3 class="single__subtitle"></h3>
     <div class="single__meta">
       
 <div class="single__infos">
   <time class="single__info" title="创建日期">📅&nbsp;2021年01月25日 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="阅读时长"> ☕&nbsp;1&nbsp;分钟 </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="阅读时长"> ☕&nbsp;2&nbsp;分钟 </span>
   
   <span class="single__info">
      &middot; 👀<span id="busuanzi_value_page_pv">...</span> 阅读
@@ -1715,67 +1715,53 @@
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <h2 id="ruby">ruby</h2>
-<p>始于1993年，由日本计算机科学家松本行弘（Matz）设计并开发，是一种面向对象，动态语言，Ruby于2006年为TIOBE获选为年度编程语言；</p>
-<h2 id="前言">前言</h2>
-<p>现在学习Ruby似乎已经过时，现在主要流行Python、Go、NodeJs；<br />
-在我看来，做技术的，不应该只限于某种语言，至少应该掌握3种语言，生计语言，个人使用语言；语言是工具，多掌握工具，多些解决问题的途径，多学习了解并不是坏事。<br />
-本系列主要是学习ruby、ruby on rails相关记录，不定时更新，从陌生到入门:)</p>
-<h2 id="安装">安装</h2>
-<h3 id="macos">macOs</h3>
+      <h2 id="配置工作">配置工作</h2>
+<p>测试ruby，可直接在<code>irb</code>中测试，定义<code>irb</code>配置文件<code>~/.irbrc</code>，去掉缩进和多余的提示，看着清爽</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-text" data-lang="text">IRB.conf[:PROMPT_MODE] = :SIMPLE
+IRB.conf[:AUTO_INDENT_MODE] = false
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="打印和注释">打印和注释</h2>
+<h3 id="打印">打印</h3>
 <ul>
-<li>使用homebrew一键安装</li>
+<li>puts<br />
+ruby中所有方法()，可带可不带，会自动识别，puts打印并自动附加\n换行</li>
 </ul>
+<p>示例：</p>
 <blockquote>
-<p>brew install ruby</p>
+<p>puts &ldquo;hello world&rdquo;<br />
+puts(&ldquo;hello word&rdquo;)</p>
 </blockquote>
 <ul>
-<li>使用官方自带管理器<a href="http://rvm.io/">rvm</a> （推荐）<br />
-用Ta能安装多个 版本的ruby，随时切换，而homebrew只能安装一个版本</li>
+<li>print<br />
+只打印不换行</li>
 </ul>
-<p>可能会遇到的问题：</p>
-<p>0.zsh: command not found: gpg2<br />
-解决：使用brew安装 <code>brew install gpg2</code></p>
+<p>示例：</p>
+<blockquote>
+<p>print &ldquo;hello world&rdquo;</p>
+</blockquote>
+<h3 id="注释">注释</h3>
+<p>使用<code>#</code> 注释</p>
+<ul>
+<li>单行注释</li>
+</ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">gpg --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+<pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="nb">puts</span> <span class="s2">&#34;hello world&#34;</span> <span class="c1"># 打印hello world</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>1.提示没找到秘钥<br />
-解决：终端请挂代理</p>
-<h2 id="验证并使用">验证并使用</h2>
-<p>确认输入命令有输出</p>
-<ul>
-<li>重启终端</li>
-<li>rvm &ndash;help</li>
-<li>gem &ndash;version</li>
+</div><ul>
+<li>多行注释</li>
 </ul>
-<table>
-<thead>
-<tr>
-<th align="left">命令</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">rvm</td>
-<td>Ruby Version Manager</td>
-</tr>
-<tr>
-<td align="left">gem</td>
-<td>包管理器 RubyGems 提供的 gem 命令</td>
-</tr>
-<tr>
-<td align="left">irb</td>
-<td>ruby在控制台的交互式解析器</td>
-</tr>
-</tbody>
-</table>
-<h2 id="替换系统自带ruby">替换系统自带ruby</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -1784,24 +1770,248 @@
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">rvm install 3.0.0
-rvm use 3.0.0
-<span class="c1"># 创建软链接</span>
-ln -s 安装目录 软链接目录
+<pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="c1">#多</span>
+<span class="c1">#行</span>
+<span class="c1">#注</span>
+<span class="c1">#释</span>
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="测试">测试</h2>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="o">=</span><span class="k">begin</span>
+
+<span class="nb">puts</span> <span class="s2">&#34;hello world&#34;</span>
+
+<span class="o">=</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>here document<br />
+用于定义多行字符串，以<code>&lt;&lt;&lt;</code>开头，跟上标识，结尾处行首跟上标识</li>
+</ul>
+<p>语法：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
+</span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">!#/usr/local/bin/ruby
-puts <span class="o">(</span><span class="s2">&#34;欧耶，hello world!&#34;</span><span class="o">)</span>
+<pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="n">str</span> <span class="o">=</span> <span class="o">&lt;&lt;&lt;</span><span class="err">标识</span>
+
+<span class="err">标识</span>
 </code></pre></td></tr></table>
 </div>
+</div><p>示例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="o">&lt;&lt;&lt;</span><span class="no">EOC</span>
+
+<span class="no">EOC</span>
+
+</code></pre></td></tr></table>
 </div>
+</div><ul>
+<li>由<code>``</code>包裹的，执行<code>``</code>内命令</li>
+</ul>
+<p>示例：</p>
+<blockquote>
+<p>print `ls -alf `</p>
+</blockquote>
+<h2 id="字符串">字符串</h2>
+<ul>
+<li>
+<p>单引号<br />
+ruby不会对单引号字符串进行插值操作。单引号字符串的用处在于它们真的就是字面值，只包含你输入的字符</p>
+</li>
+<li>
+<p>双引号<br />
+会解析表达式<code>#{}</code>内的变量</p>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="n">var</span> <span class="o">=</span> <span class="s1">&#39;test&#39;</span>
+<span class="nb">puts</span> <span class="s2">&#34;</span><span class="si">#{</span><span class="n">var</span><span class="si">}</span><span class="s2">&#34;</span>
+
+<span class="c1"># 重复3次</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span>
+<span class="n">s</span> <span class="o">*=</span> <span class="mi">3</span>
+
+<span class="c1"># 读取索引下字符</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;abc&#39;</span>
+<span class="nb">puts</span> <span class="n">s</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span>
+
+<span class="c1"># 转小写返回副本</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s2">&#34;HELLO&#34;</span>
+<span class="n">s</span><span class="o">.</span><span class="n">downcase</span>
+
+<span class="c1"># 转小写返回副本并更改原来的</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;HELLO&#39;</span>
+<span class="n">s</span><span class="o">.</span><span class="n">downcase!</span>
+
+<span class="c1"># 追加</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span>
+<span class="n">s</span> <span class="o">&lt;&lt;</span> <span class="s1">&#39;b&#39;</span> <span class="o">&lt;&lt;</span> <span class="s1">&#39;c&#39;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="拼接">拼接</h3>
+<p>支持 <code>+</code>，但使用concat性能更佳，机制不一样,<code>+=</code>会赋值原来文本再尾部添加，而<code>concat</code>直接在子串尾部添加<br />
+分别使用下面demo，感受下时间，都是50000次重复追加<code>xxx|</code>，第二种<code>concat</code>明显就很快</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="n">box</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<span class="mi">50000</span><span class="o">.</span><span class="n">times</span><span class="p">{</span><span class="n">box</span><span class="o">+=</span><span class="s2">&#34;xxx|&#34;</span><span class="p">}</span>
+
+<span class="n">box</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<span class="mi">50000</span><span class="o">.</span><span class="n">times</span><span class="p">{</span><span class="n">box</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="s2">&#34;xxx|&#34;</span><span class="p">)}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="数组hashrange">数组、hash、range</h2>
+<h3 id="数组">数组</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="c1"># 创建数组的几种方式</span>
+<span class="n">nums</span> <span class="o">=</span> <span class="nb">Array</span><span class="o">.</span><span class="n">[]</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">nums</span> <span class="o">=</span> <span class="nb">Array</span><span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="o">]</span>
+<span class="n">nums</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">(</span><span class="mi">0</span><span class="o">..</span><span class="mi">9</span><span class="p">)</span>
+<span class="n">nums</span> <span class="o">=</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="o">]</span>
+
+<span class="n">ary</span> <span class="o">=</span> <span class="o">[</span><span class="sb">`ls -alf`</span><span class="p">,</span><span class="s1">&#39;jason&#39;&#39;]
+</span><span class="s1">
+</span><span class="s1"># 只打印值
+</span><span class="s1">ary.each do |item|
+</span><span class="s1">    puts item
+</span><span class="s1">end
+</span><span class="s1">
+</span><span class="s1"># 打印索引和值
+</span><span class="s1">ary.each_with_index do |val,index|
+</span><span class="s1">    puts index,val
+</span><span class="s1">end
+</span><span class="s1">
+</span><span class="s1"># 定义数组长度
+</span><span class="s1">ary = Array.new(14)
+</span><span class="s1">
+</span><span class="s1"># 定义数组并使用相同元素
+</span><span class="s1">ary = Array.new(3,&#39;</span><span class="n">nice</span><span class="err">&#39;</span><span class="p">)</span>
+
+<span class="c1"># 生成时使用计算后结果填充</span>
+<span class="n">ary</span> <span class="o">=</span> <span class="nb">Array</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="mi">10</span><span class="p">){</span><span class="o">|</span><span class="n">e</span><span class="o">|</span><span class="n">e</span><span class="o">*=</span><span class="mi">10</span><span class="p">}</span>
+
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="hash关联数组">hash、关联数组</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="n">base_info</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&#34;name&#34;</span><span class="o">=&gt;</span><span class="s2">&#34;jason&#34;</span><span class="p">,</span><span class="s2">&#34;email&#34;</span><span class="o">=&gt;</span><span class="s2">&#34;uniqueacheng@gmal.com&#34;</span><span class="p">}</span>
+<span class="n">symbols_format</span> <span class="o">=</span> <span class="p">{</span><span class="ss">:name</span><span class="o">=&gt;</span><span class="s2">&#34;jason&#34;</span><span class="p">,</span><span class="ss">:email</span><span class="o">=&gt;</span><span class="s2">&#34;uniqueacheng@gmal.com&#34;</span><span class="p">}</span>
+<span class="n">symbols_sample</span> <span class="o">=</span> <span class="p">{</span><span class="nb">name</span><span class="ss">:&#34;jason&#34;</span><span class="p">,</span><span class="ss">email</span><span class="p">:</span><span class="s2">&#34;uniqueacheng@gmal.com&#34;</span><span class="p">}</span>
+<span class="n">base_info</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">key</span><span class="p">,</span><span class="n">val</span><span class="o">|</span>
+    <span class="nb">puts</span> <span class="s2">&#34;key:</span><span class="si">#{</span> <span class="n">key</span><span class="si">}</span><span class="s2"> ,val: </span><span class="si">#{</span><span class="n">val</span><span class="si">}</span><span class="s2">&#34;</span>
+<span class="k">end</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="range">range</h3>
+<p>(start..end) 两个<code>.</code>包含end值<br />
+(start&hellip;end) 三个<code>.</code>不包含end值</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="c1"># 生成8位随机字母</span>
+<span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="o">..</span><span class="s1">&#39;z&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">to_a</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span><span class="o">.</span><span class="n">join</span>
+<span class="c1"># bar bas bat bau</span>
+<span class="p">(</span><span class="s1">&#39;bar&#39;</span><span class="o">..</span><span class="s1">&#39;bau&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">to_a</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="其他参考">其他参考</h2>
+<p>只例举了非常基础的东西，更多可参考官方<a href="https://ruby-doc.org">ruby api 文档</a></p>
+
     </article>
     
     
@@ -2000,13 +2210,13 @@ puts <span class="o">(</span><span class="s2">&#34;欧耶，hello world!&#34;</s
     
     
       
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fbetterme.xin%2fposts%2f2021-01%2fruby01%2f" title="Facebook" aria-label="Facebook Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fbetterme.xin%2fposts%2f2021-01%2fruby02%2f" title="Facebook" aria-label="Facebook Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
           <svg data-name="facebook" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"/></svg>
         </a>
       
     
       
-        <a href="https://twitter.com/intent/tweet?text=%e5%ae%89%e8%a3%85ruby&url=https%3a%2f%2fbetterme.xin%2fposts%2f2021-01%2fruby01%2f&hashtags=ruby&via=" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
+        <a href="https://twitter.com/intent/tweet?text=Ruby%e5%9f%ba%e7%a1%80%e8%af%ad%e6%b3%95&url=https%3a%2f%2fbetterme.xin%2fposts%2f2021-01%2fruby02%2f&hashtags=ruby&via=" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
           <svg data-name="twitter" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m21.534 7.113c.976-.693 1.797-1.558 2.466-2.554v-.001c-.893.391-1.843.651-2.835.777 1.02-.609 1.799-1.566 2.165-2.719-.951.567-2.001.967-3.12 1.191-.903-.962-2.19-1.557-3.594-1.557-2.724 0-4.917 2.211-4.917 4.921 0 .39.033.765.114 1.122-4.09-.2-7.71-2.16-10.142-5.147-.424.737-.674 1.58-.674 2.487 0 1.704.877 3.214 2.186 4.089-.791-.015-1.566-.245-2.223-.606v.054c0 2.391 1.705 4.377 3.942 4.835-.401.11-.837.162-1.29.162-.315 0-.633-.018-.931-.084.637 1.948 2.447 3.381 4.597 3.428-1.674 1.309-3.8 2.098-6.101 2.098-.403 0-.79-.018-1.177-.067 2.18 1.405 4.762 2.208 7.548 2.208 8.683 0 14.342-7.244 13.986-14.637z"/></svg>
         </a>
       
@@ -2146,26 +2356,34 @@ puts <span class="o">(</span><span class="s2">&#34;欧耶，hello world!&#34;</s
     <section class="related">
     
     
+    <h1 class="related__title">
+      <hr class="hr-dots"/>
+      <div>
+        相关内容
+      </div>
+      <hr class="hr-dots"/>
+    </h1>
+    <ul class="related-ul">
+        
+        <li>
+          <a href="/posts/2021-01/ruby01/" class="related__link">安装ruby</a>
+        </li>
+        
+    </ul>
+    
   </section>
     <div class="grow"></div>
 <nav class="pagination-single">
   
     
-      <a href="https://betterme.xin/posts/2020-10/hbo/" class="pagination-single__left">
+      <a href="https://betterme.xin/posts/2021-01/ruby01/" class="pagination-single__left">
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
         </div>
-        <div class="pagination-single__left-title">HBO GO</div>      
+        <div class="pagination-single__left-title">安装ruby</div>      
       </a>
     
     <div class="grow"></div>
-    
-      <a href="https://betterme.xin/posts/2021-01/ruby02/" class="pagination-single__right">      
-        <div class="pagination-single__right-title">Ruby基础语法</div>
-        <div class="pagination-single__icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
-        </div>
-      </a>
     
   
 </nav>
@@ -2523,16 +2741,26 @@ document.addEventListener('DOMContentLoaded', function () {
   <div class="toc " data-dir="ltr" data-folding="true" data-ani="true">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#ruby">ruby</a></li>
-    <li><a href="#前言">前言</a></li>
-    <li><a href="#安装">安装</a>
+    <li><a href="#配置工作">配置工作</a></li>
+    <li><a href="#打印和注释">打印和注释</a>
       <ul>
-        <li><a href="#macos">macOs</a></li>
+        <li><a href="#打印">打印</a></li>
+        <li><a href="#注释">注释</a></li>
       </ul>
     </li>
-    <li><a href="#验证并使用">验证并使用</a></li>
-    <li><a href="#替换系统自带ruby">替换系统自带ruby</a></li>
-    <li><a href="#测试">测试</a></li>
+    <li><a href="#字符串">字符串</a>
+      <ul>
+        <li><a href="#拼接">拼接</a></li>
+      </ul>
+    </li>
+    <li><a href="#数组hashrange">数组、hash、range</a>
+      <ul>
+        <li><a href="#数组">数组</a></li>
+        <li><a href="#hash关联数组">hash、关联数组</a></li>
+        <li><a href="#range">range</a></li>
+      </ul>
+    </li>
+    <li><a href="#其他参考">其他参考</a></li>
   </ul>
 </nav>
   </div>

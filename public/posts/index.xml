@@ -14,11 +14,47 @@
     <managingEditor>uniqueacheng@gmail.com (Jason Tan)</managingEditor>
     <webMaster>uniqueacheng@gmail.com (Jason Tan)</webMaster>
     <copyright>&amp;copy;2019-{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 25 Jan 2021 10:02:47 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 25 Jan 2021 10:30:13 +0800</lastBuildDate>
     
         <atom:link href="https://betterme.xin/posts/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>Ruby基础语法</title>
+        <link>https://betterme.xin/posts/2021-01/ruby02/</link>
+        <pubDate>Mon, 25 Jan 2021 10:30:13 +0800</pubDate>
+        <author>uniqueacheng@gmail.com (Jason Tan)</author>
+        <atom:modified>Mon, 25 Jan 2021 10:30:13 +0800</atom:modified>
+        <guid>https://betterme.xin/posts/2021-01/ruby02/</guid>
+        <description>配置工作 测试ruby，可直接在irb中测试，定义irb配置文件~/.irbrc，去掉缩进和多余的提示，看着清爽 1 2 IRB.conf[:PROMPT_MODE] = :SIMPLE IRB.conf[:AUTO_INDENT_MODE] = false 打印和注释 打印</description>
+        
+        <dc:creator>Jason Tan</dc:creator>
+        
+        <media:content url="https://betterme.xin/image/cover/Ruby_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+          
+            
+              <category>ruby</category>
+            
+          
+        
+        
+          
+            
+              <category>开发</category>
+            
+          
+        
+        
+          
+            
+              <category>ruby从陌生到入门</category>
+            
+          
+        
+      </item>
       
       <item>
         <title>安装ruby</title>

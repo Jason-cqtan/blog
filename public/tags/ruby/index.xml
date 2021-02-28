@@ -14,11 +14,47 @@
     <managingEditor>uniqueacheng@gmail.com (Jason Tan)</managingEditor>
     <webMaster>uniqueacheng@gmail.com (Jason Tan)</webMaster>
     <copyright>&amp;copy;2019-{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 25 Jan 2021 10:30:13 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 25 Jan 2021 15:12:10 +0800</lastBuildDate>
     
         <atom:link href="https://betterme.xin/tags/ruby/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>变量、块、对象</title>
+        <link>https://betterme.xin/posts/2021-01/ruby03/</link>
+        <pubDate>Mon, 25 Jan 2021 15:12:10 +0800</pubDate>
+        <author>uniqueacheng@gmail.com (Jason Tan)</author>
+        <atom:modified>Mon, 25 Jan 2021 15:12:10 +0800</atom:modified>
+        <guid>https://betterme.xin/posts/2021-01/ruby03/</guid>
+        <description>块 1 2 3 4 5 6 7 8 9 10 ary = [1,2,3] ary.each do |item| # 这里就是块 puts item end (1..5).each { |i| puts 2 * i } # { |i| puts 2 * i } 为块 变量 局部变量 块中或方法内变量，以数字字母下划线开头，</description>
+        
+        <dc:creator>Jason Tan</dc:creator>
+        
+        <media:content url="https://betterme.xin/image/cover/Ruby_logo.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+          
+            
+              <category>ruby</category>
+            
+          
+        
+        
+          
+            
+              <category>开发</category>
+            
+          
+        
+        
+          
+            
+              <category>ruby从陌生到入门</category>
+            
+          
+        
+      </item>
       
       <item>
         <title>Ruby基础语法</title>

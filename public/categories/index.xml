@@ -14,19 +14,19 @@
     <managingEditor>uniqueacheng@gmail.com (Jason Tan)</managingEditor>
     <webMaster>uniqueacheng@gmail.com (Jason Tan)</webMaster>
     <copyright>&amp;copy;2019-{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 25 Jan 2021 10:30:13 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 28 Feb 2021 13:35:18 +0800</lastBuildDate>
     
         <atom:link href="https://betterme.xin/categories/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
-        <title>开发</title>
-        <link>https://betterme.xin/categories/%E5%BC%80%E5%8F%91/</link>
-        <pubDate>Mon, 25 Jan 2021 10:30:13 +0800</pubDate>
+        <title>life</title>
+        <link>https://betterme.xin/categories/life/</link>
+        <pubDate>Sun, 28 Feb 2021 13:35:18 +0800</pubDate>
         <author>uniqueacheng@gmail.com (Jason Tan)</author>
         
-        <guid>https://betterme.xin/categories/%E5%BC%80%E5%8F%91/</guid>
+        <guid>https://betterme.xin/categories/life/</guid>
         <description></description>
         
         <dc:creator>Jason Tan</dc:creator>
@@ -39,12 +39,12 @@
       </item>
       
       <item>
-        <title>life</title>
-        <link>https://betterme.xin/categories/life/</link>
-        <pubDate>Sat, 31 Oct 2020 22:13:37 +0800</pubDate>
+        <title>开发</title>
+        <link>https://betterme.xin/categories/%E5%BC%80%E5%8F%91/</link>
+        <pubDate>Mon, 25 Jan 2021 15:12:10 +0800</pubDate>
         <author>uniqueacheng@gmail.com (Jason Tan)</author>
         
-        <guid>https://betterme.xin/categories/life/</guid>
+        <guid>https://betterme.xin/categories/%E5%BC%80%E5%8F%91/</guid>
         <description></description>
         
         <dc:creator>Jason Tan</dc:creator>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Go on Jason Tan&#39;s blog</title>
+    <link>https://betterme.xin/tags/go/</link>
+    <description>Recent content in Go on Jason Tan&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <managingEditor>uniqueacheng@gmail.com (Jason Tan)</managingEditor>
+    <webMaster>uniqueacheng@gmail.com (Jason Tan)</webMaster>
+    <copyright>©2019-2021, All Rights Reserved</copyright>
+    <lastBuildDate>Tue, 25 May 2021 19:54:18 +0800</lastBuildDate>
+    
+        <atom:link href="https://betterme.xin/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>字符串拼接</title>
+        <link>https://betterme.xin/posts/2021-05/go-snippets_01/</link>
+        <pubDate>Tue, 25 May 2021 19:54:18 +0800</pubDate>
+        <author>uniqueacheng@gmail.com (Jason Tan)</author>
+        <atom:modified>Tue, 25 May 2021 19:54:18 +0800</atom:modified>
+        <guid>https://betterme.xin/posts/2021-05/go-snippets_01/</guid>
+        <description>1 str := &amp;#34;&amp;#34; 方法一：使用+ 1 str = &amp;#34;hello&amp;#34; + &amp;#34; world!&amp;#34; 方法二：使用fmt包Sprintf方法 1 str = fmt.Sprintf(&amp;#34;abc%d&amp;#34;, 123) 方法三：使用string包Join方法 1 str = strings.Join([]string{&amp;#34;123&amp;#34;, &amp;#34;456&amp;#34;}, &amp;#34;&amp;#34;) 方法四</description>
+        
+        <dc:creator>Jason Tan</dc:creator>
+        
+        <media:content url="https://betterme.xin/image/cover/go-logo-blue.svg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+          
+            
+              <category>Go</category>
+            
+          
+        
+        
+          
+            
+              <category>开发</category>
+            
+          
+        
+        
+          
+            
+              <category>Golang 代码片段</category>
+            
+          
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

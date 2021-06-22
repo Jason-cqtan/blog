@@ -13,12 +13,48 @@
     <language>zh</language>
     <managingEditor>uniqueacheng@gmail.com (Jason Tan)</managingEditor>
     <webMaster>uniqueacheng@gmail.com (Jason Tan)</webMaster>
-    <copyright>&amp;copy;2019-{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 25 Jan 2021 15:12:10 +0800</lastBuildDate>
+    <copyright>©2019-2021, All Rights Reserved</copyright>
+    <lastBuildDate>Tue, 25 May 2021 19:54:18 +0800</lastBuildDate>
     
         <atom:link href="https://betterme.xin/categories/%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>字符串拼接</title>
+        <link>https://betterme.xin/posts/2021-05/go-snippets_01/</link>
+        <pubDate>Tue, 25 May 2021 19:54:18 +0800</pubDate>
+        <author>uniqueacheng@gmail.com (Jason Tan)</author>
+        <atom:modified>Tue, 25 May 2021 19:54:18 +0800</atom:modified>
+        <guid>https://betterme.xin/posts/2021-05/go-snippets_01/</guid>
+        <description>1 str := &amp;#34;&amp;#34; 方法一：使用+ 1 str = &amp;#34;hello&amp;#34; + &amp;#34; world!&amp;#34; 方法二：使用fmt包Sprintf方法 1 str = fmt.Sprintf(&amp;#34;abc%d&amp;#34;, 123) 方法三：使用string包Join方法 1 str = strings.Join([]string{&amp;#34;123&amp;#34;, &amp;#34;456&amp;#34;}, &amp;#34;&amp;#34;) 方法四</description>
+        
+        <dc:creator>Jason Tan</dc:creator>
+        
+        <media:content url="https://betterme.xin/image/cover/go-logo-blue.svg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+          
+            
+              <category>Go</category>
+            
+          
+        
+        
+          
+            
+              <category>开发</category>
+            
+          
+        
+        
+          
+            
+              <category>Golang 代码片段</category>
+            
+          
+        
+      </item>
       
       <item>
         <title>变量、块、对象</title>

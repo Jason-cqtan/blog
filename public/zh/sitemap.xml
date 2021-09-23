@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://betterme.xin/</loc>
-    <lastmod>2021-05-25T19:54:18+08:00</lastmod>
+    <lastmod>2021-08-30T22:29:16+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -16,7 +16,7 @@
                 />
   </url><url>
     <loc>https://betterme.xin/categories/</loc>
-    <lastmod>2021-05-25T19:54:18+08:00</lastmod>
+    <lastmod>2021-08-30T22:29:16+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -28,13 +28,35 @@
                 href="https://betterme.xin/categories/"
                 />
   </url><url>
+    <loc>https://betterme.xin/posts/</loc>
+    <lastmod>2021-08-30T22:29:16+08:00</lastmod>
+  </url><url>
+    <loc>https://betterme.xin/tags/</loc>
+    <lastmod>2021-08-30T22:29:16+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://betterme.xin/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://betterme.xin/tags/"
+                />
+  </url><url>
+    <loc>https://betterme.xin/categories/%E5%BC%80%E5%8F%91/</loc>
+    <lastmod>2021-08-30T22:29:16+08:00</lastmod>
+  </url><url>
+    <loc>https://betterme.xin/posts/2021-08/microservices/</loc>
+    <lastmod>2021-08-30T22:29:16+08:00</lastmod>
+  </url><url>
+    <loc>https://betterme.xin/tags/%E6%9E%B6%E6%9E%84/</loc>
+    <lastmod>2021-08-30T22:29:16+08:00</lastmod>
+  </url><url>
     <loc>https://betterme.xin/tags/go/</loc>
     <lastmod>2021-05-25T19:54:18+08:00</lastmod>
   </url><url>
     <loc>https://betterme.xin/series/golang-%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5/</loc>
-    <lastmod>2021-05-25T19:54:18+08:00</lastmod>
-  </url><url>
-    <loc>https://betterme.xin/posts/</loc>
     <lastmod>2021-05-25T19:54:18+08:00</lastmod>
   </url><url>
     <loc>https://betterme.xin/series/</loc>
@@ -50,23 +72,7 @@
                 href="https://betterme.xin/series/"
                 />
   </url><url>
-    <loc>https://betterme.xin/tags/</loc>
-    <lastmod>2021-05-25T19:54:18+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://betterme.xin/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://betterme.xin/tags/"
-                />
-  </url><url>
     <loc>https://betterme.xin/posts/2021-05/go-snippets_01/</loc>
-    <lastmod>2021-05-25T19:54:18+08:00</lastmod>
-  </url><url>
-    <loc>https://betterme.xin/categories/%E5%BC%80%E5%8F%91/</loc>
     <lastmod>2021-05-25T19:54:18+08:00</lastmod>
   </url><url>
     <loc>https://betterme.xin/categories/life/</loc>

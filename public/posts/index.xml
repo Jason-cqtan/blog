@@ -14,11 +14,45 @@
     <managingEditor>uniqueacheng@gmail.com (Jason Tan)</managingEditor>
     <webMaster>uniqueacheng@gmail.com (Jason Tan)</webMaster>
     <copyright>©2019-2021, All Rights Reserved</copyright>
-    <lastBuildDate>Tue, 25 May 2021 19:54:18 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 30 Aug 2021 22:29:16 +0800</lastBuildDate>
     
         <atom:link href="https://betterme.xin/posts/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>微服务</title>
+        <link>https://betterme.xin/posts/2021-08/microservices/</link>
+        <pubDate>Mon, 30 Aug 2021 22:29:16 +0800</pubDate>
+        <author>uniqueacheng@gmail.com (Jason Tan)</author>
+        <atom:modified>Mon, 30 Aug 2021 22:29:16 +0800</atom:modified>
+        <guid>https://betterme.xin/posts/2021-08/microservices/</guid>
+        <description>微服务定义 微服务架构即是采用一组小服务来构建应用的方法。 每个服务运行在独立的进程中，不同服务通过一些轻量级交互机制来通信， 例如 RPC、HTT</description>
+        
+        <dc:creator>Jason Tan</dc:creator>
+        
+        <media:content url="https://betterme.xin/image/cover/microservices.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+          
+            
+              <category>架构</category>
+            
+          
+        
+        
+          
+            
+              <category>开发</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
       
       <item>
         <title>字符串拼接</title>

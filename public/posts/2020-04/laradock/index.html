@@ -1349,7 +1349,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="">
 
-<meta name="generator" content="Hugo 0.84.0" />
+<meta name="generator" content="Hugo 0.87.0" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1780,14 +1780,14 @@
 <h3 id="开始部署">开始部署</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="nb">cd</span> projects
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="nb">cd</span> projects
 git clone https://github.com/laradock/laradock
 <span class="nb">cd</span> laradock
 cp env-example .env
@@ -1802,10 +1802,10 @@ APP_CODE_PATH_CONTAINER 容器内安装软件目录</p>
 <h3 id="部署lnmp">部署lnmp</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">docker-compose up -d nginx mysql
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">docker-compose up -d nginx mysql
 </code></pre></td></tr></table>
 </div>
 </div><p>在不指定php-fpm和workspace前提下，执行命令读取.env文件内php版本变量值（7.3）创建php-fpm容器，默认创建workspace以及docker in docker容器</p>
@@ -1824,12 +1824,12 @@ APP_CODE_PATH_CONTAINER 容器内安装软件目录</p>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">docker-compose <span class="nb">exec</span> nginx bash
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">docker-compose <span class="nb">exec</span> nginx bash
 <span class="c1"># 或者使用 docker exec -it [容器名|容器id] bash 进入容器</span>
 nginx -s reload
 </code></pre></td></tr></table>

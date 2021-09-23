@@ -1351,7 +1351,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Ruby基础语法">
 
-<meta name="generator" content="Hugo 0.84.0" />
+<meta name="generator" content="Hugo 0.87.0" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1727,11 +1727,11 @@
 <p>测试ruby，可直接在<code>irb</code>中测试，定义<code>irb</code>配置文件<code>~/.irbrc</code>，去掉缩进和多余的提示，看着清爽</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-text" data-lang="text">IRB.conf[:PROMPT_MODE] = :SIMPLE
+<pre tabindex="0" class="chroma"><code class="language-text" data-lang="text">IRB.conf[:PROMPT_MODE] = :SIMPLE
 IRB.conf[:AUTO_INDENT_MODE] = false
 </code></pre></td></tr></table>
 </div>
@@ -1761,10 +1761,10 @@ puts(&ldquo;hello word&rdquo;)</p>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="nb">puts</span> <span class="s2">&#34;hello world&#34;</span> <span class="c1"># 打印hello world</span>
+<pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="nb">puts</span> <span class="s2">&#34;hello world&#34;</span> <span class="c1"># 打印hello world</span>
 </code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -1772,13 +1772,13 @@ puts(&ldquo;hello word&rdquo;)</p>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="c1">#多</span>
+<pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="c1">#多</span>
 <span class="c1">#行</span>
 <span class="c1">#注</span>
 <span class="c1">#释</span>
@@ -1786,14 +1786,14 @@ puts(&ldquo;hello word&rdquo;)</p>
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="o">=</span><span class="k">begin</span>
+<pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="o">=</span><span class="k">begin</span>
 
 <span class="nb">puts</span> <span class="s2">&#34;hello world&#34;</span>
 
@@ -1807,12 +1807,12 @@ puts(&ldquo;hello word&rdquo;)</p>
 <p>语法：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="n">str</span> <span class="o">=</span> <span class="o">&lt;&lt;&lt;</span><span class="err">标识</span>
+<pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="n">str</span> <span class="o">=</span> <span class="o">&lt;&lt;&lt;</span><span class="err">标识</span>
 
 <span class="err">标识</span>
 </code></pre></td></tr></table>
@@ -1820,13 +1820,13 @@ puts(&ldquo;hello word&rdquo;)</p>
 </div><p>示例：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="o">&lt;&lt;&lt;</span><span class="no">EOC</span>
+<pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="o">&lt;&lt;&lt;</span><span class="no">EOC</span>
 
 <span class="no">EOC</span>
 
@@ -1852,7 +1852,7 @@ ruby不会对单引号字符串进行插值操作。单引号字符串的用处�
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1876,7 +1876,7 @@ ruby不会对单引号字符串进行插值操作。单引号字符串的用处�
 </span><span class="lnt">22
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="n">var</span> <span class="o">=</span> <span class="s1">&#39;test&#39;</span>
+<pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="n">var</span> <span class="o">=</span> <span class="s1">&#39;test&#39;</span>
 <span class="nb">puts</span> <span class="s2">&#34;</span><span class="si">#{</span><span class="n">var</span><span class="si">}</span><span class="s2">&#34;</span>
 
 <span class="c1"># 重复3次</span>
@@ -1905,14 +1905,14 @@ ruby不会对单引号字符串进行插值操作。单引号字符串的用处�
 分别使用下面demo，感受下时间，都是50000次重复追加<code>xxx|</code>，第二种<code>concat</code>明显就很快</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="n">box</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="n">box</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
 <span class="mi">50000</span><span class="o">.</span><span class="n">times</span><span class="p">{</span><span class="n">box</span><span class="o">+=</span><span class="s2">&#34;xxx|&#34;</span><span class="p">}</span>
 
 <span class="n">box</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
@@ -1923,7 +1923,7 @@ ruby不会对单引号字符串进行插值操作。单引号字符串的用处�
 <h3 id="数组">数组</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1952,7 +1952,7 @@ ruby不会对单引号字符串进行插值操作。单引号字符串的用处�
 </span><span class="lnt">27
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="c1"># 创建数组的几种方式</span>
+<pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="c1"># 创建数组的几种方式</span>
 <span class="n">nums</span> <span class="o">=</span> <span class="nb">Array</span><span class="o">.</span><span class="n">[]</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
 <span class="n">nums</span> <span class="o">=</span> <span class="nb">Array</span><span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="o">]</span>
 <span class="n">nums</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">(</span><span class="mi">0</span><span class="o">..</span><span class="mi">9</span><span class="p">)</span>
@@ -1984,7 +1984,7 @@ ruby不会对单引号字符串进行插值操作。单引号字符串的用处�
 </div><h3 id="hash关联数组">hash、关联数组</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1992,7 +1992,7 @@ ruby不会对单引号字符串进行插值操作。单引号字符串的用处�
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="n">base_info</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&#34;name&#34;</span><span class="o">=&gt;</span><span class="s2">&#34;jason&#34;</span><span class="p">,</span><span class="s2">&#34;email&#34;</span><span class="o">=&gt;</span><span class="s2">&#34;uniqueacheng@gmal.com&#34;</span><span class="p">}</span>
+<pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="n">base_info</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&#34;name&#34;</span><span class="o">=&gt;</span><span class="s2">&#34;jason&#34;</span><span class="p">,</span><span class="s2">&#34;email&#34;</span><span class="o">=&gt;</span><span class="s2">&#34;uniqueacheng@gmal.com&#34;</span><span class="p">}</span>
 <span class="n">symbols_format</span> <span class="o">=</span> <span class="p">{</span><span class="ss">:name</span><span class="o">=&gt;</span><span class="s2">&#34;jason&#34;</span><span class="p">,</span><span class="ss">:email</span><span class="o">=&gt;</span><span class="s2">&#34;uniqueacheng@gmal.com&#34;</span><span class="p">}</span>
 <span class="n">symbols_sample</span> <span class="o">=</span> <span class="p">{</span><span class="nb">name</span><span class="ss">:&#34;jason&#34;</span><span class="p">,</span><span class="ss">email</span><span class="p">:</span><span class="s2">&#34;uniqueacheng@gmal.com&#34;</span><span class="p">}</span>
 <span class="n">base_info</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">key</span><span class="p">,</span><span class="n">val</span><span class="o">|</span>
@@ -2005,13 +2005,13 @@ ruby不会对单引号字符串进行插值操作。单引号字符串的用处�
 (start&hellip;end) 三个<code>.</code>不包含end值</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="c1"># 生成8位随机字母</span>
+<pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="c1"># 生成8位随机字母</span>
 <span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="o">..</span><span class="s1">&#39;z&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">to_a</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span><span class="o">.</span><span class="n">join</span>
 <span class="c1"># bar bas bat bau</span>
 <span class="p">(</span><span class="s1">&#39;bar&#39;</span><span class="o">..</span><span class="s1">&#39;bau&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">to_a</span>

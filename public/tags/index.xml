@@ -14,11 +14,29 @@
     <managingEditor>uniqueacheng@gmail.com (Jason Tan)</managingEditor>
     <webMaster>uniqueacheng@gmail.com (Jason Tan)</webMaster>
     <copyright>©2019-2021, All Rights Reserved</copyright>
-    <lastBuildDate>Tue, 25 May 2021 19:54:18 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 30 Aug 2021 22:29:16 +0800</lastBuildDate>
     
         <atom:link href="https://betterme.xin/tags/index.xml" rel="self" type="application/rss+xml" />
     
 
+      
+      <item>
+        <title>架构</title>
+        <link>https://betterme.xin/tags/%E6%9E%B6%E6%9E%84/</link>
+        <pubDate>Mon, 30 Aug 2021 22:29:16 +0800</pubDate>
+        <author>uniqueacheng@gmail.com (Jason Tan)</author>
+        
+        <guid>https://betterme.xin/tags/%E6%9E%B6%E6%9E%84/</guid>
+        <description></description>
+        
+        <dc:creator>Jason Tan</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>Go</title>

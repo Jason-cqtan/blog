@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>架构 on Jason Tan&#39;s blog</title>
+    <link>https://betterme.xin/tags/%E6%9E%B6%E6%9E%84/</link>
+    <description>Recent content in 架构 on Jason Tan&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <managingEditor>uniqueacheng@gmail.com (Jason Tan)</managingEditor>
+    <webMaster>uniqueacheng@gmail.com (Jason Tan)</webMaster>
+    <copyright>©2019-2021, All Rights Reserved</copyright>
+    <lastBuildDate>Mon, 30 Aug 2021 22:29:16 +0800</lastBuildDate>
+    
+        <atom:link href="https://betterme.xin/tags/%E6%9E%B6%E6%9E%84/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>微服务</title>
+        <link>https://betterme.xin/posts/2021-08/microservices/</link>
+        <pubDate>Mon, 30 Aug 2021 22:29:16 +0800</pubDate>
+        <author>uniqueacheng@gmail.com (Jason Tan)</author>
+        <atom:modified>Mon, 30 Aug 2021 22:29:16 +0800</atom:modified>
+        <guid>https://betterme.xin/posts/2021-08/microservices/</guid>
+        <description>微服务定义 微服务架构即是采用一组小服务来构建应用的方法。 每个服务运行在独立的进程中，不同服务通过一些轻量级交互机制来通信， 例如 RPC、HTT</description>
+        
+        <dc:creator>Jason Tan</dc:creator>
+        
+        <media:content url="https://betterme.xin/image/cover/microservices.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+          
+            
+              <category>架构</category>
+            
+          
+        
+        
+          
+            
+              <category>开发</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

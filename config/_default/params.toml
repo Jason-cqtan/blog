@@ -91,7 +91,7 @@ commento = false
 
 [gitment]          # Gitment is a comment system based on GitHub issues. see https://github.com/imsun/gitment
   owner = "Jason-cqtan"   #"17697213"              # Your GitHub ID
-  repo = "Jason-cqtan/blog"               # The repo to store comments
+  repo = "blog"               # The repo to store comments
   clientId = "4663d0721ccec0ae10c8"           # Your client ID
   clientSecret = "6d6565011bc6f2a0b0c0b06e44d4c82b25b70fa5"       # Your client secret
 
@@ -100,10 +100,10 @@ commento = false
   repo = ""               # The repo to store comments
 
 [gitalk]           # Gitalk is a comment system based on GitHub issues. see https://github.com/gitalk/gitalk
-  owner = ""              # Your GitHub ID
-  repo = ""               # The repo to store comments
-  clientId = ""           # Your client ID
-  clientSecret = ""       # Your client secret
+  owner = "Jason-cqtan"              # Your GitHub ID
+  repo = "blog"               # The repo to store comments
+  clientId = "4663d0721ccec0ae10c8"           # Your client ID
+  clientSecret = "6d6565011bc6f2a0b0c0b06e44d4c82b25b70fa5"       # Your client secret
 
 # Valine.
 # You can get your appid and appkey from https://leancloud.cn

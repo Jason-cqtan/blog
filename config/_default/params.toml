@@ -90,7 +90,7 @@ disqus_shortname = ""
 commento = false
 
 [gitment]          # Gitment is a comment system based on GitHub issues. see https://github.com/imsun/gitment
-  owner = "17697213" #"Jason-cqtan"   #"17697213"              # Your GitHub ID
+  owner = "Jason-cqtan"   #"17697213"              # Your GitHub ID
   repo = "Jason-cqtan/blog"               # The repo to store comments
   clientId = "4663d0721ccec0ae10c8"           # Your client ID
   clientSecret = "6d6565011bc6f2a0b0c0b06e44d4c82b25b70fa5"       # Your client secret

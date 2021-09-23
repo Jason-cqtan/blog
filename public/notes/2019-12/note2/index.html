@@ -2116,25 +2116,23 @@
 </nav>
     
   
-    <div id="comments-gitment"></div>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.min.css" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.min.js" crossorigin="anonymous"></script>
-<script type="text/javascript">
-  var gitment = new Gitment({
+    <div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" crossorigin="anonymous"></script>
+<script>
+  var gitalk = new Gitalk({
     id: '2019-12-04 21:23:00 \u002b0800 CST',
     title: '逼近26岁，25岁时记的话',
-    link: decodeURI(location.href),
-    desc: '0.知识或者技能这种东西，学到了就跟你一辈子 1.我们养成习惯，然后习惯养成我们 2.吸星大法（围剿式学习）：通过观察对方的沟通、演讲、写作方式',
-    owner: 'Jason-cqtan',
+    clientID: '4663d0721ccec0ae10c8',
+    clientSecret: '6d6565011bc6f2a0b0c0b06e44d4c82b25b70fa5',
     repo: 'blog',
-    oauth: {
-      client_id: '4663d0721ccec0ae10c8',
-      client_secret: '6d6565011bc6f2a0b0c0b06e44d4c82b25b70fa5'
-    }
+    owner: 'Jason-cqtan',
+    admin: ['Jason-cqtan'],
+    body: decodeURI(location.href)
   });
-  gitment.render('comments-gitment');
+  gitalk.render('gitalk-container');
 </script>
-<noscript>Please enable JavaScript to view the <a href="https://github.com/imsun/gitment">comments powered by gitment.</a></noscript>
+<noscript>Please enable JavaScript to view the <a href="https://github.com/gitalk/gitalk">comments powered by gitalk.</a></noscript>
   
 
     <div class="modal micromodal-slide" id="modal" aria-hidden="true">

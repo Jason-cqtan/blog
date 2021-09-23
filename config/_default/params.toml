@@ -1,4 +1,4 @@
-logoText = "" # site navigation bar logo text.
+logoText = "betterme" # site navigation bar logo text.
 logoType = "short" # long, short
 description = "享受生活,乐于分享,happy coding,To be better me." # for SEO
 keywords = "Blog,生活,编程,分享"
@@ -90,10 +90,10 @@ disqus_shortname = ""
 commento = false
 
 [gitment]          # Gitment is a comment system based on GitHub issues. see https://github.com/imsun/gitment
-  owner = ""              # Your GitHub ID
-  repo = ""               # The repo to store comments
-  clientId = ""           # Your client ID
-  clientSecret = ""       # Your client secret
+  owner = "Jason-cqtan"              # Your GitHub ID
+  repo = "blog"               # The repo to store comments
+  clientId = "4663d0721ccec0ae10c8"           # Your client ID
+  clientSecret = "6d6565011bc6f2a0b0c0b06e44d4c82b25b70fa5"       # Your client secret
 
 [utterances]       # https://utteranc.es/
   owner = ""              # Your GitHub ID
@@ -115,7 +115,7 @@ commento = false
   notify = false  # mail notifier , https://github.com/xCss/Valine/wiki
   verify = true # Verification code
   avatar = 'mm' 
-  placeholder = '点击这里讨论，支持markdown语法'
+  placeholder = '评论，支持markdown语法'
   visitor = false
 
 [changyan]

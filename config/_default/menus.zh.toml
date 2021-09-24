@@ -2,22 +2,22 @@
   identifier = "posts"
   name = "文章"
   url = "posts"
-  weight = 10
-    
-[[main]]
-  identifier = "notes"
-  name = "随记"
-  url = "notes"
-  weight = 20
+  weight = 1
 
 [[main]]
   identifier = "archive"
   name = "归档"
   url = "archive"
-  weight = 30
+  weight = 2
+    
+[[main]]
+  identifier = "notes"
+  name = "随记"
+  url = "notes"
+  weight = 3
 
 [[main]]
   identifier = "about"
-  name = "关于我"
+  name = "关于"
   url = "about"
-  weight = 50
+  weight = 4

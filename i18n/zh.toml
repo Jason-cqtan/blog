@@ -7,6 +7,9 @@ other = "2006年01月02日"
 [reading-time]
 other = "分钟"
 
+[notes]
+other = "随记"
+
 [tags]
 other = "标签"
 
@@ -17,7 +20,7 @@ other = "分类"
 other = "系列"
 
 [archive-dateformat]
-other = "01-02"
+other = "2006-01"
 
 [talks-dateformat]
 other = "01月02日"
@@ -50,7 +53,7 @@ other = "总访客"
 other = "阅读"
 
 [donate-message]
-other = "↓点击↓鼓励打赏"
+other = "您的鼓励是我最大的动力"
 
 [share-message]
 other = "分享"
@@ -99,3 +102,21 @@ other = "Please enable Javascript to view the contents"
 
 [posts-by-order]
 other = "TOP POSTS"
+
+[skin-dark]
+other = "dark"
+
+[skin-light]
+other = "light"
+
+[skin-hacker]
+other = "hacker"
+
+[skin-solarized]
+other = "solarized"
+
+[skin-kimbie]
+other = "kimbie"
+
+[no-contents]
+other = "Nothing to Display"

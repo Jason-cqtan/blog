@@ -2,6 +2,7 @@
 title: "HBO GO"
 date: 2020-10-31T22:13:37+08:00
 description: "了解hbo，讲解菲律宾区hbo go和香港hbo go区别，如何订阅，还有使用体验"
+pinned: true
 draft: false
 hideToc: false
 enableToc: true

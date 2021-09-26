@@ -2,6 +2,7 @@
 title: "Trojan从搭建到使用"
 date: 2019-12-14T17:12:56+08:00
 description: "介绍搭建新型科学上网工具及使用"
+pinned: true
 keywords:
 - 科学上网
 - Trojan

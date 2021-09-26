@@ -32,7 +32,7 @@ featured_image: "cover/hugo.svg"
 
 2.源码新建分支github-actions ,创建`.github/workflows/build.yml`
 
-```yml
+```yaml
 name: github pages # 名字自取
 
 on:
@@ -76,7 +76,7 @@ jobs:
 
 5. 合并master分支并修改.github/workflows/build.yml
 
-```yml
+```yaml
 on:
   push:
     branches:

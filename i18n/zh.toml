@@ -20,7 +20,7 @@ other = "分类"
 other = "系列"
 
 [archive-dateformat]
-other = "2006-01"
+other = "01-02"
 
 [talks-dateformat]
 other = "01月02日"

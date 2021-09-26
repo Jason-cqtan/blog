@@ -2,7 +2,5 @@
 title: "归档"
 date: 2019-10-19T11:44:14+09:00
 type: "archive"
-description: "按月归档"
+description: "归档"
 ---
-
-文章按月归档

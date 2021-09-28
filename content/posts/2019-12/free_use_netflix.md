@@ -25,7 +25,7 @@ netflix中文名奈飞、网飞，是国外流媒体平台，提供在线看美�
 观看时，根据用户网络质量自动调节画面质量，可切换字幕。
 目前不支持在中国观看。
 
-![alt neiflix](/images/netflix_full.png "我的奈飞首页")
+![alt netflix](https://z4a.net/images/2021/09/28/netflix_full.png "我的奈飞首页")
 
 ### 片源
 - 美区

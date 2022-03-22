@@ -93,3 +93,7 @@ Spotify官网订阅，绑定PayPal进行扣费，只要银联卡中够抵扣，�
     - 歌词不全，即使现在所有区域都支持歌词，但有些歌就是没有。mac上可用这个[软件](https://github.com/ddddxxx/LyricsX)弥补
 - 若对你有所帮助，不用谢
 
+### 参考
+- [音乐平台横评：Apple Music、QQ 音乐、网易云、咪咕、Spotify、YouTube Music、Tidal](https://sspai.com/post/64477)
+- [为什么Spotify比Apple Music更好？| Spotify对比Apple Music](https://zhuanlan.zhihu.com/p/373365808)
+- [2022最全Spotify注册、选区及使用教程（下载渠道+曲库对比+会员价格+付费版和免费版区别+常见问题）](https://www.extrabux.com/chs/guide/6022636)

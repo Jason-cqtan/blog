@@ -1,14 +1,14 @@
 ---
 title: "在大陆使用spotify可行性方案"
 date: 2022-03-22T22:38:20+08:00
-description:
+description: "在大陆使用spotify可行性方案，个人3年多使用经验分享"
 draft: false
 hideToc: false
 enableToc: true
 enableTocContent: false
 tocFolding: false
 tocPosition: inner
-tocLevels: ["h2", "h3", "h4"]
+tocLevels: ["h3", "h4","h5"]
 keywords:
 - spotify
 - 菲律宾区spotify

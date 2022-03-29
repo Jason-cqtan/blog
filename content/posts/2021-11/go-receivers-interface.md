@@ -264,6 +264,7 @@ func main() {
 - 一个接口值并不是严格意义上的指针或不是指针，它只是一个接口。
 - 如果你需要完全覆盖一个方法中的值，可以使用*操作符来手动解除对一个指针的定义。
 
+参考：[how-to-use-interfaces-in-go](https://jordanorelli.com/post/32665860244/how-to-use-interfaces-in-go)
 
 ### 参考
 - http://c.biancheng.net/view/69.html

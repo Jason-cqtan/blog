@@ -118,3 +118,12 @@ featured_image: "cover/elastic-logo.svg"
 ➜  elastic-stack cd node2
 ➜  node2 bin/elasticsearch --enrollment-token <token>
 ```
+
+### 其他
+
+widnows下由于用户组、文件权限原因，本人暂时无法搭建成功，可换虚拟机或docker尝试。
+还是mac香
+
+#### 参考
+[elasticsearch-complete-guide](https://www.udemy.com/share/101W9q3@cMiG43CpEGYjNBmDsO2q3gttSNG7ihJL-moRS5kxHnGz225aAKzXNiugb1nK-BHG/)
+[https://www.elastic.co/guide/en/beats/libbeat/current/config-file-permissions.html](https://www.elastic.co/guide/en/beats/libbeat/current/config-file-permissions.html)

@@ -172,8 +172,8 @@ commento = false
 
 [donationOptions] 
   enable = true
-  alipay = "https://static01.imgkr.com/temp/f427ac2520d94c6c8b7705620ea63cec.png" #"/images/alipay.png" # Alipay QR Code image (example path: images/donation/alipay-qrcode.png) and put your file at root/static/images/donation/
-  wechat = "https://static01.imgkr.com/temp/4dd05252b4bc4ef582b2923021cb1a1e.png" #"/images/wechat.png" # Wechat pay QR Code image (example path: same as above)
+  alipay = "/images/alipay.png" # Alipay QR Code image (example path: images/donation/alipay-qrcode.png) and put your file at root/static/images/donation/
+  wechat = "/images/wechat.png" # Wechat pay QR Code image (example path: same as above)
   paypal = "https://paypal.me/jasontan2?locale.x=zh_XC"
 
 # possible share name: ["facebook","twitter", "reddit", "linkedin", "tumblr", "weibo", "douban", "line"]

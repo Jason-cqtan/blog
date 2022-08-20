@@ -105,7 +105,7 @@ bingo！
 ![alt 个人分流设置](/images/fenliu.jpg "个人分流设置")
 
 当然良好的网络体验还是离不开机场的服务，这里推荐几个我使用过性价比较好的：
-- [`tag`](https://user.taggood-5.xyz/#/register?code=48JZfDYQ) 6年+老牌机场，90+国家节点，满足你各种特殊场景需求，流媒体稳定解锁，缺点贵，要合租联系我
+- [`tag`](https://tagss.pro/#/register?code=48JZfDYQ) 6年+老牌机场，90+国家节点，满足你各种特殊场景需求，流媒体稳定解锁，缺点贵，要合租联系我
 - [`fnf`](https://fnf.one/auth/register?code=WUkO) 节点国家够多，分2种协议（ss、v2ray），还有游戏加速支持，电报每日签到获取更多流量
 - [`猫熊网络加速器`](https://mxwljsq.top/auth/register?code=EEzb) 单v2ray用过一段时间，还行。你可以去网站了解其他
 

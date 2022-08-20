@@ -83,7 +83,7 @@ Unlimited movies, TV shows, and more.Watch anywhere. Cancel anytime.
    - 验证码问题
    寻找接收短信验证码平台，先尝试免费的看能不能蒙混过关，不能再找付费的，一条短信费用2-5元不等
    - 无法绑定信用卡
-   使用土区礼品卡（淘宝购买，75里拉即可），先开通。ip位置保持不变，然后找`在线客户`绑卡，聊天不支持中文，推荐 https://www.deepl.com/zh/translator 翻译后聊天，需要准备你的礼品卡兑换码，然后在聊天中填写信用卡信息绑定
+   使用土区礼品卡（淘宝购买，75里拉即可），先开通。ip位置保持不变，然后找`在线客户`绑卡，聊天不支持中文，推荐 [deepl](https://www.deepl.com/zh/translator) 翻译后聊天，需要准备你的礼品卡兑换码，然后在聊天中填写信用卡信息绑定
 
    个人亲身经历可参考如下：
    ```English
@@ -117,7 +117,7 @@ Unlimited movies, TV shows, and more.Watch anywhere. Cancel anytime.
 
 本人免费分享谷歌云香港节点，如有需要，call me maybe.还有什么问题的，也可以联系我，尽管问，反正我也不一定帮😅
 
-最后实在嫌麻烦，自己找车上车，一月￥15左右，然后自备梯子也可以观看奈飞，只是多花钱少麻烦个。有些梯子还会共享netflix账号（https://mxwljsq.com/auth/register?code=EEzb），如果你偶尔看这不失一个好选择。
+最后实在嫌麻烦，自己找车上车，一月￥15左右，然后自备梯子也可以观看奈飞，只是多花钱少麻烦个。有些梯子还会共享netflix账号（[熊猫网络加速器](https://mxwljsq.com/auth/register?code=EEzb)），如果你偶尔看这不失一个好选择。
 
 另外分享其他比较好的观影网站
 - [novipnoad](https://www.novipnoad.com/)正如网站域名表达含义，no vip、no ad，无需会员还没广告，提供最新电影、美剧**在线**观看

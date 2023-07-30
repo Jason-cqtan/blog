@@ -21,3 +21,9 @@
   name = "关于"
   url = "about"
   weight = 4
+
+[[main]]
+  identifier = "running_page"
+  name = "跑步记录"
+  url = "https://jason-cqtan.github.io/running_page/"
+  weight = 5
